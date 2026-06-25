@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.13)  25 JUN 2026 11:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.13)  25 JUN 2026 11:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1698,11 +1698,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[62])
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
-
+[62]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1720,13 +1716,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[64
+[64]
 
-] (./main.lof
-Underfull \vbox (badness 7133) has occurred while \output is active []
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
- [65]
-Underfull \vbox (badness 3525) has occurred while \output is active []
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[65]
+Underfull \vbox (badness 5189) has occurred while \output is active []
 
 
 
@@ -1747,9 +1747,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [67]
-Underfull \vbox (badness 3525) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1759,7 +1756,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5189) has occurred while \output is active []
 
 
 
@@ -1771,6 +1768,69 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [69])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[70] (./main.lof
+Underfull \vbox (badness 7133) has occurred while \output is active []
+
+ [71
+
+]
+Underfull \vbox (badness 3525) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[72]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[73]
+Underfull \vbox (badness 3525) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[75])
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1783,10 +1843,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[70] (./main.lot
+[76] (./main.lot
 Underfull \vbox (badness 4779) has occurred while \output is active []
 
- [71
+ [77
 
 ])
 \tf@lot=\write7
@@ -1801,7 +1861,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[72] [1
+[78] [1
 
 
 ] [2]
@@ -20190,15 +20250,9 @@ or  <return>  to continue without it.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 0CDDC2D7BF5043AA7C54FEF4BD4B4CA8;356878.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 90F219B74FFF79E51CCB0995DA25B610;311983
-(rerunfilecheck)             After:  0CDDC2D7BF5043AA7C54FEF4BD4B4CA8;356878.
  )
 (\end occurred inside a group at level 60)
 
@@ -20264,10 +20318,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 ### simple group (level 1) entered at line 436 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38007 strings out of 474222
- 692883 string characters out of 5748733
+ 38230 strings out of 474222
+ 696467 string characters out of 5748733
  2018975 words of memory out of 5000000
- 54734 multiletter control sequences out of 15000+600000
+ 54951 multiletter control sequences out of 15000+600000
  637076 words of font info for 157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,12n,96p,1001b,10794s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -20279,10 +20333,10 @@ pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (555 pages, 1213759 bytes).
+Output written on main.pdf (561 pages, 1243242 bytes).
 PDF statistics:
- 14970 PDF objects out of 15390 (max. 8388607)
- 14243 compressed objects within 143 object streams
- 4672 named destinations out of 5155 (max. 500000)
- 60933 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 15882 PDF objects out of 18468 (max. 8388607)
+ 15140 compressed objects within 152 object streams
+ 4678 named destinations out of 5155 (max. 500000)
+ 62669 words of extra memory for PDF output out of 74296 (max. 10000000)
 
