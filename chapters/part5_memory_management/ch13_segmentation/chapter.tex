@@ -1,0 +1,896 @@
+\chapter{Segmentation}
+
+\section{Introduction}
+
+Segmentation is a memory management technique that divides a program into logical units called \textbf{segments}. Unlike paging, which divides memory into fixed-size blocks, segmentation reflects the programmer's view of memory and groups related data together.
+
+Typical program components naturally map to segments:
+
+\begin{itemize}
+\item Code Segment
+\item Data Segment
+\item Stack Segment
+\item Heap Segment
+\item Shared Library Segment
+\end{itemize}
+
+Segmentation improves program organization, protection, and sharing.
+
+\section{Motivation for Segmentation}
+
+\subsection{Problem with Linear Address Spaces}
+
+Consider a program containing:
+
+\begin{itemize}
+\item Instructions
+\item Global Variables
+\item Functions
+\item Stack
+\item Dynamic Memory
+\end{itemize}
+
+Treating all of these as a single contiguous memory block is inefficient.
+
+Different parts of a program require different:
+
+\begin{itemize}
+\item Protection Levels
+\item Access Rights
+\item Growth Patterns
+\item Sharing Policies
+\end{itemize}
+
+\subsection{Logical Organization}
+
+Programmers think of memory as:
+
+\begin{center}
+Code + Data + Stack + Heap
+\end{center}
+
+not as one large array of bytes.
+
+Segmentation aligns memory management with the programmer's perspective.
+
+\section{Segmentation Fundamentals}
+
+\subsection{Definition}
+
+Segmentation divides a process into variable-sized logical units called segments.
+
+Each segment contains logically related information.
+
+\subsection{Examples}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|l|}
+\hline
+Segment Number & Contents \
+\hline
+0 & Code \
+1 & Global Data \
+2 & Heap \
+3 & Stack \
+4 & Shared Libraries \
+\hline
+\end{tabular}
+\caption{Example Segments}
+\end{table}
+
+\subsection{Logical Address Format}
+
+In segmentation, a logical address consists of:
+
+[
+\langle Segment\ Number,\ Offset \rangle
+]
+
+Example:
+
+[
+\langle 2, 150 \rangle
+]
+
+means:
+
+\begin{itemize}
+\item Segment Number = 2
+\item Offset = 150
+\end{itemize}
+
+\section{User View vs Physical Memory View}
+
+\subsection{User View}
+
+Programmers see:
+
+\begin{itemize}
+\item Functions
+\item Variables
+\item Stack
+\item Heap
+\item Libraries
+\end{itemize}
+
+\subsection{Physical Memory View}
+
+Hardware sees:
+
+\begin{itemize}
+\item Physical Memory Addresses
+\item Memory Frames
+\item Actual RAM Locations
+\end{itemize}
+
+\subsection{Illustration}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw,minimum width=4cm,minimum height=5cm] (user) {};
+\node at (0,2) {Code};
+\node at (0,1) {Data};
+\node at (0,0) {Heap};
+\node at (0,-1) {Stack};
+
+\node[draw,minimum width=4cm,minimum height=5cm,right=5cm of user] (phys) {};
+
+\node at (5,2) {Physical Block A};
+\node at (5,1) {Physical Block B};
+\node at (5,0) {Physical Block C};
+\node at (5,-1) {Physical Block D};
+
+\draw[->] (user) -- (phys);
+
+\end{tikzpicture}
+\caption{User View vs Physical Memory View}
+\end{figure}
+
+\section{Segment Structure}
+
+Each segment contains:
+
+\begin{itemize}
+\item Base Address
+\item Length (Limit)
+\item Protection Information
+\end{itemize}
+
+\subsection{Example}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Segment & Base & Limit \
+\hline
+0 & 1000 & 500 \
+1 & 4000 & 800 \
+2 & 9000 & 300 \
+\hline
+\end{tabular}
+\caption{Segment Structure Example}
+\end{table}
+
+\section{Segment Tables}
+
+\subsection{Definition}
+
+A Segment Table stores information about all segments belonging to a process.
+
+\subsection{Fields}
+
+Typically contains:
+
+\begin{itemize}
+\item Segment Number
+\item Base Address
+\item Limit
+\item Protection Bits
+\end{itemize}
+
+\subsection{Example Segment Table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Segment & Base & Limit \
+\hline
+0 & 1000 & 600 \
+1 & 4000 & 800 \
+2 & 7000 & 500 \
+3 & 9000 & 1000 \
+\hline
+\end{tabular}
+\caption{Example Segment Table}
+\end{table}
+
+\section{Address Translation in Segmentation}
+
+\subsection{Translation Process}
+
+Logical Address:
+
+[
+\langle s,d \rangle
+]
+
+where:
+
+\begin{itemize}
+\item (s) = segment number
+\item (d) = offset
+\end{itemize}
+
+Steps:
+
+\begin{enumerate}
+\item Locate segment table entry.
+\item Check offset against limit.
+\item Add offset to base address.
+\item Generate physical address.
+\end{enumerate}
+
+\subsection{Formula}
+
+If
+
+[
+d < Limit
+]
+
+then
+
+[
+Physical\ Address = Base + d
+]
+
+\subsection{Numerical Example}
+
+Segment Table:
+
+\begin{center}
+Segment 1: Base = 4000, Limit = 800
+\end{center}
+
+Logical Address:
+
+[
+\langle 1,200 \rangle
+]
+
+Physical Address:
+
+[
+4000 + 200 = 4200
+]
+
+\section{Address Translation Diagram}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (cpu) {CPU};
+
+\node[draw,right=3cm of cpu] (st) {Segment Table};
+
+\node[draw,right=3cm of st] (mem) {Physical Memory};
+
+\draw[->] (cpu) -- node[above]{Segment, Offset} (st);
+
+\draw[->] (st) -- node[above]{Base + Offset} (mem);
+
+\end{tikzpicture}
+\caption{Segmentation Address Translation}
+\end{figure}
+
+\section{Protection Mechanisms}
+
+Segmentation naturally supports protection.
+
+\subsection{Protection Bits}
+
+Each segment may have:
+
+\begin{itemize}
+\item Read Permission
+\item Write Permission
+\item Execute Permission
+\end{itemize}
+
+\subsection{Example}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Segment & Permission \
+\hline
+Code & Execute Only \
+Data & Read/Write \
+Stack & Read/Write \
+\hline
+\end{tabular}
+\caption{Segment Protection}
+\end{table}
+
+\section{Sharing Mechanisms}
+
+Segmentation allows efficient sharing.
+
+\subsection{Example}
+
+Two processes may share:
+
+\begin{itemize}
+\item Code Segment
+\item Shared Libraries
+\end{itemize}
+
+while maintaining separate:
+
+\begin{itemize}
+\item Data Segments
+\item Stack Segments
+\end{itemize}
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Reduced Memory Usage
+\item Improved Efficiency
+\end{itemize}
+
+\section{Segmentation Hardware}
+
+Hardware support typically includes:
+
+\begin{itemize}
+\item Segment Table Base Register (STBR)
+\item Segment Table Length Register (STLR)
+\item MMU Support
+\end{itemize}
+
+\subsection{STBR}
+
+Points to segment table location.
+
+\subsection{STLR}
+
+Stores number of segments.
+
+\section{External Fragmentation}
+
+\subsection{Problem}
+
+Segments have variable sizes.
+
+Memory develops holes over time.
+
+\subsection{Example}
+
+\begin{verbatim}
+| P1 | Free | P2 | Free | P3 |
+\end{verbatim}
+
+Although sufficient free memory exists, large requests may fail.
+
+\subsection{Result}
+
+External fragmentation occurs.
+
+\section{Compaction}
+
+\subsection{Definition}
+
+Compaction moves segments to create contiguous free space.
+
+\subsection{Before}
+
+\begin{verbatim}
+| P1 | Free | P2 | Free | P3 |
+\end{verbatim}
+
+\subsection{After}
+
+\begin{verbatim}
+| P1 | P2 | P3 | Large Free Block |
+\end{verbatim}
+
+\subsection{Drawback}
+
+Compaction is expensive.
+
+\section{Pure Segmentation}
+
+\subsection{Definition}
+
+Memory management using only segmentation.
+
+\subsection{Characteristics}
+
+\begin{itemize}
+\item Variable-sized segments
+\item Logical organization
+\item External fragmentation
+\end{itemize}
+
+\section{Segmentation with Paging}
+
+\subsection{Motivation}
+
+Segmentation suffers from external fragmentation.
+
+Paging solves fragmentation problems.
+
+\subsection{Approach}
+
+Each segment is divided into pages.
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Logical Organization
+\item Reduced Fragmentation
+\item Better Memory Utilization
+\end{itemize}
+
+\subsection{Architecture}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (seg) {Segment};
+
+\node[draw,right=3cm of seg] (page1) {Page 1};
+
+\node[draw,right=5cm of seg] (page2) {Page 2};
+
+\node[draw,right=7cm of seg] (page3) {Page 3};
+
+\draw[->] (seg) -- (page1);
+\draw[->] (seg) -- (page2);
+\draw[->] (seg) -- (page3);
+
+\end{tikzpicture}
+\caption{Segmentation with Paging}
+\end{figure}
+
+\section{Intel x86 Segmentation Overview}
+
+\subsection{Historical Design}
+
+Intel x86 originally relied heavily on segmentation.
+
+Logical address:
+
+[
+Segment:Offset
+]
+
+Example:
+
+[
+CS:IP
+]
+
+[
+DS:Offset
+]
+
+\subsection{Segment Registers}
+
+\begin{itemize}
+\item CS (Code Segment)
+\item DS (Data Segment)
+\item SS (Stack Segment)
+\item ES
+\item FS
+\item GS
+\end{itemize}
+
+\subsection{Modern x86}
+
+Modern operating systems use:
+
+\begin{itemize}
+\item Flat Address Spaces
+\item Paging Dominantly
+\item Minimal Segmentation
+\end{itemize}
+
+\section{Modern Operating Systems and Segmentation}
+
+\subsection{Linux}
+
+Modern Linux primarily uses:
+
+\begin{itemize}
+\item Paging
+\item Virtual Memory
+\end{itemize}
+
+Segmentation usage is minimal.
+
+\subsection{Windows}
+
+Modern Windows also uses:
+
+\begin{itemize}
+\item Paging-Based Memory Management
+\item Flat Memory Model
+\end{itemize}
+
+\subsection{Reason}
+
+Paging provides:
+
+\begin{itemize}
+\item Better Flexibility
+\item Reduced Fragmentation
+\item Easier Memory Management
+\end{itemize}
+
+\section{Advantages of Segmentation}
+
+\begin{enumerate}
+\item Matches Programmer View
+\item Natural Protection Support
+\item Easy Sharing
+\item Logical Program Organization
+\item Independent Segment Growth
+\end{enumerate}
+
+\section{Disadvantages of Segmentation}
+
+\begin{enumerate}
+\item External Fragmentation
+\item Compaction Overhead
+\item Complex Allocation
+\item Variable Size Management
+\item Additional Hardware Support
+\end{enumerate}
+
+\section{Real-World Use Cases}
+
+\subsection{Program Organization}
+
+Separate:
+
+\begin{itemize}
+\item Code
+\item Data
+\item Stack
+\end{itemize}
+
+\subsection{Shared Libraries}
+
+Shared code segments among processes.
+
+\subsection{Security}
+
+Different permissions per segment.
+
+\subsection{Legacy x86 Systems}
+
+Used segmentation extensively.
+
+\section{Segmentation vs Paging}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+Feature & Segmentation & Paging \
+\hline
+Division Basis & Logical Units & Fixed Size Pages \
+\hline
+Size & Variable & Fixed \
+\hline
+Programmer Visible & Yes & No \
+\hline
+Fragmentation & External & Internal \
+\hline
+Protection & Natural & Supported via Page Tables \
+\hline
+Sharing & Easy & Possible \
+\hline
+Allocation & Complex & Simpler \
+\hline
+Modern Usage & Limited & Dominant \
+\hline
+\end{tabular}
+\caption{Segmentation vs Paging}
+\end{table}
+
+\section{Key Takeaways}
+
+\begin{itemize}
+\item Segmentation divides memory into logical units.
+\item Logical addresses contain segment number and offset.
+\item Segment tables store base and limit values.
+\item Segmentation supports protection naturally.
+\item Segmentation supports sharing efficiently.
+\item External fragmentation is a major drawback.
+\item Compaction reduces fragmentation.
+\item Modern systems primarily use paging.
+\item Segmentation with paging combines strengths of both.
+\item Intel x86 historically used segmentation extensively.
+\end{itemize}
+
+\section{20 Interview Questions with Answers}
+
+\begin{enumerate}
+\item What is segmentation?\
+Answer: A memory management technique dividing memory into logical segments.
+
+\item Why was segmentation introduced?\
+Answer: To match programmer view of memory.
+
+\item What is a segment?\
+Answer: A logical unit of a program.
+
+\item What is a logical address in segmentation?\
+Answer: Segment number and offset.
+
+\item What is a segment table?\
+Answer: A table storing segment information.
+
+\item What does a segment table contain?\
+Answer: Base address and limit.
+
+\item What is STBR?\
+Answer: Segment Table Base Register.
+
+\item What is STLR?\
+Answer: Segment Table Length Register.
+
+\item How is physical address calculated?\
+Answer: Base + Offset.
+
+\item What happens if offset exceeds limit?\
+Answer: Trap or protection fault.
+
+\item Does segmentation support protection?\
+Answer: Yes.
+
+\item Does segmentation support sharing?\
+Answer: Yes.
+
+\item What fragmentation occurs in segmentation?\
+Answer: External fragmentation.
+
+\item What is compaction?\
+Answer: Rearranging memory to create large free blocks.
+
+\item What is pure segmentation?\
+Answer: Segmentation without paging.
+
+\item Why combine segmentation with paging?\
+Answer: To reduce fragmentation.
+
+\item What segment register stores code segment?\
+Answer: CS.
+
+\item What segment register stores stack segment?\
+Answer: SS.
+
+\item Do modern Linux systems rely heavily on segmentation?\
+Answer: No.
+
+\item Which memory technique dominates modern OSes?\
+Answer: Paging.
+\end{enumerate}
+
+\section{20 MCQs with Answers}
+
+\begin{enumerate}
+\item Segmentation divides memory into:
+A) Frames
+B) Pages
+C) Segments
+D) Blocks
+
+Answer: C
+
+\item Segment sizes are:
+A) Fixed
+B) Variable
+C) Equal
+D) Random
+
+Answer: B
+
+\item Logical address contains:
+A) Page + Frame
+B) Segment + Offset
+C) Base + Limit
+D) Frame + Offset
+
+Answer: B
+
+\item Segment table stores:
+A) Base and Limit
+B) Frames
+C) Pages
+D) Cache Lines
+
+Answer: A
+
+\item STBR stands for:
+Answer: Segment Table Base Register
+
+\item STLR stands for:
+Answer: Segment Table Length Register
+
+\item Segmentation supports:
+A) Protection
+B) Sharing
+C) Both
+D) Neither
+
+Answer: C
+
+\item Physical address equals:
+A) Base + Offset
+B) Page + Offset
+C) Limit + Offset
+D) Segment + Offset
+
+Answer: A
+
+\item Main fragmentation issue:
+A) Internal
+B) External
+C) Cache
+D) TLB
+
+Answer: B
+
+\item Compaction addresses:
+A) Internal Fragmentation
+B) External Fragmentation
+C) TLB Misses
+D) Cache Misses
+
+Answer: B
+
+\item Segment register for code:
+A) DS
+B) SS
+C) CS
+D) ES
+
+Answer: C
+
+\item Segment register for stack:
+A) CS
+B) SS
+C) DS
+D) FS
+
+Answer: B
+
+\item Segmentation is:
+A) Programmer Visible
+B) Invisible
+C) Kernel Only
+D) Hardware Only
+
+Answer: A
+
+\item Paging uses:
+A) Variable Sizes
+B) Fixed Sizes
+C) Logical Units
+D) Functions
+
+Answer: B
+
+\item Segmentation uses:
+A) Logical Units
+B) Fixed Blocks
+C) Cache Lines
+D) Frames Only
+
+Answer: A
+
+\item Modern Linux primarily uses:
+A) Segmentation
+B) Paging
+C) Swapping Only
+D) Overlaying
+
+Answer: B
+
+\item Modern Windows primarily uses:
+A) Segmentation
+B) Paging
+C) Compaction
+D) Overlays
+
+Answer: B
+
+\item Shared libraries benefit from:
+A) Segmentation
+B) Cache
+C) DMA
+D) TLB
+
+Answer: A
+
+\item Segment table entry includes:
+A) Limit
+B) Base
+C) Protection
+D) All
+
+Answer: D
+
+\item Segmentation with paging combines:
+A) Benefits of both techniques
+B) Only paging
+C) Only segmentation
+D) Neither
+
+Answer: A
+\end{enumerate}
+
+\section{Revision Notes}
+
+\begin{itemize}
+\item Segmentation divides memory into logical units.
+\item Logical address = Segment Number + Offset.
+\item Segment Table stores Base and Limit.
+\item MMU performs address translation.
+\item Protection and sharing are natural in segmentation.
+\item External fragmentation is the primary problem.
+\item Compaction reduces fragmentation.
+\item Pure segmentation uses variable-sized segments.
+\item Segmentation with paging is more efficient.
+\item Modern operating systems primarily rely on paging.
+\end{itemize}
+
+\section{Cheat Sheet}
+
+\begin{center}
+\begin{tabular}{|p{5cm}|p{8cm}|}
+\hline
+Logical Address & Segment Number + Offset \
+\hline
+Physical Address & Base + Offset \
+\hline
+Segment Table & Base + Limit + Protection \
+\hline
+STBR & Segment Table Base Register \
+\hline
+STLR & Segment Table Length Register \
+\hline
+Major Advantage & Logical Organization \
+\hline
+Major Disadvantage & External Fragmentation \
+\hline
+Compaction & Removes External Fragmentation \
+\hline
+Protection & Natural Support \
+\hline
+Sharing & Easy Support \
+\hline
+Pure Segmentation & Variable Sized Segments \
+\hline
+Segmentation + Paging & Hybrid Approach \
+\hline
+Intel x86 & Historically Segmentation Based \
+\hline
+Modern Linux & Paging Dominant \
+\hline
+Modern Windows & Paging Dominant \
+\hline
+\end{tabular}
+\end{center}

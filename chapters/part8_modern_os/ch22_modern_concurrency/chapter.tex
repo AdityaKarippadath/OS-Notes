@@ -1,0 +1,1083 @@
+\chapter{Modern Concurrency}
+
+\section{Introduction}
+
+Modern software systems must serve millions of users, process massive amounts of data, and utilize multicore processors efficiently. Concurrency has therefore become one of the most important topics for Software Development Engineers.
+
+Understanding modern concurrency is essential for:
+
+\begin{itemize}
+\item Backend Development
+\item Distributed Systems
+\item Cloud Computing
+\item High-Performance Computing
+\item System Design Interviews
+\item Operating Systems Interviews
+\end{itemize}
+
+This chapter covers the concepts, architectures, programming models, and interview perspectives required for modern software engineering roles.
+
+\section{Learning Objectives}
+
+After completing this chapter, you should be able to:
+
+\begin{itemize}
+\item Differentiate concurrency and parallelism.
+\item Understand multicore architectures.
+\item Explain thread pools and task scheduling.
+\item Use futures and promises.
+\item Understand asynchronous programming.
+\item Explain lock-free and wait-free algorithms.
+\item Understand actor systems and reactive programming.
+\item Analyze high-concurrency server architectures.
+\item Solve modern concurrency interview questions.
+\end{itemize}
+
+%=================================================
+\section{Concurrency vs Parallelism}
+%=================================================
+
+\subsection{Concurrency}
+
+Concurrency means multiple tasks make progress during overlapping time periods.
+
+Tasks may not execute simultaneously.
+
+\subsection{Parallelism}
+
+Parallelism means multiple tasks execute at exactly the same time.
+
+Requires multiple processing units.
+
+\subsection{Example}
+
+Single-core CPU:
+
+\[
+Task_A \rightarrow Task_B \rightarrow Task_A
+\]
+
+Concurrent but not parallel.
+
+Multi-core CPU:
+
+\[
+Core_1: Task_A
+\]
+
+\[
+Core_2: Task_B
+\]
+
+Parallel execution.
+
+\subsection{Comparison}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+Feature & Concurrency & Parallelism \\
+\hline
+Simultaneous Execution & Not Required & Required \\
+\hline
+Multiple Cores & Optional & Required \\
+\hline
+Goal & Responsiveness & Performance \\
+\hline
+Example & Async Server & Matrix Multiplication \\
+\hline
+\end{tabular}
+\caption{Concurrency vs Parallelism}
+\end{table}
+
+%=================================================
+\section{Multicore Architectures}
+%=================================================
+
+\subsection{Definition}
+
+A multicore processor contains multiple CPU cores on a single chip.
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Higher throughput
+\item Better energy efficiency
+\item Parallel execution
+\item Improved responsiveness
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (cpu) {CPU Package};
+
+\node[draw,below left=1cm and 2cm of cpu] (c1) {Core 1};
+\node[draw,below=1cm of cpu] (c2) {Core 2};
+\node[draw,below right=1cm and 2cm of cpu] (c3) {Core 3};
+
+\draw (cpu)--(c1);
+\draw (cpu)--(c2);
+\draw (cpu)--(c3);
+
+\end{tikzpicture}
+\caption{Multicore Processor}
+\end{figure}
+
+%=================================================
+\section{Hyperthreading}
+%=================================================
+
+\subsection{Definition}
+
+Hyperthreading allows a physical core to appear as multiple logical processors.
+
+\subsection{Goal}
+
+Improve utilization of execution units.
+
+\subsection{Example}
+
+\[
+8 \text{ Physical Cores}
+\]
+
+with Hyperthreading:
+
+\[
+16 \text{ Logical CPUs}
+\]
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Better CPU utilization
+\item Increased throughput
+\end{itemize}
+
+\subsection{Limitations}
+
+\begin{itemize}
+\item Not equivalent to additional physical cores
+\end{itemize}
+
+%=================================================
+\section{Symmetric Multiprocessing (SMP)}
+%=================================================
+
+\subsection{Definition}
+
+Multiple processors share:
+
+\begin{itemize}
+\item Main memory
+\item I/O subsystem
+\item Operating system
+\end{itemize}
+
+\subsection{Characteristics}
+
+\begin{itemize}
+\item Equal access to resources
+\item Shared memory model
+\item Common in modern servers
+\end{itemize}
+
+%=================================================
+\section{NUMA Systems}
+%=================================================
+
+\subsection{Definition}
+
+NUMA stands for Non-Uniform Memory Access.
+
+\subsection{Idea}
+
+Memory closer to a CPU can be accessed faster.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (cpu1) {CPU 1};
+\node[draw,right=5cm of cpu1] (cpu2) {CPU 2};
+
+\node[draw,below=1cm of cpu1] (m1) {Memory 1};
+\node[draw,below=1cm of cpu2] (m2) {Memory 2};
+
+\draw (cpu1)--(m1);
+\draw (cpu2)--(m2);
+
+\draw[dashed] (cpu1)--(m2);
+\draw[dashed] (cpu2)--(m1);
+
+\end{tikzpicture}
+\caption{NUMA Architecture}
+\end{figure}
+
+\subsection{Interview Insight}
+
+NUMA awareness is critical for high-performance databases and backend systems.
+
+%=================================================
+\section{Thread Pools}
+%=================================================
+
+\subsection{Definition}
+
+A thread pool is a collection of reusable worker threads.
+
+\subsection{Why Needed}
+
+Creating threads repeatedly is expensive.
+
+\subsection{Architecture}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (queue) {Task Queue};
+
+\node[draw,below left=1cm and 2cm of queue] (w1) {Worker 1};
+\node[draw,below=1cm of queue] (w2) {Worker 2};
+\node[draw,below right=1cm and 2cm of queue] (w3) {Worker 3};
+
+\draw[->] (queue)--(w1);
+\draw[->] (queue)--(w2);
+\draw[->] (queue)--(w3);
+
+\end{tikzpicture}
+\caption{Thread Pool}
+\end{figure}
+
+\subsection{Java Example}
+
+\begin{verbatim}
+ExecutorService pool =
+Executors.newFixedThreadPool(4);
+
+pool.submit(() -> {
+    System.out.println("Task");
+});
+\end{verbatim}
+
+%=================================================
+\section{Work Queues}
+%=================================================
+
+\subsection{Definition}
+
+A work queue stores tasks waiting for execution.
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Load balancing
+\item Scalability
+\item Better resource utilization
+\end{itemize}
+
+\section{Fork-Join Model}
+
+\subsection{Definition}
+
+Problem is split into smaller subtasks.
+
+\begin{enumerate}
+\item Fork
+\item Execute
+\item Join
+\end{enumerate}
+
+\subsection{Example}
+
+Parallel Merge Sort.
+
+\subsection{Java Example}
+
+\begin{verbatim}
+ForkJoinPool pool =
+new ForkJoinPool();
+\end{verbatim}
+
+%=================================================
+\section{Task Scheduling}
+%=================================================
+
+Modern runtimes schedule tasks rather than threads.
+
+Examples:
+
+\begin{itemize}
+\item Java Virtual Threads
+\item Go Goroutines
+\item Kotlin Coroutines
+\item Tokio Tasks
+\end{itemize}
+
+Benefits:
+
+\begin{itemize}
+\item Lightweight
+\item Scalable
+\item Millions of concurrent tasks
+\end{itemize}
+
+%=================================================
+\section{Futures}
+%=================================================
+
+\subsection{Definition}
+
+A Future represents a value available later.
+
+\subsection{Java Example}
+
+\begin{verbatim}
+Future<Integer> result =
+executor.submit(() -> 42);
+\end{verbatim}
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Non-blocking workflows
+\item Async execution
+\end{itemize}
+
+%=================================================
+\section{Promises}
+%=================================================
+
+\subsection{Definition}
+
+A Promise is a writable counterpart of a Future.
+
+\subsection{Workflow}
+
+\[
+Producer \rightarrow Promise
+\]
+
+\[
+Consumer \rightarrow Future
+\]
+
+\subsection{Use Cases}
+
+\begin{itemize}
+\item Async APIs
+\item Distributed systems
+\end{itemize}
+
+%=================================================
+\section{Async Programming}
+%=================================================
+
+\subsection{Definition}
+
+Execution proceeds without waiting for long-running operations.
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Better scalability
+\item Higher throughput
+\item Reduced blocking
+\end{itemize}
+
+\subsection{Python Example}
+
+\begin{verbatim}
+import asyncio
+
+async def hello():
+    print("Hello")
+
+asyncio.run(hello())
+\end{verbatim}
+
+%=================================================
+\section{Event Loops}
+%=================================================
+
+\subsection{Definition}
+
+An event loop continuously processes events and callbacks.
+
+\subsection{Architecture}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (loop) {Event Loop};
+
+\node[draw,left=3cm of loop] (events) {Events};
+\node[draw,right=3cm of loop] (handlers) {Handlers};
+
+\draw[->] (events)--(loop);
+\draw[->] (loop)--(handlers);
+
+\end{tikzpicture}
+\caption{Event Loop}
+\end{figure}
+
+\subsection{Examples}
+
+\begin{itemize}
+\item Node.js
+\item Python asyncio
+\item Nginx
+\end{itemize}
+
+%=================================================
+\section{Non-Blocking Programming}
+%=================================================
+
+\subsection{Definition}
+
+Operations return immediately without blocking threads.
+
+\subsection{Examples}
+
+\begin{itemize}
+\item Async I/O
+\item Epoll
+\item io\_uring
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Better scalability
+\item Fewer threads
+\end{itemize}
+
+%=================================================
+\section{Lock-Free Data Structures}
+%=================================================
+
+\subsection{Definition}
+
+System-wide progress is guaranteed without locks.
+
+\subsection{Tools}
+
+\begin{itemize}
+\item CAS
+\item Atomic Operations
+\end{itemize}
+
+\subsection{Example}
+
+Lock-free queue.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item High performance
+\item No deadlocks
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Complex implementation
+\end{itemize}
+
+%=================================================
+\section{Wait-Free Algorithms}
+%=================================================
+
+\subsection{Definition}
+
+Every thread completes its operation in finite steps.
+
+\subsection{Properties}
+
+\begin{itemize}
+\item Stronger than lock-free
+\item No starvation
+\end{itemize}
+
+\subsection{Challenge}
+
+Very difficult to implement.
+
+%=================================================
+\section{Software Transactional Memory}
+%=================================================
+
+\subsection{Definition}
+
+Treat memory operations as transactions.
+
+\subsection{Workflow}
+
+\begin{enumerate}
+\item Begin Transaction
+\item Execute
+\item Commit
+\item Retry on Conflict
+\end{enumerate}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Easier reasoning
+\item Reduced locking
+\end{itemize}
+
+%=================================================
+\section{Actor Model}
+%=================================================
+
+\subsection{Definition}
+
+Actors communicate through messages.
+
+No shared memory.
+
+\subsection{Principles}
+
+\begin{itemize}
+\item Encapsulation
+\item Message Passing
+\item Isolation
+\end{itemize}
+
+\subsection{Examples}
+
+\begin{itemize}
+\item Erlang
+\item Akka
+\item Orleans
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (a1) {Actor A};
+\node[draw,right=4cm of a1] (a2) {Actor B};
+
+\draw[->] (a1)--(a2);
+
+\end{tikzpicture}
+\caption{Actor Communication}
+\end{figure}
+
+%=================================================
+\section{Reactive Programming Concepts}
+%=================================================
+
+\subsection{Definition}
+
+Programming based on asynchronous streams.
+
+\subsection{Features}
+
+\begin{itemize}
+\item Event-driven
+\item Non-blocking
+\item Backpressure support
+\end{itemize}
+
+\subsection{Examples}
+
+\begin{itemize}
+\item RxJava
+\item Reactor
+\item Akka Streams
+\end{itemize}
+
+%=================================================
+\section{Modern Concurrency Challenges}
+%=================================================
+
+\begin{itemize}
+\item Race Conditions
+\item Deadlocks
+\item Livelocks
+\item Starvation
+\item False Sharing
+\item Cache Coherency
+\item NUMA Effects
+\item Memory Ordering
+\end{itemize}
+
+%=================================================
+\section{Thread-per-Request vs Event-Driven Architectures}
+%=================================================
+
+\subsection{Thread-per-Request}
+
+Each request gets a dedicated thread.
+
+Examples:
+
+\begin{itemize}
+\item Traditional Java Servers
+\item Apache HTTP Server
+\end{itemize}
+
+Advantages:
+
+\begin{itemize}
+\item Simpler programming model
+\end{itemize}
+
+Disadvantages:
+
+\begin{itemize}
+\item High memory usage
+\item Context switching overhead
+\end{itemize}
+
+\subsection{Event-Driven Architecture}
+
+Single or few threads process many requests.
+
+Examples:
+
+\begin{itemize}
+\item Nginx
+\item Node.js
+\item Redis
+\end{itemize}
+
+Advantages:
+
+\begin{itemize}
+\item Massive scalability
+\end{itemize}
+
+Disadvantages:
+
+\begin{itemize}
+\item More complex logic
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{4cm}|p{4cm}|}
+\hline
+Feature & Thread-per-Request & Event Driven \\
+\hline
+Threads & Many & Few \\
+\hline
+Memory & High & Low \\
+\hline
+Scalability & Moderate & High \\
+\hline
+Complexity & Low & High \\
+\hline
+\end{tabular}
+\caption{Architecture Comparison}
+\end{table}
+
+%=================================================
+\section{How High-Concurrency Servers Work}
+%=================================================
+
+Modern servers use:
+
+\begin{itemize}
+\item Event Loops
+\item Async I/O
+\item Thread Pools
+\item Work Queues
+\item Lock-Free Structures
+\item Load Balancing
+\end{itemize}
+
+Examples:
+
+\begin{itemize}
+\item Nginx
+\item Netty
+\item Redis
+\item Kafka
+\item Envoy
+\end{itemize}
+
+Typical architecture:
+
+\[
+Network \rightarrow Event\ Loop \rightarrow Task\ Queue
+\]
+
+\[
+\rightarrow Worker\ Pool \rightarrow Response
+\]
+
+%=================================================
+\section{Java Examples}
+%=================================================
+
+\subsection{CompletableFuture}
+
+\begin{verbatim}
+CompletableFuture.supplyAsync(
+    () -> "Hello"
+);
+\end{verbatim}
+
+\subsection{ExecutorService}
+
+\begin{verbatim}
+ExecutorService executor =
+Executors.newFixedThreadPool(8);
+\end{verbatim}
+
+%=================================================
+\section{Python Examples}
+%=================================================
+
+\subsection{Asyncio}
+
+\begin{verbatim}
+import asyncio
+
+async def work():
+    await asyncio.sleep(1)
+
+asyncio.run(work())
+\end{verbatim}
+
+%=================================================
+\section{C++ Examples}
+%=================================================
+
+\subsection{Future}
+
+\begin{verbatim}
+auto result =
+std::async([] {
+    return 42;
+});
+\end{verbatim}
+
+\subsection{Thread}
+
+\begin{verbatim}
+std::thread t(task);
+t.join();
+\end{verbatim}
+
+%=================================================
+\section{Backend Service Examples}
+%=================================================
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{7cm}|}
+\hline
+System & Concurrency Model \\
+\hline
+Nginx & Event Driven \\
+\hline
+Redis & Single Thread Event Loop \\
+\hline
+Kafka & Thread Pools \\
+\hline
+Netty & Event Loop Groups \\
+\hline
+Go Services & Goroutines \\
+\hline
+Akka & Actor Model \\
+\hline
+\end{tabular}
+\caption{Real-World Concurrency Models}
+\end{table}
+
+%=================================================
+\section{Performance Discussion}
+%=================================================
+
+Key performance factors:
+
+\begin{itemize}
+\item Context Switches
+\item Lock Contention
+\item Cache Locality
+\item False Sharing
+\item Memory Bandwidth
+\item NUMA Awareness
+\item Thread Scheduling
+\end{itemize}
+
+Interview insight:
+
+\begin{quote}
+Scalable systems minimize blocking and maximize useful CPU work.
+\end{quote}
+
+%=================================================
+\section{Modern Concurrency Interview Questions}
+%=================================================
+
+Common interview themes:
+
+\begin{itemize}
+\item Futures vs Promises
+\item Thread Pools
+\item Event Loops
+\item Actor Model
+\item Async vs Multithreading
+\item Lock-Free Programming
+\item NUMA
+\item High-Concurrency Servers
+\end{itemize}
+
+%=================================================
+\section{Key Takeaways}
+%=================================================
+
+\begin{itemize}
+\item Concurrency and parallelism are different concepts.
+\item Modern systems rely heavily on multicore processors.
+\item Thread pools improve efficiency.
+\item Futures and promises simplify async workflows.
+\item Event loops power scalable servers.
+\item Lock-free algorithms improve throughput.
+\item Actor systems eliminate shared memory issues.
+\item Reactive programming supports asynchronous streams.
+\item High-concurrency servers avoid blocking.
+\item Modern SDE interviews frequently test concurrency knowledge.
+\end{itemize}
+
+%=================================================
+\section{25 Interview Questions with Answers}
+%=================================================
+
+\begin{enumerate}
+\item What is concurrency?\\
+Answer: Multiple tasks making progress during overlapping time.
+
+\item What is parallelism?\\
+Answer: Simultaneous execution of tasks.
+
+\item Difference between concurrency and parallelism?\\
+Answer: Parallelism requires simultaneous execution.
+
+\item What is hyperthreading?\\
+Answer: Multiple logical CPUs per physical core.
+
+\item What is SMP?\\
+Answer: Shared-memory multiprocessor architecture.
+
+\item What is NUMA?\\
+Answer: Non-Uniform Memory Access.
+
+\item Why use thread pools?\\
+Answer: Reduce thread creation overhead.
+
+\item What is a work queue?\\
+Answer: Queue of pending tasks.
+
+\item What is fork-join?\\
+Answer: Divide and merge parallel computation.
+
+\item What is a Future?\\
+Answer: Result available later.
+
+\item What is a Promise?\\
+Answer: Producer side of a Future.
+
+\item What is async programming?\\
+Answer: Non-blocking execution model.
+
+\item What is an event loop?\\
+Answer: Dispatcher for asynchronous events.
+
+\item What is non-blocking I/O?\\
+Answer: I/O that does not stall threads.
+
+\item What is lock-free programming?\\
+Answer: Progress without locks.
+
+\item What is wait-free programming?\\
+Answer: Every thread completes in finite steps.
+
+\item What is STM?\\
+Answer: Software Transactional Memory.
+
+\item What is the Actor Model?\\
+Answer: Message-based concurrency.
+
+\item What is reactive programming?\\
+Answer: Programming with asynchronous streams.
+
+\item What causes false sharing?\\
+Answer: Multiple threads updating same cache line.
+
+\item Why is NUMA important?\\
+Answer: Memory locality affects performance.
+
+\item What powers Node.js?\\
+Answer: Event loop.
+
+\item Why avoid excessive threads?\\
+Answer: Context-switch overhead.
+
+\item How does Nginx scale?\\
+Answer: Event-driven architecture.
+
+\item What is lock contention?\\
+Answer: Multiple threads competing for locks.
+\end{enumerate}
+
+%=================================================
+\section{25 MCQs with Answers}
+%=================================================
+
+\begin{enumerate}
+\item Parallelism requires:
+Answer: Multiple Execution Units
+
+\item Hyperthreading creates:
+Answer: Logical CPUs
+
+\item NUMA stands for:
+Answer: Non-Uniform Memory Access
+
+\item Thread pools improve:
+Answer: Efficiency
+
+\item Future represents:
+Answer: Future Result
+
+\item Promise is:
+Answer: Writable Future
+
+\item Node.js uses:
+Answer: Event Loop
+
+\item Redis primarily uses:
+Answer: Event Loop
+
+\item Async programming reduces:
+Answer: Blocking
+
+\item Lock-free structures use:
+Answer: Atomic Operations
+
+\item Wait-free guarantees:
+Answer: Per-thread Progress
+
+\item Actor model uses:
+Answer: Message Passing
+
+\item STM stands for:
+Answer: Software Transactional Memory
+
+\item Nginx is:
+Answer: Event Driven
+
+\item Go uses:
+Answer: Goroutines
+
+\item Reactive systems process:
+Answer: Streams
+
+\item Thread-per-request creates:
+Answer: Many Threads
+
+\item Event-driven servers create:
+Answer: Few Threads
+
+\item False sharing affects:
+Answer: Cache Performance
+
+\item NUMA impacts:
+Answer: Memory Latency
+
+\item CompletableFuture belongs to:
+Answer: Java
+
+\item asyncio belongs to:
+Answer: Python
+
+\item std::future belongs to:
+Answer: C++
+
+\item Fork-Join is useful for:
+Answer: Parallel Tasks
+
+\item Lock contention decreases:
+Answer: Throughput
+\end{enumerate}
+
+%=================================================
+\section{Revision Notes}
+%=================================================
+
+\begin{itemize}
+\item Concurrency ≠ Parallelism.
+\item Multicore processors enable parallel execution.
+\item Thread pools reduce overhead.
+\item Futures represent future results.
+\item Promises complete futures.
+\item Event loops power scalable servers.
+\item Async programming avoids blocking.
+\item Lock-free algorithms improve throughput.
+\item Wait-free guarantees completion.
+\item Actor systems use message passing.
+\item NUMA affects memory access speed.
+\item Modern backend systems are heavily asynchronous.
+\end{itemize}
+
+%=================================================
+\section{Cheat Sheet}
+%=================================================
+
+\begin{center}
+\begin{tabular}{|p{5cm}|p{8cm}|}
+\hline
+Concurrency & Overlapping Progress \\
+\hline
+Parallelism & Simultaneous Execution \\
+\hline
+Hyperthreading & Multiple Logical CPUs \\
+\hline
+SMP & Shared Memory Multiprocessing \\
+\hline
+NUMA & Non-Uniform Memory Access \\
+\hline
+Thread Pool & Reusable Threads \\
+\hline
+Work Queue & Pending Tasks \\
+\hline
+Future & Future Result \\
+\hline
+Promise & Future Producer \\
+\hline
+Event Loop & Async Dispatcher \\
+\hline
+Async Programming & Non-Blocking Execution \\
+\hline
+Lock-Free & System Progress Guaranteed \\
+\hline
+Wait-Free & Per-Thread Progress Guaranteed \\
+\hline
+STM & Transactional Memory \\
+\hline
+Actor Model & Message Passing \\
+\hline
+Reactive Programming & Async Streams \\
+\hline
+Nginx & Event Driven \\
+\hline
+Node.js & Event Loop \\
+\hline
+Redis & Event Loop \\
+\hline
+Go & Goroutines \\
+\hline
+\end{tabular}
+\end{center}

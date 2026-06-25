@@ -1,0 +1,976 @@
+\chapter{File System Fundamentals}
+
+\section{Introduction}
+
+A file system is one of the most important components of an operating system. It provides a structured way to store, organize, retrieve, protect, and manage data on storage devices such as hard disks, SSDs, USB drives, and network storage systems.
+
+For Software Development Engineer interviews, file systems are frequently discussed because they directly impact storage efficiency, application performance, reliability, security, and scalability.
+
+\section{Learning Objectives}
+
+After completing this chapter, you should be able to:
+
+\begin{itemize}
+\item Understand the purpose of file systems.
+\item Explain file concepts and attributes.
+\item Describe common file operations.
+\item Differentiate file access methods.
+\item Analyze directory structures.
+\item Understand metadata and permissions.
+\item Explain hard links and symbolic links.
+\item Solve common interview questions on file systems.
+\end{itemize}
+
+%====================================================
+\section{What is a File System}
+%====================================================
+
+\subsection{Definition}
+
+A File System is a collection of methods and data structures that an operating system uses to store, organize, retrieve, and manage files on storage devices.
+
+\subsection{Responsibilities}
+
+\begin{itemize}
+\item File Storage
+\item File Retrieval
+\item Directory Management
+\item Access Control
+\item Space Management
+\item Metadata Maintenance
+\item Data Integrity
+\end{itemize}
+
+\subsection{Examples}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Operating System & File System \\
+\hline
+Linux & ext4, XFS, Btrfs \\
+Windows & NTFS, FAT32, exFAT \\
+macOS & APFS, HFS+ \\
+\hline
+\end{tabular}
+\caption{Common File Systems}
+\end{table}
+
+\section{File Concept}
+
+\subsection{Definition}
+
+A file is a named collection of related information stored on secondary storage.
+
+\subsection{Examples}
+
+\begin{itemize}
+\item source.cpp
+\item report.pdf
+\item image.jpg
+\item database.db
+\item video.mp4
+\end{itemize}
+
+\subsection{Real-World Analogy}
+
+Think of a file cabinet:
+
+\begin{itemize}
+\item Cabinet = Storage Device
+\item Folder = Directory
+\item Document = File
+\end{itemize}
+
+\section{File Attributes}
+
+Every file contains metadata called file attributes.
+
+\subsection{Common Attributes}
+
+\begin{itemize}
+\item Name
+\item Identifier
+\item Type
+\item Location
+\item Size
+\item Creation Time
+\item Modification Time
+\item Access Time
+\item Owner
+\item Permissions
+\end{itemize}
+
+\subsection{Example}
+
+Linux:
+
+\begin{verbatim}
+-rw-r--r-- 1 user user 2048 Jan 1 notes.txt
+\end{verbatim}
+
+Contains:
+
+\begin{itemize}
+\item Permissions
+\item Owner
+\item Size
+\item Timestamp
+\item Filename
+\end{itemize}
+
+%====================================================
+\section{File Operations}
+%====================================================
+
+Common file operations include:
+
+\begin{enumerate}
+\item Create
+\item Open
+\item Read
+\item Write
+\item Append
+\item Seek
+\item Rename
+\item Close
+\item Delete
+\item Truncate
+\end{enumerate}
+
+\subsection{Linux Example}
+
+Create file:
+
+\begin{verbatim}
+touch notes.txt
+\end{verbatim}
+
+Delete file:
+
+\begin{verbatim}
+rm notes.txt
+\end{verbatim}
+
+\subsection{Windows Example}
+
+Create file:
+
+\begin{verbatim}
+type nul > notes.txt
+\end{verbatim}
+
+Delete file:
+
+\begin{verbatim}
+del notes.txt
+\end{verbatim}
+
+%====================================================
+\section{Access Methods}
+%====================================================
+
+File systems provide different ways to access data.
+
+\begin{enumerate}
+\item Sequential Access
+\item Direct Access
+\item Indexed Access
+\end{enumerate}
+
+%====================================================
+\section{Sequential Access}
+%====================================================
+
+\subsection{Definition}
+
+Records are accessed in sequence.
+
+\subsection{Example}
+
+Reading a text file line-by-line.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\node[draw] (a) {Record 1};
+\node[draw,right=1.5cm of a] (b) {Record 2};
+\node[draw,right=1.5cm of b] (c) {Record 3};
+
+\draw[->] (a)--(b);
+\draw[->] (b)--(c);
+\end{tikzpicture}
+\caption{Sequential Access}
+\end{figure}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Simple
+\item Efficient for streaming
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Slow random access
+\end{itemize}
+
+%====================================================
+\section{Direct Access}
+%====================================================
+
+\subsection{Definition}
+
+Any record can be accessed directly.
+
+\subsection{Example}
+
+Database record lookup.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\node[draw] (cpu) {Request};
+\node[draw,right=4cm of cpu] (rec) {Record 100};
+
+\draw[->] (cpu)--(rec);
+\end{tikzpicture}
+\caption{Direct Access}
+\end{figure}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Fast retrieval
+\item Suitable for databases
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Additional indexing overhead
+\end{itemize}
+
+%====================================================
+\section{Indexed Access}
+%====================================================
+
+\subsection{Definition}
+
+An index maps records to storage locations.
+
+\subsection{Example}
+
+Database B+ Tree index.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\node[draw] (idx) {Index};
+
+\node[draw,below left=1cm and 2cm of idx] (r1) {R1};
+\node[draw,below=1cm of idx] (r2) {R2};
+\node[draw,below right=1cm and 2cm of idx] (r3) {R3};
+
+\draw[->] (idx)--(r1);
+\draw[->] (idx)--(r2);
+\draw[->] (idx)--(r3);
+\end{tikzpicture}
+\caption{Indexed Access}
+\end{figure}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Efficient searching
+\item Supports large datasets
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Extra storage for index
+\end{itemize}
+
+%====================================================
+\section{Directory Structures}
+%====================================================
+
+Directories organize files into a hierarchy.
+
+Common structures:
+
+\begin{enumerate}
+\item Single-Level Directory
+\item Two-Level Directory
+\item Tree-Structured Directory
+\item Acyclic Graph Directory
+\item General Graph Directory
+\end{enumerate}
+
+%====================================================
+\section{Single-Level Directory}
+%====================================================
+
+\subsection{Definition}
+
+All files reside in one directory.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\node[draw] (root) {/};
+
+\node[draw,below left=1cm and 1cm of root] (f1) {A.txt};
+\node[draw,below=1cm of root] (f2) {B.txt};
+\node[draw,below right=1cm and 1cm of root] (f3) {C.txt};
+
+\draw (root)--(f1);
+\draw (root)--(f2);
+\draw (root)--(f3);
+\end{tikzpicture}
+\caption{Single-Level Directory}
+\end{figure}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Simple
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Filename conflicts
+\item Poor scalability
+\end{itemize}
+
+%====================================================
+\section{Two-Level Directory}
+%====================================================
+
+\subsection{Definition}
+
+Each user has a separate directory.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\node[draw] (root) {Root};
+
+\node[draw,below left=1cm and 2cm of root] (u1) {User1};
+\node[draw,below right=1cm and 2cm of root] (u2) {User2};
+
+\draw (root)--(u1);
+\draw (root)--(u2);
+
+\end{tikzpicture}
+\caption{Two-Level Directory}
+\end{figure}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Avoids name conflicts
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Limited organization
+\end{itemize}
+
+%====================================================
+\section{Tree-Structured Directory}
+%====================================================
+
+\subsection{Definition}
+
+Directories may contain files and subdirectories.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (root) {/};
+
+\node[draw,below left=1cm and 2cm of root] (home) {home};
+\node[draw,below right=1cm and 2cm of root] (etc) {etc};
+
+\node[draw,below=1cm of home] (user) {user};
+
+\node[draw,below=1cm of user] (docs) {documents};
+
+\draw (root)--(home);
+\draw (root)--(etc);
+\draw (home)--(user);
+\draw (user)--(docs);
+
+\end{tikzpicture}
+\caption{Tree-Structured Directory}
+\end{figure}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Highly scalable
+\item Natural hierarchy
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item More complex traversal
+\end{itemize}
+
+%====================================================
+\section{Acyclic Graph Directories}
+%====================================================
+
+\subsection{Definition}
+
+Allows shared files and directories without cycles.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Resource sharing
+\item No infinite traversal loops
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item More complex management
+\end{itemize}
+
+%====================================================
+\section{General Graph Directories}
+%====================================================
+
+\subsection{Definition}
+
+Allows arbitrary links, including cycles.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Maximum flexibility
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Infinite traversal risk
+\item Garbage collection challenges
+\end{itemize}
+
+%====================================================
+\section{File Metadata}
+%====================================================
+
+\subsection{Definition}
+
+Metadata is information about a file rather than file content.
+
+\subsection{Examples}
+
+\begin{itemize}
+\item Owner
+\item Size
+\item Permissions
+\item Creation Time
+\item Modification Time
+\end{itemize}
+
+Linux command:
+
+\begin{verbatim}
+stat file.txt
+\end{verbatim}
+
+%====================================================
+\section{File Permissions}
+%====================================================
+
+\subsection{Linux Permissions}
+
+\begin{verbatim}
+-rwxr-xr--
+\end{verbatim}
+
+\subsection{Meaning}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Symbol & Meaning \\
+\hline
+r & Read \\
+w & Write \\
+x & Execute \\
+\hline
+\end{tabular}
+\caption{Permission Symbols}
+\end{table}
+
+\subsection{Permission Groups}
+
+\begin{itemize}
+\item Owner
+\item Group
+\item Others
+\end{itemize}
+
+%====================================================
+\section{Links}
+%====================================================
+
+A link is a directory entry referencing a file.
+
+Types:
+
+\begin{enumerate}
+\item Hard Link
+\item Symbolic Link
+\end{enumerate}
+
+%====================================================
+\section{Hard Links}
+%====================================================
+
+\subsection{Definition}
+
+A hard link is another name for the same inode.
+
+\subsection{Linux Example}
+
+\begin{verbatim}
+ln file1 file2
+\end{verbatim}
+
+\subsection{Properties}
+
+\begin{itemize}
+\item Same inode
+\item Cannot span file systems
+\item Usually not allowed for directories
+\end{itemize}
+
+\subsection{Illustration}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (f1) {file1};
+\node[draw,right=4cm of f1] (inode) {inode 100};
+
+\node[draw,below=1cm of f1] (f2) {file2};
+
+\draw[->] (f1)--(inode);
+\draw[->] (f2)--(inode);
+
+\end{tikzpicture}
+\caption{Hard Links}
+\end{figure}
+
+%====================================================
+\section{Symbolic Links}
+%====================================================
+
+\subsection{Definition}
+
+A symbolic link stores a pathname pointing to another file.
+
+\subsection{Linux Example}
+
+\begin{verbatim}
+ln -s target link
+\end{verbatim}
+
+\subsection{Properties}
+
+\begin{itemize}
+\item Different inode
+\item Can span file systems
+\item Can point to directories
+\item Can become dangling
+\end{itemize}
+
+\subsection{Illustration}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (link) {soft link};
+
+\node[draw,right=5cm of link] (target) {target file};
+
+\draw[->] (link)--(target);
+
+\end{tikzpicture}
+\caption{Symbolic Link}
+\end{figure}
+
+%====================================================
+\section{Hard Link vs Soft Link}
+%====================================================
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+Feature & Hard Link & Soft Link \\
+\hline
+References & Inode & Pathname \\
+\hline
+Same Inode & Yes & No \\
+\hline
+Cross Filesystems & No & Yes \\
+\hline
+Directory Support & Usually No & Yes \\
+\hline
+Dangling Possible & No & Yes \\
+\hline
+Delete Original & Still Works & Breaks Link \\
+\hline
+\end{tabular}
+\caption{Hard Link vs Symbolic Link}
+\end{table}
+
+%====================================================
+\section{Linux Examples}
+%====================================================
+
+List files:
+
+\begin{verbatim}
+ls
+\end{verbatim}
+
+Detailed listing:
+
+\begin{verbatim}
+ls -l
+\end{verbatim}
+
+Create directory:
+
+\begin{verbatim}
+mkdir project
+\end{verbatim}
+
+Show metadata:
+
+\begin{verbatim}
+stat file.txt
+\end{verbatim}
+
+Create hard link:
+
+\begin{verbatim}
+ln a.txt b.txt
+\end{verbatim}
+
+Create symbolic link:
+
+\begin{verbatim}
+ln -s a.txt link.txt
+\end{verbatim}
+
+%====================================================
+\section{Windows Examples}
+%====================================================
+
+Create directory:
+
+\begin{verbatim}
+mkdir project
+\end{verbatim}
+
+List files:
+
+\begin{verbatim}
+dir
+\end{verbatim}
+
+Create symbolic link:
+
+\begin{verbatim}
+mklink link.txt target.txt
+\end{verbatim}
+
+Create directory junction:
+
+\begin{verbatim}
+mklink /J linkdir targetdir
+\end{verbatim}
+
+%====================================================
+\section{Directory Structure Comparison}
+%====================================================
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{|p{4cm}|p{4cm}|p{5cm}|}
+\hline
+Structure & Advantage & Disadvantage \\
+\hline
+Single-Level & Simple & Name Conflicts \\
+\hline
+Two-Level & User Isolation & Limited Hierarchy \\
+\hline
+Tree & Scalable & More Complex \\
+\hline
+Acyclic Graph & Sharing & Management Overhead \\
+\hline
+General Graph & Flexible & Cycles Possible \\
+\hline
+\end{tabular}
+\caption{Directory Structure Comparison}
+\end{table}
+
+%====================================================
+\section{Interview Focus}
+%====================================================
+
+\subsection{Frequently Asked Topics}
+
+\begin{itemize}
+\item Hard Link vs Soft Link
+\item Directory Structures
+\item Inodes
+\item Metadata
+\item File Permissions
+\item Access Methods
+\end{itemize}
+
+\subsection{Golden Rule}
+
+\begin{center}
+Hard Link = Same Inode
+
+Soft Link = Path Reference
+\end{center}
+
+%====================================================
+\section{Key Takeaways}
+%====================================================
+
+\begin{itemize}
+\item File systems organize and manage storage.
+\item Files are named collections of data.
+\item Metadata describes file properties.
+\item Sequential, direct, and indexed access are common methods.
+\item Tree directories dominate modern systems.
+\item Hard links share the same inode.
+\item Symbolic links store paths.
+\item Linux and Windows support hierarchical directories.
+\item Permissions provide security.
+\item Directory design affects scalability.
+\end{itemize}
+
+%====================================================
+\section{20 Interview Questions with Answers}
+%====================================================
+
+\begin{enumerate}
+\item What is a file system?\\
+Answer: A mechanism for organizing and managing files on storage devices.
+
+\item What is a file?\\
+Answer: A named collection of related data.
+
+\item What are file attributes?\\
+Answer: Metadata such as size, owner, permissions, and timestamps.
+
+\item What is metadata?\\
+Answer: Information about a file.
+
+\item What is sequential access?\\
+Answer: Accessing records in order.
+
+\item What is direct access?\\
+Answer: Accessing any record directly.
+
+\item What is indexed access?\\
+Answer: Using an index for retrieval.
+
+\item What is a directory?\\
+Answer: A structure that organizes files.
+
+\item What is a single-level directory?\\
+Answer: All files stored in one directory.
+
+\item What is a two-level directory?\\
+Answer: Separate directories per user.
+
+\item What is a tree directory?\\
+Answer: Hierarchical directory structure.
+
+\item What is an acyclic graph directory?\\
+Answer: Shared files without cycles.
+
+\item What is a general graph directory?\\
+Answer: Directory structure allowing cycles.
+
+\item What are file permissions?\\
+Answer: Access control settings.
+
+\item What does chmod modify?\\
+Answer: File permissions.
+
+\item What is a hard link?\\
+Answer: Another name for the same inode.
+
+\item What is a symbolic link?\\
+Answer: A path reference to another file.
+
+\item Can hard links cross file systems?\\
+Answer: No.
+
+\item Can symbolic links cross file systems?\\
+Answer: Yes.
+
+\item Which directory structure is most common?\\
+Answer: Tree-structured directory.
+\end{enumerate}
+
+%====================================================
+\section{20 MCQs with Answers}
+%====================================================
+
+\begin{enumerate}
+\item A file system manages:
+A) CPU
+B) Memory
+C) Storage
+D) Cache
+
+Answer: C
+
+\item File metadata contains:
+Answer: File Attributes
+
+\item Sequential access reads:
+Answer: In Order
+
+\item Direct access allows:
+Answer: Random Retrieval
+
+\item Indexed access uses:
+Answer: Index Structure
+
+\item Tree directories are:
+Answer: Hierarchical
+
+\item Hard links share:
+Answer: Inode
+
+\item Symbolic links store:
+Answer: Pathname
+
+\item Linux file permissions include:
+Answer: r, w, x
+
+\item chmod changes:
+Answer: Permissions
+
+\item Hard links can cross filesystems:
+Answer: No
+
+\item Soft links can cross filesystems:
+Answer: Yes
+
+\item Dangling links occur with:
+Answer: Symbolic Links
+
+\item Common Linux filesystem:
+Answer: ext4
+
+\item Common Windows filesystem:
+Answer: NTFS
+
+\item File size is:
+Answer: Metadata
+
+\item Tree structure provides:
+Answer: Scalability
+
+\item Single-level directories suffer:
+Answer: Name Conflicts
+
+\item Acyclic graph allows:
+Answer: Sharing
+
+\item Most common directory structure:
+Answer: Tree
+\end{enumerate}
+
+%====================================================
+\section{Revision Notes}
+%====================================================
+
+\begin{itemize}
+\item File systems organize storage.
+\item Files contain data.
+\item Metadata describes files.
+\item Access methods include sequential, direct, and indexed.
+\item Directories organize files.
+\item Tree structure is most common.
+\item Hard links share inodes.
+\item Symbolic links store paths.
+\item Permissions provide security.
+\item Linux and Windows use hierarchical directories.
+\end{itemize}
+
+%====================================================
+\section{Cheat Sheet}
+%====================================================
+
+\begin{center}
+\begin{tabular}{|p{5cm}|p{8cm}|}
+\hline
+File & Named Collection of Data \\
+\hline
+Metadata & Data About Data \\
+\hline
+Sequential Access & Ordered Access \\
+\hline
+Direct Access & Random Access \\
+\hline
+Indexed Access & Index-Based Access \\
+\hline
+Single-Level Directory & One Directory \\
+\hline
+Two-Level Directory & Per User Directory \\
+\hline
+Tree Directory & Hierarchical Structure \\
+\hline
+Acyclic Graph & Sharing Without Cycles \\
+\hline
+General Graph & Cycles Allowed \\
+\hline
+Hard Link & Same Inode \\
+\hline
+Symbolic Link & Path Reference \\
+\hline
+Hard Link Cross FS & No \\
+\hline
+Soft Link Cross FS & Yes \\
+\hline
+Permissions & r, w, x \\
+\hline
+Linux FS & ext4 \\
+\hline
+Windows FS & NTFS \\
+\hline
+\end{tabular}
+\end{center}

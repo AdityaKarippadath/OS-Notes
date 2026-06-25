@@ -1,0 +1,15 @@
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Goals of an Operating System}}{5}{table.caption.5}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Hard vs Soft RTOS}}{9}{table.caption.8}%
+\contentsline {table}{\numberline {1.3}{\ignorespaces Kernel Types}}{10}{table.caption.10}%
+\contentsline {table}{\numberline {1.4}{\ignorespaces User Mode vs Kernel Mode}}{11}{table.caption.11}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Program vs Process}}{32}{table.caption.24}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces fork() Return Values}}{37}{table.caption.29}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Linux Process Commands}}{42}{table.caption.31}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Scheduling Algorithm Comparison}}{68}{table.caption.42}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

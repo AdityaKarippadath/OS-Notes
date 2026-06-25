@@ -1,0 +1,972 @@
+\chapter{Operating System Security}
+
+\section{Introduction}
+
+Operating System (OS) security focuses on protecting system resources, processes, memory, files, devices, and users from unauthorized access, misuse, and attacks.
+
+Modern operating systems such as Linux, Windows, macOS, Android, and iOS implement multiple layers of defense to provide confidentiality, integrity, and availability.
+
+For Software Development Engineers (SDEs), OS security knowledge is important because security vulnerabilities often arise from improper privilege handling, memory misuse, weak authentication mechanisms, and insecure system design.
+
+\section{Learning Objectives}
+
+After completing this chapter, you should be able to:
+
+\begin{itemize}
+\item Understand core OS security concepts.
+\item Explain authentication and authorization mechanisms.
+\item Compare ACLs and capabilities.
+\item Understand memory protection techniques.
+\item Explain ASLR and DEP.
+\item Understand sandboxing and secure boot.
+\item Describe SELinux and AppArmor.
+\item Understand container security fundamentals.
+\item Identify common operating system vulnerabilities.
+\item Answer OS security interview questions confidently.
+\end{itemize}
+
+%=========================================================
+\section{Security Fundamentals}
+%=========================================================
+
+\subsection{Definition}
+
+Security is the protection of computing resources against unauthorized access, modification, destruction, or disclosure.
+
+\subsection{CIA Triad}
+
+The foundation of information security consists of:
+
+\begin{enumerate}
+\item Confidentiality
+\item Integrity
+\item Availability
+\end{enumerate}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{3cm}|p{9cm}|}
+\hline
+Property & Description \\
+\hline
+Confidentiality & Prevent unauthorized access to information \\
+\hline
+Integrity & Prevent unauthorized modification \\
+\hline
+Availability & Ensure resources remain accessible \\
+\hline
+\end{tabular}
+\caption{CIA Triad}
+\end{table}
+
+\subsection{Example}
+
+Online banking systems require:
+
+\begin{itemize}
+\item Confidentiality of account data.
+\item Integrity of transactions.
+\item Availability of services.
+\end{itemize}
+
+%=========================================================
+\section{Threat Model Basics}
+%=========================================================
+
+\subsection{Definition}
+
+A threat model identifies:
+
+\begin{itemize}
+\item Assets
+\item Threats
+\item Attackers
+\item Attack Surfaces
+\item Mitigations
+\end{itemize}
+
+\subsection{Typical Threats}
+
+\begin{itemize}
+\item Malware
+\item Privilege Escalation
+\item Data Theft
+\item Insider Threats
+\item Remote Exploits
+\item Denial of Service
+\end{itemize}
+
+\subsection{Security Architecture}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (user) {User};
+\node[draw,below=1.5cm of user] (app) {Application};
+\node[draw,below=1.5cm of app] (kernel) {Kernel};
+\node[draw,below=1.5cm of kernel] (hardware) {Hardware};
+
+\draw[->] (user)--(app);
+\draw[->] (app)--(kernel);
+\draw[->] (kernel)--(hardware);
+
+\end{tikzpicture}
+\caption{Security Layers}
+\end{figure}
+
+%=========================================================
+\section{Authentication}
+%=========================================================
+
+\subsection{Definition}
+
+Authentication verifies identity.
+
+Question answered:
+
+\begin{quote}
+Who are you?
+\end{quote}
+
+\subsection{Methods}
+
+\begin{itemize}
+\item Passwords
+\item Biometrics
+\item Smart Cards
+\item OTPs
+\item Multi-Factor Authentication
+\end{itemize}
+
+\subsection{Linux Example}
+
+\begin{verbatim}
+/etc/passwd
+/etc/shadow
+\end{verbatim}
+
+\subsection{Windows Example}
+
+Authentication is commonly integrated with:
+
+\begin{itemize}
+\item Active Directory
+\item Kerberos
+\item NTLM
+\end{itemize}
+
+%=========================================================
+\section{Authorization}
+%=========================================================
+
+\subsection{Definition}
+
+Authorization determines allowed actions.
+
+Question answered:
+
+\begin{quote}
+What are you allowed to do?
+\end{quote}
+
+\subsection{Examples}
+
+\begin{itemize}
+\item Read file
+\item Write file
+\item Execute program
+\item Access device
+\end{itemize}
+
+\section{Authentication vs Authorization}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|}
+\hline
+Authentication & Authorization \\
+\hline
+Identity Verification & Permission Verification \\
+\hline
+Who Are You? & What Can You Do? \\
+\hline
+Occurs First & Occurs After Authentication \\
+\hline
+Password Login & File Access Check \\
+\hline
+\end{tabular}
+\caption{Authentication vs Authorization}
+\end{table}
+
+%=========================================================
+\section{Access Control Matrix}
+%=========================================================
+
+\subsection{Definition}
+
+An Access Control Matrix defines permissions between subjects and objects.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+ & File A & File B \\
+\hline
+Alice & RW & R \\
+\hline
+Bob & R & RWX \\
+\hline
+\end{tabular}
+\caption{Access Control Matrix}
+\end{table}
+
+\subsection{Challenge}
+
+Matrices become very large in real systems.
+
+%=========================================================
+\section{Access Control Lists (ACLs)}
+%=========================================================
+
+\subsection{Definition}
+
+ACLs store permissions with each object.
+
+\subsection{Example}
+
+File:
+
+\begin{verbatim}
+report.txt
+\end{verbatim}
+
+ACL:
+
+\begin{itemize}
+\item Alice : Read
+\item Bob : Read, Write
+\item Charlie : Read
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Easy per-object management
+\item Widely used
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Large ACL maintenance
+\end{itemize}
+
+%=========================================================
+\section{Capabilities}
+%=========================================================
+
+\subsection{Definition}
+
+Capabilities associate permissions with subjects instead of objects.
+
+\subsection{Example}
+
+User Alice possesses:
+
+\begin{itemize}
+\item Read(File A)
+\item Write(File B)
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Fine-grained security
+\item Easier delegation
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Capability management complexity
+\end{itemize}
+
+\section{ACLs vs Capabilities}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{4cm}|p{4cm}|}
+\hline
+Feature & ACL & Capability \\
+\hline
+Stored With & Object & Subject \\
+\hline
+Lookup & Object Based & User Based \\
+\hline
+Delegation & Difficult & Easier \\
+\hline
+Usage & Common & Specialized Systems \\
+\hline
+\end{tabular}
+\caption{ACL vs Capability}
+\end{table}
+
+%=========================================================
+\section{Privilege Separation}
+%=========================================================
+
+\subsection{Definition}
+
+Separate privileged and unprivileged components.
+
+\subsection{Example}
+
+Web Browser:
+
+\begin{itemize}
+\item Renderer Process
+\item Network Process
+\item Sandbox Process
+\end{itemize}
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Reduced attack impact
+\item Better isolation
+\end{itemize}
+
+%=========================================================
+\section{Principle of Least Privilege}
+%=========================================================
+
+\subsection{Definition}
+
+Grant only the minimum permissions required.
+
+\subsection{Example}
+
+A web server should not run as:
+
+\begin{verbatim}
+root
+\end{verbatim}
+
+Instead:
+
+\begin{verbatim}
+www-data
+\end{verbatim}
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Reduced damage
+\item Improved security
+\end{itemize}
+
+%=========================================================
+\section{Secure Kernel Design}
+%=========================================================
+
+Secure kernels focus on:
+
+\begin{itemize}
+\item Isolation
+\item Access Control
+\item Memory Protection
+\item Auditing
+\item Secure IPC
+\end{itemize}
+
+\subsection{Goals}
+
+\begin{itemize}
+\item Small trusted computing base
+\item Minimal attack surface
+\item Strong privilege boundaries
+\end{itemize}
+
+%=========================================================
+\section{Memory Protection}
+%=========================================================
+
+\subsection{Definition}
+
+Memory protection prevents unauthorized access between processes.
+
+\subsection{Mechanisms}
+
+\begin{itemize}
+\item Virtual Memory
+\item MMU
+\item Page Tables
+\item User Mode
+\item Kernel Mode
+\end{itemize}
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Process Isolation
+\item Fault Containment
+\item Security Enforcement
+\end{itemize}
+
+%=========================================================
+\section{ASLR}
+%=========================================================
+
+\subsection{Definition}
+
+ASLR stands for Address Space Layout Randomization.
+
+\subsection{Goal}
+
+Randomize memory locations.
+
+\subsection{Protected Areas}
+
+\begin{itemize}
+\item Stack
+\item Heap
+\item Libraries
+\item Executable Regions
+\end{itemize}
+
+\subsection{Benefit}
+
+Makes exploitation significantly harder.
+
+\subsection{Linux Example}
+
+\begin{verbatim}
+cat /proc/sys/kernel/randomize_va_space
+\end{verbatim}
+
+%=========================================================
+\section{DEP / NX Bit}
+%=========================================================
+
+\subsection{Definition}
+
+DEP (Data Execution Prevention) prevents execution from data pages.
+
+NX = No Execute.
+
+\subsection{Purpose}
+
+Stop code execution in:
+
+\begin{itemize}
+\item Stack
+\item Heap
+\item Data Regions
+\end{itemize}
+
+\subsection{Mitigates}
+
+\begin{itemize}
+\item Buffer Overflow Attacks
+\item Code Injection
+\end{itemize}
+
+%=========================================================
+\section{Sandboxing}
+%=========================================================
+
+\subsection{Definition}
+
+Sandboxing isolates applications from the rest of the system.
+
+\subsection{Examples}
+
+\begin{itemize}
+\item Chrome Sandbox
+\item Android App Sandbox
+\item iOS App Sandbox
+\item Firejail
+\end{itemize}
+
+\subsection{Architecture}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (app) {Application};
+\node[draw,below=1.5cm of app] (sandbox) {Sandbox};
+\node[draw,below=1.5cm of sandbox] (os) {Operating System};
+
+\draw[->] (app)--(sandbox);
+\draw[->] (sandbox)--(os);
+
+\end{tikzpicture}
+\caption{Application Sandbox}
+\end{figure}
+
+%=========================================================
+\section{Secure Boot}
+%=========================================================
+
+\subsection{Definition}
+
+Secure Boot verifies cryptographic signatures during boot.
+
+\subsection{Goal}
+
+Prevent unauthorized software from loading.
+
+\subsection{Boot Chain}
+
+\begin{enumerate}
+\item Firmware
+\item Bootloader
+\item Kernel
+\item Operating System
+\end{enumerate}
+
+\subsection{Benefits}
+
+\begin{itemize}
+\item Rootkit Protection
+\item Boot-Time Integrity
+\end{itemize}
+
+%=========================================================
+\section{SELinux Overview}
+%=========================================================
+
+\subsection{Definition}
+
+SELinux stands for Security Enhanced Linux.
+
+\subsection{Security Model}
+
+Mandatory Access Control (MAC)
+
+\subsection{Features}
+
+\begin{itemize}
+\item Fine-grained policies
+\item Process isolation
+\item File labeling
+\item Security contexts
+\end{itemize}
+
+\subsection{Example}
+
+\begin{verbatim}
+getenforce
+\end{verbatim}
+
+Possible output:
+
+\begin{verbatim}
+Enforcing
+\end{verbatim}
+
+%=========================================================
+\section{AppArmor Overview}
+%=========================================================
+
+\subsection{Definition}
+
+AppArmor is a Linux security framework.
+
+\subsection{Approach}
+
+Path-based access control.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Easier policy management
+\item Simpler configuration
+\end{itemize}
+
+\subsection{Common Usage}
+
+\begin{itemize}
+\item Ubuntu
+\item SUSE Linux
+\end{itemize}
+
+%=========================================================
+\section{Container Security}
+%=========================================================
+
+\subsection{Challenges}
+
+Containers share the host kernel.
+
+\subsection{Security Mechanisms}
+
+\begin{itemize}
+\item Namespaces
+\item Cgroups
+\item Capabilities
+\item Seccomp
+\item SELinux
+\item AppArmor
+\end{itemize}
+
+\subsection{Container Isolation}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (c1) {Container A};
+\node[draw,right=3cm of c1] (c2) {Container B};
+\node[draw,below=2cm of c1,xshift=1.5cm] (kernel) {Shared Kernel};
+
+\draw (c1)--(kernel);
+\draw (c2)--(kernel);
+
+\end{tikzpicture}
+\caption{Container Isolation}
+\end{figure}
+
+%=========================================================
+\section{Common Vulnerabilities}
+%=========================================================
+
+\subsection{Buffer Overflow}
+
+Writing beyond memory boundaries.
+
+\subsection{Privilege Escalation}
+
+Obtaining higher permissions.
+
+\subsection{Race Conditions}
+
+Timing-based attacks.
+
+\subsection{Code Injection}
+
+Injecting malicious code.
+
+\subsection{Directory Traversal}
+
+Accessing unintended files.
+
+\subsection{Use-After-Free}
+
+Accessing freed memory.
+
+%=========================================================
+\section{Real-World Attack Scenarios}
+%=========================================================
+
+\subsection{Scenario 1}
+
+Web server running as root.
+
+Result:
+
+\begin{itemize}
+\item Full system compromise.
+\end{itemize}
+
+\subsection{Scenario 2}
+
+No ASLR.
+
+Result:
+
+\begin{itemize}
+\item Easier exploitation.
+\end{itemize}
+
+\subsection{Scenario 3}
+
+Weak container isolation.
+
+Result:
+
+\begin{itemize}
+\item Container escape attack.
+\end{itemize}
+
+\subsection{Scenario 4}
+
+Misconfigured ACLs.
+
+Result:
+
+\begin{itemize}
+\item Data leakage.
+\end{itemize}
+
+%=========================================================
+\section{How Modern OSes Isolate Applications}
+%=========================================================
+
+Modern operating systems isolate applications using:
+
+\begin{itemize}
+\item Virtual Memory
+\item Process Boundaries
+\item User/Kernel Modes
+\item Sandboxing
+\item Containers
+\item SELinux
+\item AppArmor
+\item Access Control Systems
+\end{itemize}
+
+\subsection{Isolation Layers}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (app1) {App 1};
+\node[draw,right=3cm of app1] (app2) {App 2};
+
+\node[draw,below=2cm of app1,xshift=1.5cm] (kernel) {Kernel};
+
+\draw (app1)--(kernel);
+\draw (app2)--(kernel);
+
+\end{tikzpicture}
+\caption{Application Isolation}
+\end{figure}
+
+%=========================================================
+\section{Security Best Practices}
+%=========================================================
+
+\begin{itemize}
+\item Follow least privilege.
+\item Keep systems updated.
+\item Use strong authentication.
+\item Enable ASLR.
+\item Enable DEP/NX.
+\item Use secure boot.
+\item Audit permissions regularly.
+\item Isolate workloads.
+\item Minimize attack surface.
+\item Monitor security logs.
+\end{itemize}
+
+%=========================================================
+\section{Key Takeaways}
+%=========================================================
+
+\begin{itemize}
+\item Authentication verifies identity.
+\item Authorization verifies permissions.
+\item ACLs and capabilities implement access control.
+\item Least privilege is a fundamental security principle.
+\item Memory protection isolates processes.
+\item ASLR randomizes memory layouts.
+\item DEP prevents execution from data pages.
+\item Sandboxing limits application damage.
+\item SELinux and AppArmor strengthen Linux security.
+\item Containers require additional security controls.
+\end{itemize}
+
+%=========================================================
+\section{20 Interview Questions with Answers}
+%=========================================================
+
+\begin{enumerate}
+\item What is OS security?\\
+Answer: Protection of system resources from unauthorized access.
+
+\item What is authentication?\\
+Answer: Identity verification.
+
+\item What is authorization?\\
+Answer: Permission verification.
+
+\item Difference between authentication and authorization?\\
+Answer: Authentication identifies users; authorization determines permissions.
+
+\item What is an ACL?\\
+Answer: Object-based permission list.
+
+\item What is a capability?\\
+Answer: Subject-held permission token.
+
+\item What is least privilege?\\
+Answer: Grant minimum necessary permissions.
+
+\item What is ASLR?\\
+Answer: Address Space Layout Randomization.
+
+\item Why use ASLR?\\
+Answer: Prevent predictable memory layouts.
+
+\item What is DEP?\\
+Answer: Data Execution Prevention.
+
+\item What is NX Bit?\\
+Answer: Marks memory non-executable.
+
+\item What is sandboxing?\\
+Answer: Application isolation mechanism.
+
+\item What is secure boot?\\
+Answer: Verified boot process.
+
+\item What is SELinux?\\
+Answer: Mandatory access control framework.
+
+\item What is AppArmor?\\
+Answer: Path-based Linux security framework.
+
+\item What is privilege escalation?\\
+Answer: Gaining unauthorized privileges.
+
+\item What is container isolation?\\
+Answer: Separation using namespaces and cgroups.
+
+\item What is a threat model?\\
+Answer: Structured analysis of threats and defenses.
+
+\item Why is memory protection important?\\
+Answer: Prevents process interference.
+
+\item What is the CIA triad?\\
+Answer: Confidentiality, Integrity, Availability.
+\end{enumerate}
+
+%=========================================================
+\section{20 MCQs with Answers}
+%=========================================================
+
+\begin{enumerate}
+\item Authentication verifies:
+Answer: Identity
+
+\item Authorization verifies:
+Answer: Permissions
+
+\item CIA stands for:
+Answer: Confidentiality, Integrity, Availability
+
+\item ACLs are associated with:
+Answer: Objects
+
+\item Capabilities are associated with:
+Answer: Subjects
+
+\item ASLR randomizes:
+Answer: Memory Layout
+
+\item DEP prevents:
+Answer: Code Execution in Data Pages
+
+\item NX stands for:
+Answer: No Execute
+
+\item SELinux implements:
+Answer: Mandatory Access Control
+
+\item AppArmor is:
+Answer: Path-Based Security
+
+\item Secure Boot protects:
+Answer: Boot Process
+
+\item Least privilege means:
+Answer: Minimum Permissions
+
+\item Container isolation uses:
+Answer: Namespaces
+
+\item Rootkits commonly target:
+Answer: Boot and Kernel Layers
+
+\item Sandboxing provides:
+Answer: Isolation
+
+\item Buffer overflow affects:
+Answer: Memory Safety
+
+\item Privilege escalation increases:
+Answer: Access Rights
+
+\item Threat modeling identifies:
+Answer: Risks
+
+\item Virtual memory improves:
+Answer: Isolation
+
+\item Secure kernels reduce:
+Answer: Attack Surface
+\end{enumerate}
+
+%=========================================================
+\section{Revision Notes}
+%=========================================================
+
+\begin{itemize}
+\item Authentication = Identity.
+\item Authorization = Permissions.
+\item ACL = Object-based permissions.
+\item Capability = Subject-based permissions.
+\item Least privilege minimizes risk.
+\item ASLR randomizes memory addresses.
+\item DEP blocks execution from data memory.
+\item Sandboxing isolates applications.
+\item Secure Boot protects startup integrity.
+\item SELinux uses MAC policies.
+\item AppArmor uses path-based controls.
+\item Containers require layered security.
+\end{itemize}
+
+%=========================================================
+\section{Cheat Sheet}
+%=========================================================
+
+\begin{center}
+\begin{tabular}{|p{5cm}|p{8cm}|}
+\hline
+Authentication & Identity Verification \\
+\hline
+Authorization & Permission Verification \\
+\hline
+ACL & Object-Based Permissions \\
+\hline
+Capability & Subject-Based Permissions \\
+\hline
+Least Privilege & Minimum Required Access \\
+\hline
+ASLR & Randomized Memory Layout \\
+\hline
+DEP & Data Execution Prevention \\
+\hline
+NX Bit & Non-Executable Memory \\
+\hline
+Sandbox & Application Isolation \\
+\hline
+Secure Boot & Verified Startup Chain \\
+\hline
+SELinux & Mandatory Access Control \\
+\hline
+AppArmor & Path-Based Access Control \\
+\hline
+Container Security & Namespaces + Cgroups \\
+\hline
+Memory Protection & Process Isolation \\
+\hline
+CIA & Confidentiality Integrity Availability \\
+\hline
+Threat Model & Assets Threats Defenses \\
+\hline
+Privilege Separation & Isolated Components \\
+\hline
+Buffer Overflow & Memory Corruption Attack \\
+\hline
+Privilege Escalation & Unauthorized Permission Gain \\
+\hline
+Secure Kernel & Protected Core OS Component \\
+\hline
+\end{tabular}
+\end{center}

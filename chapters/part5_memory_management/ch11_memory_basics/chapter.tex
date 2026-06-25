@@ -1,0 +1,1009 @@
+\chapter{Memory Management Fundamentals}
+
+\section{Chapter Overview}
+
+Memory management is one of the core responsibilities of an Operating System. It determines how memory is allocated, protected, shared, relocated, and reclaimed. Understanding memory management is essential for Software Development Engineer interviews because it directly impacts performance, scalability, security, and system reliability.
+
+This chapter introduces the foundational concepts required for advanced topics such as paging, segmentation, virtual memory, page replacement, and memory allocation.
+
+\section{Learning Objectives}
+
+After completing this chapter, you should be able to:
+
+\begin{itemize}
+\item Understand memory management responsibilities.
+\item Explain address binding mechanisms.
+\item Differentiate logical and physical addresses.
+\item Understand MMU functionality.
+\item Explain dynamic loading and linking.
+\item Compare static and dynamic linking.
+\item Understand swapping.
+\item Explain memory protection mechanisms.
+\item Understand relocation.
+\item Analyze contiguous memory allocation.
+\item Differentiate internal and external fragmentation.
+\item Explain memory compaction.
+\end{itemize}
+
+%====================================================
+\section{Memory Management Overview}
+%====================================================
+
+\subsection{Definition}
+
+Memory Management is the process of controlling and coordinating main memory usage among processes.
+
+\subsection{Responsibilities}
+
+\begin{itemize}
+\item Allocation of memory
+\item Deallocation of memory
+\item Address translation
+\item Memory protection
+\item Process isolation
+\item Efficient utilization
+\item Sharing mechanisms
+\end{itemize}
+
+\subsection{Why It Matters}
+
+Without proper memory management:
+
+\begin{itemize}
+\item Processes may overwrite each other.
+\item Security vulnerabilities may arise.
+\item Memory utilization becomes inefficient.
+\item System crashes may occur.
+\end{itemize}
+
+\subsection{Real-World Analogy}
+
+Consider a hotel:
+
+\begin{itemize}
+\item Hotel = Memory
+\item Rooms = Memory Blocks
+\item Guests = Processes
+\item Reception = Operating System
+\end{itemize}
+
+The OS decides which process gets which memory region.
+
+%====================================================
+\section{Address Binding}
+%====================================================
+
+\subsection{Definition}
+
+Address binding is the process of mapping program addresses to memory addresses.
+
+\subsection{Why Binding is Needed}
+
+Source programs use symbolic addresses:
+
+\begin{verbatim}
+count
+sum
+buffer
+\end{verbatim}
+
+These must eventually be converted into actual memory addresses.
+
+\subsection{Stages}
+
+\begin{enumerate}
+\item Compile-Time Binding
+\item Load-Time Binding
+\item Execution-Time Binding
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (src) {Source Code};
+\node[draw,right=3cm of src] (obj) {Object Code};
+\node[draw,right=3cm of obj] (mem) {Memory};
+
+\draw[->] (src)--(obj);
+\draw[->] (obj)--(mem);
+
+\end{tikzpicture}
+\caption{Address Binding Process}
+\end{figure}
+
+%====================================================
+\section{Compile-Time Binding}
+%====================================================
+
+\subsection{Definition}
+
+Addresses are fixed during compilation.
+
+\subsection{Characteristics}
+
+\begin{itemize}
+\item Compiler generates absolute addresses.
+\item Program must load at predetermined location.
+\item Relocation is impossible.
+\end{itemize}
+
+\subsection{Example}
+
+Suppose compiler assumes:
+
+\[
+Base = 1000
+\]
+
+Variable:
+
+\[
+x = 1020
+\]
+
+Address is fixed permanently.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Simple
+\item Fast execution
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Inflexible
+\item Rarely used in modern systems
+\end{itemize}
+
+%====================================================
+\section{Load-Time Binding}
+%====================================================
+
+\subsection{Definition}
+
+Address binding occurs when the program is loaded into memory.
+
+\subsection{Characteristics}
+
+\begin{itemize}
+\item Compiler generates relocatable code.
+\item Loader determines actual addresses.
+\end{itemize}
+
+\subsection{Example}
+
+Program can load at:
+
+\[
+1000
+\]
+
+or
+
+\[
+5000
+\]
+
+depending on memory availability.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Flexible
+\item Supports relocation during loading
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Cannot move after execution starts
+\end{itemize}
+
+%====================================================
+\section{Execution-Time Binding}
+%====================================================
+
+\subsection{Definition}
+
+Address translation occurs while the program executes.
+
+\subsection{Characteristics}
+
+\begin{itemize}
+\item Most modern operating systems use it.
+\item Requires hardware support.
+\item Uses MMU.
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Maximum flexibility
+\item Supports virtual memory
+\item Allows process relocation
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Additional hardware complexity
+\end{itemize}
+
+%====================================================
+\section{Logical Addresses}
+%====================================================
+
+\subsection{Definition}
+
+Addresses generated by the CPU.
+
+Also called:
+
+\begin{itemize}
+\item Virtual Addresses
+\item Program Addresses
+\end{itemize}
+
+\subsection{Characteristics}
+
+\begin{itemize}
+\item Visible to processes.
+\item Not actual RAM locations.
+\item Translated by MMU.
+\end{itemize}
+
+\subsection{Example}
+
+CPU generates:
+
+\[
+2500
+\]
+
+Logical address.
+
+%====================================================
+\section{Physical Addresses}
+%====================================================
+
+\subsection{Definition}
+
+Actual addresses in main memory.
+
+\subsection{Characteristics}
+
+\begin{itemize}
+\item Used by RAM hardware.
+\item Generated after address translation.
+\end{itemize}
+
+\subsection{Example}
+
+Logical:
+
+\[
+2500
+\]
+
+Translated to:
+
+\[
+10500
+\]
+
+Physical address.
+
+%====================================================
+\section{MMU (Memory Management Unit)}
+%====================================================
+
+\subsection{Definition}
+
+Hardware component responsible for address translation.
+
+\subsection{Working}
+
+\[
+Physical = Logical + Base
+\]
+
+\subsection{Example}
+
+Base Register:
+
+\[
+10000
+\]
+
+Logical Address:
+
+\[
+500
+\]
+
+Physical Address:
+
+\[
+10500
+\]
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (cpu) {CPU};
+\node[draw,right=3cm of cpu] (mmu) {MMU};
+\node[draw,right=3cm of mmu] (mem) {Memory};
+
+\draw[->] (cpu)--node[above]{Logical Address}(mmu);
+\draw[->] (mmu)--node[above]{Physical Address}(mem);
+
+\end{tikzpicture}
+\caption{MMU Address Translation}
+\end{figure}
+
+\subsection{Interview Note}
+
+MMU is a favorite interview topic because it bridges hardware and operating systems.
+
+%====================================================
+\section{Dynamic Loading}
+%====================================================
+
+\subsection{Definition}
+
+Program modules are loaded into memory only when required.
+
+\subsection{Example}
+
+A rarely used error-handling module loads only when an error occurs.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Reduced memory usage
+\item Faster startup
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Additional runtime overhead
+\end{itemize}
+
+%====================================================
+\section{Dynamic Linking}
+%====================================================
+
+\subsection{Definition}
+
+Libraries are linked during execution.
+
+\subsection{Working}
+
+Executable contains references instead of full library code.
+
+At runtime:
+
+\begin{itemize}
+\item Loader locates library.
+\item Addresses resolved.
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Smaller executable
+\item Shared libraries
+\item Easy updates
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Runtime dependency
+\end{itemize}
+
+%====================================================
+\section{Shared Libraries}
+%====================================================
+
+\subsection{Definition}
+
+Libraries shared among multiple processes.
+
+\subsection{Linux Examples}
+
+\begin{verbatim}
+libc.so
+libpthread.so
+libm.so
+\end{verbatim}
+
+\subsection{Windows Examples}
+
+\begin{verbatim}
+kernel32.dll
+user32.dll
+gdi32.dll
+\end{verbatim}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Memory savings
+\item Reduced disk usage
+\end{itemize}
+
+%====================================================
+\section{Static Linking vs Dynamic Linking}
+%====================================================
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+Feature & Static Linking & Dynamic Linking \\
+\hline
+Library Inclusion & Embedded & External \\
+\hline
+Executable Size & Large & Small \\
+\hline
+Memory Usage & Higher & Lower \\
+\hline
+Runtime Dependency & No & Yes \\
+\hline
+Updates & Rebuild Required & Easy \\
+\hline
+Performance & Slightly Faster & Slight Overhead \\
+\hline
+\end{tabular}
+\caption{Static vs Dynamic Linking}
+\end{table}
+
+%====================================================
+\section{Swapping}
+%====================================================
+
+\subsection{Definition}
+
+Swapping moves processes between memory and secondary storage.
+
+\subsection{Purpose}
+
+Allows more processes than available RAM.
+
+\subsection{Diagram}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (ram) {RAM};
+\node[draw,right=5cm of ram] (disk) {Disk};
+
+\draw[->] (ram) to[bend left] node[above]{Swap Out} (disk);
+\draw[->] (disk) to[bend left] node[below]{Swap In} (ram);
+
+\end{tikzpicture}
+\caption{Swapping}
+\end{figure}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Better memory utilization
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Disk I/O overhead
+\item Performance degradation
+\end{itemize}
+
+%====================================================
+\section{Memory Protection}
+%====================================================
+
+\subsection{Definition}
+
+Mechanisms preventing unauthorized memory access.
+
+\subsection{Need}
+
+One process must not corrupt another process.
+
+\subsection{Protection Mechanisms}
+
+\begin{itemize}
+\item Base Register
+\item Limit Register
+\item Access Permissions
+\item Virtual Memory
+\end{itemize}
+
+\subsection{Example}
+
+Valid range:
+
+\[
+1000 - 5000
+\]
+
+Accessing:
+
+\[
+6000
+\]
+
+causes protection fault.
+
+%====================================================
+\section{Relocation}
+%====================================================
+
+\subsection{Definition}
+
+Ability to move a process in memory during execution.
+
+\subsection{Why Needed}
+
+\begin{itemize}
+\item Memory compaction
+\item Swapping
+\item Virtual memory
+\end{itemize}
+
+\subsection{Interview Insight}
+
+Execution-time binding enables relocation.
+
+%====================================================
+\section{Contiguous Memory Allocation}
+%====================================================
+
+\subsection{Definition}
+
+Each process occupies one continuous block of memory.
+
+\subsection{Example}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+
+\draw (0,0) rectangle (4,8);
+
+\draw (0,6)--(4,6);
+\draw (0,4)--(4,4);
+\draw (0,2)--(4,2);
+
+\node at (2,7) {OS};
+\node at (2,5) {P1};
+\node at (2,3) {P2};
+\node at (2,1) {P3};
+
+\end{tikzpicture}
+\caption{Contiguous Allocation}
+\end{figure}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Simple implementation
+\item Fast access
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Fragmentation problems
+\end{itemize}
+
+%====================================================
+\section{Fragmentation}
+%====================================================
+
+\subsection{Definition}
+
+Unused memory resulting from allocation inefficiencies.
+
+Two types:
+
+\begin{enumerate}
+\item Internal Fragmentation
+\item External Fragmentation
+\end{enumerate}
+
+%====================================================
+\section{Internal Fragmentation}
+%====================================================
+
+\subsection{Definition}
+
+Unused space inside allocated memory blocks.
+
+\subsection{Example}
+
+Process requires:
+
+\[
+14KB
+\]
+
+Allocated:
+
+\[
+16KB
+\]
+
+Waste:
+
+\[
+2KB
+\]
+
+\subsection{Visualization}
+
+\[
+| Used | Used | Unused |
+\]
+
+%====================================================
+\section{External Fragmentation}
+%====================================================
+
+\subsection{Definition}
+
+Free memory exists but is scattered into small pieces.
+
+\subsection{Example}
+
+Free blocks:
+
+\[
+5KB + 4KB + 3KB
+\]
+
+Total:
+
+\[
+12KB
+\]
+
+Request:
+
+\[
+10KB
+\]
+
+Cannot allocate because no single contiguous block exists.
+
+\subsection{Visualization}
+
+\[
+|P1|Free|P2|Free|P3|Free|
+\]
+
+%====================================================
+\section{Memory Compaction}
+%====================================================
+
+\subsection{Definition}
+
+Technique of moving processes to combine scattered free memory.
+
+\subsection{Before Compaction}
+
+\[
+|P1|Free|P2|Free|P3|Free|
+\]
+
+\subsection{After Compaction}
+
+\[
+|P1|P2|P3|FreeFreeFree|
+\]
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Eliminates external fragmentation
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Expensive operation
+\item Requires relocation support
+\end{itemize}
+
+%====================================================
+\section{Linux Examples}
+%====================================================
+
+View memory usage:
+
+\begin{verbatim}
+free -h
+\end{verbatim}
+
+Process memory:
+
+\begin{verbatim}
+top
+\end{verbatim}
+
+Shared libraries:
+
+\begin{verbatim}
+ldd executable
+\end{verbatim}
+
+Memory maps:
+
+\begin{verbatim}
+cat /proc/pid/maps
+\end{verbatim}
+
+%====================================================
+\section{Windows Examples}
+%====================================================
+
+Memory monitoring:
+
+\begin{verbatim}
+Task Manager
+\end{verbatim}
+
+Memory diagnostics:
+
+\begin{verbatim}
+Resource Monitor
+\end{verbatim}
+
+DLL inspection:
+
+\begin{verbatim}
+Dependency Walker
+\end{verbatim}
+
+%====================================================
+\section{Interview Notes}
+%====================================================
+
+Frequently asked topics:
+
+\begin{itemize}
+\item Logical vs Physical Address
+\item MMU Working
+\item Static vs Dynamic Linking
+\item Internal vs External Fragmentation
+\item Swapping
+\item Relocation
+\item Dynamic Loading vs Dynamic Linking
+\end{itemize}
+
+\subsection{Golden Rule}
+
+\begin{center}
+Logical Address $\rightarrow$ MMU $\rightarrow$ Physical Address
+\end{center}
+
+%====================================================
+\section{Key Takeaways}
+%====================================================
+
+\begin{itemize}
+\item Memory management allocates and protects memory.
+\item Address binding may occur at compile, load, or execution time.
+\item Logical addresses differ from physical addresses.
+\item MMU performs address translation.
+\item Dynamic loading loads modules on demand.
+\item Dynamic linking links libraries at runtime.
+\item Shared libraries save memory.
+\item Swapping enables better memory utilization.
+\item Fragmentation reduces efficiency.
+\item Compaction reduces external fragmentation.
+\end{itemize}
+
+%====================================================
+\section{20 Interview Questions with Answers}
+%====================================================
+
+\begin{enumerate}
+\item What is memory management?\\
+Answer: Allocation and control of memory resources.
+
+\item What is address binding?\\
+Answer: Mapping program addresses to memory addresses.
+
+\item Types of address binding?\\
+Answer: Compile-time, load-time, execution-time.
+
+\item What is compile-time binding?\\
+Answer: Addresses fixed during compilation.
+
+\item What is load-time binding?\\
+Answer: Addresses resolved during loading.
+
+\item What is execution-time binding?\\
+Answer: Addresses resolved during execution.
+
+\item What is a logical address?\\
+Answer: Address generated by CPU.
+
+\item What is a physical address?\\
+Answer: Actual RAM location.
+
+\item What is MMU?\\
+Answer: Memory Management Unit.
+
+\item MMU performs?\\
+Answer: Address translation.
+
+\item What is dynamic loading?\\
+Answer: Load modules when needed.
+
+\item What is dynamic linking?\\
+Answer: Link libraries at runtime.
+
+\item Shared library example in Linux?\\
+Answer: libc.so.
+
+\item Shared library example in Windows?\\
+Answer: kernel32.dll.
+
+\item What is swapping?\\
+Answer: Moving processes between RAM and disk.
+
+\item What is relocation?\\
+Answer: Moving process memory location.
+
+\item What is contiguous allocation?\\
+Answer: Continuous memory block allocation.
+
+\item What is internal fragmentation?\\
+Answer: Waste inside allocated block.
+
+\item What is external fragmentation?\\
+Answer: Scattered free memory.
+
+\item What is compaction?\\
+Answer: Combining free memory blocks.
+\end{enumerate}
+
+%====================================================
+\section{20 MCQs with Answers}
+%====================================================
+
+\begin{enumerate}
+\item MMU stands for:
+A) Memory Mapping Unit
+B) Memory Management Unit
+C) Main Memory Unit
+D) Memory Monitor Unit
+
+Answer: B
+
+\item Logical address is generated by:
+Answer: CPU
+
+\item Physical address belongs to:
+Answer: RAM
+
+\item Dynamic loading occurs:
+Answer: On demand
+
+\item Dynamic linking occurs:
+Answer: Runtime
+
+\item Linux shared library extension:
+Answer: .so
+
+\item Windows shared library extension:
+Answer: .dll
+
+\item Swapping uses:
+Answer: Disk
+
+\item Internal fragmentation occurs:
+Answer: Inside allocated blocks
+
+\item External fragmentation occurs:
+Answer: Between allocated blocks
+
+\item Compile-time binding is:
+Answer: Fixed
+
+\item Execution-time binding requires:
+Answer: MMU
+
+\item Shared libraries save:
+Answer: Memory
+
+\item Compaction removes:
+Answer: External Fragmentation
+
+\item Relocation moves:
+Answer: Process Memory
+
+\item Contiguous allocation uses:
+Answer: Continuous Blocks
+
+\item Dynamic loading improves:
+Answer: Memory Utilization
+
+\item Memory protection prevents:
+Answer: Illegal Access
+
+\item Address translation performed by:
+Answer: MMU
+
+\item Fragmentation reduces:
+Answer: Memory Efficiency
+\end{enumerate}
+
+%====================================================
+\section{Revision Notes}
+%====================================================
+
+\begin{itemize}
+\item Memory management controls memory allocation.
+\item Address binding maps addresses.
+\item Logical address generated by CPU.
+\item Physical address exists in RAM.
+\item MMU performs translation.
+\item Dynamic loading loads code on demand.
+\item Dynamic linking resolves libraries at runtime.
+\item Shared libraries reduce memory usage.
+\item Swapping moves processes between RAM and disk.
+\item Internal fragmentation = inside allocated blocks.
+\item External fragmentation = scattered free space.
+\item Compaction removes external fragmentation.
+\end{itemize}
+
+%====================================================
+\section{Cheat Sheet}
+%====================================================
+
+\begin{center}
+\begin{tabular}{|p{5cm}|p{8cm}|}
+\hline
+Logical Address & Generated by CPU \\
+\hline
+Physical Address & Actual RAM Address \\
+\hline
+MMU & Address Translator \\
+\hline
+Compile-Time Binding & Fixed at Compilation \\
+\hline
+Load-Time Binding & Fixed During Loading \\
+\hline
+Execution-Time Binding & Runtime Translation \\
+\hline
+Dynamic Loading & Load on Demand \\
+\hline
+Dynamic Linking & Link at Runtime \\
+\hline
+Shared Library & Shared Executable Code \\
+\hline
+Swapping & RAM $\leftrightarrow$ Disk \\
+\hline
+Relocation & Move Process Memory \\
+\hline
+Contiguous Allocation & Continuous Block \\
+\hline
+Internal Fragmentation & Waste Inside Block \\
+\hline
+External Fragmentation & Scattered Free Space \\
+\hline
+Compaction & Merge Free Space \\
+\hline
+\end{tabular}
+\end{center}

@@ -1,0 +1,1010 @@
+\chapter{CPU Scheduling}
+
+\section{Chapter Overview}
+
+CPU Scheduling is one of the most important Operating Systems topics for Software Development Engineer interviews. It combines theoretical concepts with numerical problem-solving and is frequently asked by Amazon, Google, Microsoft, Meta, Uber, Atlassian, Apple, Bloomberg, and many other technology companies.
+
+This chapter covers scheduling fundamentals, scheduling metrics, major scheduling algorithms, numerical techniques, interview tricks, and quick-solving strategies.
+
+\section{Learning Objectives}
+
+After completing this chapter, you should be able to:
+
+\begin{itemize}
+\item Understand why CPU scheduling is necessary.
+\item Calculate scheduling performance metrics.
+\item Differentiate preemptive and non-preemptive scheduling.
+\item Solve scheduling numericals efficiently.
+\item Analyze FCFS, SJF, SRTF, Priority, Round Robin, MLQ, and MLFQ.
+\item Explain starvation and aging.
+\item Compare scheduling algorithms.
+\item Answer interview questions confidently.
+\end{itemize}
+
+%====================================================
+\section{CPU Scheduling Basics}
+%====================================================
+
+\subsection{Definition}
+
+CPU Scheduling is the process of selecting a process from the ready queue and allocating the CPU to it.
+
+\subsection{Why Scheduling is Needed}
+
+At any instant:
+
+\begin{itemize}
+\item Multiple processes may be ready.
+\item Only one process can use a CPU core.
+\item OS must decide who gets CPU access.
+\end{itemize}
+
+\subsection{Scheduling Cycle}
+
+\begin{center}
+Ready Queue $\rightarrow$ Scheduler $\rightarrow$ CPU Execution
+\end{center}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+
+\node[draw] (rq) {Ready Queue};
+\node[draw,right=4cm of rq] (cpu) {CPU};
+
+\draw[->,thick] (rq) -- node[above]{Scheduler} (cpu);
+
+\end{tikzpicture}
+\caption{Basic CPU Scheduling}
+\end{figure}
+
+%====================================================
+\section{Scheduling Goals}
+%====================================================
+
+A good scheduler should:
+
+\begin{itemize}
+\item Maximize CPU utilization.
+\item Maximize throughput.
+\item Minimize waiting time.
+\item Minimize turnaround time.
+\item Minimize response time.
+\item Ensure fairness.
+\item Avoid starvation.
+\end{itemize}
+
+%====================================================
+\section{Throughput}
+%====================================================
+
+\subsection{Definition}
+
+Number of processes completed per unit time.
+
+\[
+Throughput =
+\frac{\text{Number of completed processes}}
+{\text{Time}}
+\]
+
+\subsection{Example}
+
+50 processes completed in 10 seconds.
+
+\[
+Throughput = \frac{50}{10}=5
+\]
+
+processes/second.
+
+%====================================================
+\section{Turnaround Time}
+%====================================================
+
+\subsection{Definition}
+
+Total time spent by a process in the system.
+
+\[
+TAT = Completion - Arrival
+\]
+
+\subsection{Example}
+
+Arrival = 2
+
+Completion = 15
+
+\[
+TAT=15-2=13
+\]
+
+%====================================================
+\section{Waiting Time}
+%====================================================
+
+\subsection{Definition}
+
+Time spent waiting in the ready queue.
+
+\[
+WT=TAT-Burst
+\]
+
+\subsection{Example}
+
+TAT = 20
+
+Burst = 8
+
+\[
+WT=20-8=12
+\]
+
+%====================================================
+\section{Response Time}
+%====================================================
+
+\subsection{Definition}
+
+Time from arrival until first CPU allocation.
+
+\[
+RT = First\ Start - Arrival
+\]
+
+\subsection{Importance}
+
+Critical for interactive systems.
+
+%====================================================
+\section{CPU Utilization}
+%====================================================
+
+\subsection{Definition}
+
+Percentage of time CPU remains busy.
+
+\[
+CPU\ Utilization=
+\frac{CPU\ Busy\ Time}
+{Total\ Time}
+\times100
+\]
+
+\subsection{Goal}
+
+Keep CPU utilization as high as possible.
+
+%====================================================
+\section{Preemptive Scheduling}
+%====================================================
+
+\subsection{Definition}
+
+OS can forcibly take CPU away from a running process.
+
+\subsection{Examples}
+
+\begin{itemize}
+\item Round Robin
+\item SRTF
+\item Preemptive Priority
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Better responsiveness
+\item Fair CPU allocation
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item More context switches
+\item Higher overhead
+\end{itemize}
+
+%====================================================
+\section{Non-Preemptive Scheduling}
+%====================================================
+
+\subsection{Definition}
+
+Once CPU is allocated, process keeps CPU until completion or blocking.
+
+\subsection{Examples}
+
+\begin{itemize}
+\item FCFS
+\item SJF
+\item Non-preemptive Priority
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Simpler
+\item Less overhead
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Poor responsiveness
+\item Convoy effect
+\end{itemize}
+
+%====================================================
+\section{First Come First Serve (FCFS)}
+%====================================================
+
+\subsection{Definition}
+
+Processes are executed in order of arrival.
+
+\subsection{Working}
+
+Queue behaves like FIFO.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Simple
+\item Easy implementation
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Convoy effect
+\item Poor average waiting time
+\end{itemize}
+
+\subsection{Complexity}
+
+\[
+O(1)
+\]
+
+\subsection{Example}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Process & Burst \\
+\hline
+P1 & 5\\
+P2 & 3\\
+P3 & 2\\
+\hline
+\end{tabular}
+\end{table}
+
+Gantt Chart:
+
+\begin{center}
+0 \quad P1 \quad 5 \quad P2 \quad 8 \quad P3 \quad 10
+\end{center}
+
+Waiting Times:
+
+\[
+P1=0
+\]
+
+\[
+P2=5
+\]
+
+\[
+P3=8
+\]
+
+Average WT:
+
+\[
+\frac{0+5+8}{3}=4.33
+\]
+
+%====================================================
+\section{Shortest Job First (SJF)}
+%====================================================
+
+\subsection{Definition}
+
+Shortest burst process executes first.
+
+\subsection{Working}
+
+Select minimum burst time.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Minimum average waiting time
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Burst prediction difficult
+\item Starvation possible
+\end{itemize}
+
+\subsection{Complexity}
+
+\[
+O(n)
+\]
+
+\subsection{Example}
+
+Processes:
+
+\[
+P1=6,\;
+P2=2,\;
+P3=8,\;
+P4=3
+\]
+
+Order:
+
+\[
+P2 \rightarrow P4 \rightarrow P1 \rightarrow P3
+\]
+
+Gantt Chart:
+
+\begin{center}
+0 2 5 11 19
+\end{center}
+
+Average WT:
+
+\[
+\frac{0+2+5+11}{4}
+=4.5
+\]
+
+%====================================================
+\section{Shortest Remaining Time First (SRTF)}
+%====================================================
+
+\subsection{Definition}
+
+Preemptive version of SJF.
+
+\subsection{Working}
+
+Always execute process with smallest remaining burst.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Optimal average waiting time
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item High context switching
+\item Starvation possible
+\end{itemize}
+
+\subsection{Complexity}
+
+\[
+O(n)
+\]
+
+\subsection{Example}
+
+Arrival:
+
+\[
+P1=(0,8)
+\]
+
+\[
+P2=(1,4)
+\]
+
+At time 1:
+
+P2 preempts P1.
+
+Gantt:
+
+\begin{center}
+P1 | P2 | P1
+\end{center}
+
+%====================================================
+\section{Priority Scheduling}
+%====================================================
+
+\subsection{Definition}
+
+Highest priority process executes first.
+
+\subsection{Working}
+
+Priority determines scheduling order.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Important tasks run first
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Starvation
+\end{itemize}
+
+\subsection{Complexity}
+
+\[
+O(n)
+\]
+
+\subsection{Example}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Process & Priority \\
+\hline
+P1 & 3\\
+P2 & 1\\
+P3 & 2\\
+\hline
+\end{tabular}
+\end{table}
+
+Order:
+
+\[
+P2 \rightarrow P3 \rightarrow P1
+\]
+
+%====================================================
+\section{Round Robin Scheduling}
+%====================================================
+
+\subsection{Definition}
+
+Processes receive CPU for a fixed time quantum.
+
+\subsection{Working}
+
+After quantum expires:
+
+\begin{itemize}
+\item Process preempted
+\item Moved to queue end
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Fairness
+\item Good response time
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item High context switching
+\item Quantum selection critical
+\end{itemize}
+
+\subsection{Complexity}
+
+\[
+O(1)
+\]
+
+\subsection{Example}
+
+Quantum = 2
+
+\[
+P1=5
+\]
+
+\[
+P2=4
+\]
+
+Gantt:
+
+\begin{center}
+P1 P2 P1 P2 P1
+\end{center}
+
+%====================================================
+\section{Multilevel Queue Scheduling}
+%====================================================
+
+\subsection{Definition}
+
+Ready queue divided into multiple fixed queues.
+
+Example:
+
+\begin{itemize}
+\item System Processes
+\item Interactive Processes
+\item Batch Processes
+\end{itemize}
+
+\subsection{Working}
+
+Each queue has its own scheduler.
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Separation of workloads
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Inflexible
+\item Starvation possible
+\end{itemize}
+
+\subsection{Complexity}
+
+Depends on queue structure.
+
+%====================================================
+\section{Multilevel Feedback Queue (MLFQ)}
+%====================================================
+
+\subsection{Definition}
+
+Processes can move between queues.
+
+\subsection{Working}
+
+\begin{itemize}
+\item New jobs start at top queue.
+\item CPU-intensive jobs move downward.
+\item Interactive jobs remain near top.
+\end{itemize}
+
+\subsection{Advantages}
+
+\begin{itemize}
+\item Adaptive
+\item Excellent responsiveness
+\end{itemize}
+
+\subsection{Disadvantages}
+
+\begin{itemize}
+\item Complex implementation
+\end{itemize}
+
+\subsection{Complexity}
+
+Implementation dependent.
+
+\subsection{Example}
+
+\[
+Q1: RR(4)
+\]
+
+\[
+Q2: RR(8)
+\]
+
+\[
+Q3: FCFS
+\]
+
+%====================================================
+\section{Dispatcher}
+%====================================================
+
+\subsection{Definition}
+
+Dispatcher transfers CPU control to selected process.
+
+Responsibilities:
+
+\begin{itemize}
+\item Context switching
+\item User mode transition
+\item Jump to process location
+\end{itemize}
+
+\subsection{Dispatch Latency}
+
+Time taken by dispatcher to stop one process and start another.
+
+%====================================================
+\section{Context Switch Impact}
+%====================================================
+
+Context switching introduces overhead.
+
+\[
+Useful\ Work = Total\ Time - Context\ Switch\ Time
+\]
+
+Excessive context switching reduces:
+
+\begin{itemize}
+\item Throughput
+\item CPU efficiency
+\end{itemize}
+
+%====================================================
+\section{Starvation}
+%====================================================
+
+\subsection{Definition}
+
+A process waits indefinitely because other processes continuously receive CPU.
+
+\subsection{Common In}
+
+\begin{itemize}
+\item Priority Scheduling
+\item SJF
+\item SRTF
+\end{itemize}
+
+%====================================================
+\section{Aging}
+%====================================================
+
+\subsection{Definition}
+
+Gradually increasing process priority over time.
+
+\subsection{Purpose}
+
+Prevents starvation.
+
+\subsection{Example}
+
+Priority increases every 5 seconds.
+
+%====================================================
+\section{Comparative Summary}
+%====================================================
+
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{|p{3cm}|p{2cm}|p{2cm}|p{3cm}|}
+\hline
+Algorithm & Preemptive & Starvation & Response Time \\
+\hline
+FCFS & No & No & Poor \\
+\hline
+SJF & No & Yes & Good \\
+\hline
+SRTF & Yes & Yes & Excellent \\
+\hline
+Priority & Both & Yes & Good \\
+\hline
+RR & Yes & No & Excellent \\
+\hline
+MLQ & Usually & Possible & Good \\
+\hline
+MLFQ & Yes & Rare & Excellent \\
+\hline
+\end{tabular}
+\caption{Scheduling Algorithm Comparison}
+\end{table}
+
+%====================================================
+\section{Common Interview Traps}
+%====================================================
+
+\begin{enumerate}
+\item Forgetting arrival times.
+\item Confusing turnaround and waiting time.
+\item Using wrong quantum in RR.
+\item Ignoring preemption in SRTF.
+\item Incorrect completion times.
+\item Missing starvation discussion.
+\item Not mentioning aging.
+\item Forgetting context switch overhead.
+\end{enumerate}
+
+%====================================================
+\section{How to Solve Scheduling Numericals Quickly}
+%====================================================
+
+\subsection{Step 1}
+
+Create process table.
+
+\subsection{Step 2}
+
+Draw Gantt chart.
+
+\subsection{Step 3}
+
+Find completion times.
+
+\subsection{Step 4}
+
+Calculate:
+
+\[
+TAT = CT - AT
+\]
+
+\[
+WT = TAT - BT
+\]
+
+\[
+RT = FirstStart - AT
+\]
+
+\subsection{Step 5}
+
+Compute averages.
+
+\subsection{Golden Interview Formula}
+
+\[
+WT = TAT - BT
+\]
+
+This formula solves most scheduling problems quickly.
+
+%====================================================
+\section{Key Takeaways}
+%====================================================
+
+\begin{itemize}
+\item Scheduling selects the next CPU process.
+\item FCFS is simple but suffers convoy effect.
+\item SJF minimizes average waiting time.
+\item SRTF is preemptive SJF.
+\item Priority scheduling can starve low-priority jobs.
+\item Aging prevents starvation.
+\item Round Robin provides fairness.
+\item MLFQ is widely used in modern systems.
+\item Dispatcher performs context switches.
+\item Numerical problems require accurate Gantt charts.
+\end{itemize}
+
+%====================================================
+\section{25 Interview Questions with Answers}
+%====================================================
+
+\begin{enumerate}
+\item What is CPU scheduling?\\
+Answer: Selecting a process for CPU execution.
+
+\item What is throughput?\\
+Answer: Completed processes per unit time.
+
+\item Define turnaround time.\\
+Answer: Completion time minus arrival time.
+
+\item Define waiting time.\\
+Answer: Time spent in ready queue.
+
+\item Define response time.\\
+Answer: First CPU allocation delay.
+
+\item What is CPU utilization?\\
+Answer: Percentage CPU remains busy.
+
+\item FCFS stands for?\\
+Answer: First Come First Serve.
+
+\item Major issue in FCFS?\\
+Answer: Convoy effect.
+
+\item Which algorithm minimizes average waiting time?\\
+Answer: SJF.
+
+\item What is SRTF?\\
+Answer: Preemptive SJF.
+
+\item What causes starvation?\\
+Answer: Continuous postponement.
+
+\item How is starvation prevented?\\
+Answer: Aging.
+
+\item What is aging?\\
+Answer: Gradual priority increase.
+
+\item Round Robin is?\\
+Answer: Preemptive.
+
+\item What is time quantum?\\
+Answer: Fixed CPU slice.
+
+\item Very small quantum causes?\\
+Answer: Excessive context switching.
+
+\item Very large quantum becomes?\\
+Answer: FCFS.
+
+\item Priority scheduling problem?\\
+Answer: Starvation.
+
+\item What is dispatcher?\\
+Answer: CPU transfer mechanism.
+
+\item Dispatch latency?\\
+Answer: Dispatcher overhead time.
+
+\item Which algorithm is best for interactive systems?\\
+Answer: Round Robin.
+
+\item Which algorithm adapts dynamically?\\
+Answer: MLFQ.
+
+\item Which algorithm uses multiple queues?\\
+Answer: MLQ.
+
+\item What is context switching?\\
+Answer: Process state change.
+
+\item Why is scheduling important?\\
+Answer: Efficient CPU utilization.
+\end{enumerate}
+
+%====================================================
+\section{25 MCQs with Answers}
+%====================================================
+
+\begin{enumerate}
+\item FCFS is:
+A) Preemptive
+B) Non-preemptive
+Answer: B
+
+\item SRTF is:
+Answer: Preemptive SJF
+
+\item Turnaround Time =
+Answer: Completion - Arrival
+
+\item Waiting Time =
+Answer: TAT - Burst
+
+\item Response Time measures:
+Answer: First CPU allocation delay
+
+\item RR uses:
+Answer: Time Quantum
+
+\item Starvation occurs in:
+Answer: Priority Scheduling
+
+\item Aging prevents:
+Answer: Starvation
+
+\item Dispatcher performs:
+Answer: Context Switch
+
+\item CPU utilization should be:
+Answer: High
+
+\item Throughput should be:
+Answer: High
+
+\item Waiting time should be:
+Answer: Low
+
+\item Round Robin is:
+Answer: Preemptive
+
+\item Convoy effect occurs in:
+Answer: FCFS
+
+\item SJF gives:
+Answer: Minimum Average Waiting Time
+
+\item Interactive systems prefer:
+Answer: RR
+
+\item MLFQ stands for:
+Answer: Multilevel Feedback Queue
+
+\item Dispatch latency is:
+Answer: Dispatcher Time
+
+\item Priority scheduling can cause:
+Answer: Starvation
+
+\item MLFQ allows:
+Answer: Queue Migration
+
+\item Small quantum causes:
+Answer: High Overhead
+
+\item Large quantum resembles:
+Answer: FCFS
+
+\item Scheduler selects:
+Answer: Next Process
+
+\item Throughput unit:
+Answer: Processes/Time
+
+\item SRTF chooses:
+Answer: Shortest Remaining Burst
+\end{enumerate}
+
+%====================================================
+\section{Revision Notes}
+%====================================================
+
+\begin{itemize}
+\item CPU Scheduling selects next process.
+\item Throughput should increase.
+\item Waiting time should decrease.
+\item TAT = CT - AT.
+\item WT = TAT - BT.
+\item RT = First Start - AT.
+\item FCFS suffers convoy effect.
+\item SJF minimizes average waiting time.
+\item SRTF is preemptive SJF.
+\item RR uses time quantum.
+\item Aging prevents starvation.
+\item MLFQ is adaptive.
+\end{itemize}
+
+%====================================================
+\section{Cheat Sheet}
+%====================================================
+
+\begin{center}
+\begin{tabular}{|p{5cm}|p{8cm}|}
+\hline
+TAT & CT - AT \\
+\hline
+WT & TAT - BT \\
+\hline
+RT & First Start - AT \\
+\hline
+FCFS & FIFO Scheduling \\
+\hline
+SJF & Smallest Burst First \\
+\hline
+SRTF & Smallest Remaining Burst First \\
+\hline
+Priority & Highest Priority First \\
+\hline
+RR & Time Quantum Scheduling \\
+\hline
+MLQ & Fixed Multiple Queues \\
+\hline
+MLFQ & Dynamic Multiple Queues \\
+\hline
+Starvation & Indefinite Waiting \\
+\hline
+Aging & Priority Increase \\
+\hline
+Dispatcher & CPU Transfer Unit \\
+\hline
+Context Switch & Save + Restore State \\
+\hline
+\end{tabular}
+\end{center}

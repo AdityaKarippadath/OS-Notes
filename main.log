@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.13)  25 JUN 2026 11:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.13)  25 JUN 2026 11:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -680,8 +680,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count339
 \l__pdf_internal_box=\box78
-) (./main.aux (./chapters/part1_fundamentals/ch01_introduction/chapter.aux) (./chapters/part1_fundamentals/ch02_computer_architecture/chapter.aux) (./chapters/part2_processes_threads/ch03_processes/chapter.aux) (./chapters/part2_processes_threads/ch04_threads/chapter.aux) (./chapters/part2_processes_threads/ch05_cpu_scheduling/chapter.aux) (./chapters/part3_synchronization/ch06_critical_section/chapter.aux) (./chapters/part3_synchronization/ch07_synchronization_mechanisms/chapter.aux)
-(./chapters/part3_synchronization/ch08_classical_sync_problems/chapter.aux) (./chapters/part4_deadlocks/ch09_deadlocks/chapter.aux) (./chapters/part4_deadlocks/ch10_deadlock_handling/chapter.aux) (./chapters/part5_memory_management/ch11_memory_basics/chapter.aux) (./chapters/part5_memory_management/ch12_paging/chapter.aux) (./chapters/part5_memory_management/ch13_segmentation/chapter.aux) (./chapters/part5_memory_management/ch14_virtual_memory/chapter.aux) (./chapters/part5_memory_management/ch15_page_replacement/chapter.aux) (./chapters/part5_memory_management/ch16_memory_allocation/chapter.aux) (./chapters/part6_file_systems/ch17_file_system_basics/chapter.aux) (./chapters/part6_file_systems/ch18_file_system_implementation/chapter.aux) (./chapters/part6_file_systems/ch19_disk_management/chapter.aux) (./chapters/part7_io/ch20_io_systems/chapter.aux) (./chapters/part8_modern_os/ch21_linux_internals/chapter.aux) (./chapters/part8_modern_os/ch22_modern_concurrency/chapter.aux) (./chapters/part8_modern_os/ch23_virtualization_containers/chapter.aux) (./chapters/part8_modern_os/ch24_os_security/chapter.aux) (./chapters/part9_system_design/ch25_high_concurrency/chapter.aux) (./chapters/part9_system_design/ch26_memory_performance/chapter.aux) (./chapters/part9_system_design/ch27_distributed_systems_os/chapter.aux) (./chapters/part10_interview_mastery/ch28_interview_questions/chapter.aux) (./chapters/part10_interview_mastery/ch29_numericals/chapter.aux) (./chapters/part10_interview_mastery/ch30_cheat_sheets/chapter.aux) (./chapters/part10_interview_mastery/ch31_revision_notes/chapter.aux))
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -752,7 +751,6 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count346
 Package hyperref Info: Link coloring ON on input line 5.
- (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -805,11 +803,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-]) (./main.toc)
+])
+No file main.toc.
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [3
+[3
 
 ]
 
@@ -821,11 +820,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4
 
-] (./main.lof)
+]
+No file main.lof.
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [5]
+[5]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -835,11 +835,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6
 
-] (./main.lot)
+]
+No file main.lot.
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [7]
+[7]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -854,72 +855,2947 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ] [2]
 \openout2 = `chapters/part1_fundamentals/ch01_introduction/chapter.aux'.
 
+ (./chapters/part1_fundamentals/ch01_introduction/chapter.tex
+Chapter 1.
+./chapters/part1_fundamentals/ch01_introduction/chapter.tex:3: Undefined control sequence.
+l.3 \chapterquote
+                 {``An operating system is the most important software layer...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-No file chapters/part1_fundamentals/ch01_introduction/chapter.tex.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 16.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3
+
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4]
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 118.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 118.
+ (/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 118.
+ (/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 118.
+ (/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 118.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 118.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 118.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 118.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 118.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[5]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[6]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[10]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 476.
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[14])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15]
 \openout2 = `chapters/part1_fundamentals/ch02_computer_architecture/chapter.aux'.
 
-No file chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex.
-[3
+ (./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[16
 
 
 
 
+]
+Chapter 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-] [4]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[18]
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:113: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.113 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:114: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.114 G
+       eneral Purpose Registers & Store operands and intermediate results \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:114: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.114 G
+       eneral Purpose Registers & Store operands and intermediate results \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:115: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.115 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:116: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.116 P
+       rogram Counter & Address of next instruction \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:116: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.116 P
+       rogram Counter & Address of next instruction \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:117: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.117 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:118: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.118 S
+       tack Pointer & Points to stack top \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:118: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.118 S
+       tack Pointer & Points to stack top \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:119: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.119 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:120: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.120 I
+       nstruction Register & Current instruction \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:120: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.120 I
+       nstruction Register & Current instruction \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:121: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.121 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:122: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.122 S
+       tatus Register & Condition flags \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:122: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.122 S
+       tatus Register & Condition flags \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:123: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.123 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:124: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.124 B
+       ase Register & Memory relocation \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:124: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.124 B
+       ase Register & Memory relocation \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:125: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.125 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:126: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.126 I
+       ndex Register & Address calculation \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:126: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.126 I
+       ndex Register & Address calculation \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:127: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.127 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:128: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.128 \end
+          {longtable}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:128: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.128 \end
+          {longtable}
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+
+Underfull \vbox (badness 1009) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[20]
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:226: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.226 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:227: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.227 R
+       egisters & Highest & Highest & Lowest \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:227: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.227 R
+       egisters & Highest & Highest & Lowest \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:228: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.228 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:229: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.229 L
+       1 Cache & Very High & High & Small \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:229: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.229 L
+       1 Cache & Very High & High & Small \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:230: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.230 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:231: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.231 L
+       2 Cache & High & Medium & Moderate \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:231: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.231 L
+       2 Cache & High & Medium & Moderate \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:232: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.232 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:233: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.233 R
+       AM & Moderate & Lower & Large \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:233: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.233 R
+       AM & Moderate & Lower & Large \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:234: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.234 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:235: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.235 D
+       isk & Slow & Lowest & Very Large \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:235: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.235 D
+       isk & Slow & Lowest & Very Large \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:236: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.236 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:237: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.237 \end
+          {longtable}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:237: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.237 \end
+          {longtable}
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[21]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[22]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[23]
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:368: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.368 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:369: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.369 F
+       ault & Recoverable exception \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:369: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.369 F
+       ault & Recoverable exception \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:370: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.370 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:371: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.371 T
+       rap & Intentional exception \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:371: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.371 T
+       rap & Intentional exception \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:372: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.372 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:373: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.373 A
+       bort & Severe unrecoverable error \
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:373: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.373 A
+       bort & Severe unrecoverable error \
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:374: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.374 \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:375: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.375 \end
+          {longtable}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:375: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.375 \end
+          {longtable}
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[24]
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:436: Missing $ inserted.
+<inserted text> 
+                $
+l.436 {\text{Total Accesses}}
+                             
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:436: Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.436 {\text{Total Accesses}}
+                             
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./chapters/part1_fundamentals/ch02_computer_architecture/chapter.tex:438: Missing $ inserted.
+<inserted text> 
+                $
+l.438 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \vbox (badness 6526) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[26]
+Underfull \vbox (badness 1067) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[27])
+Runaway argument?
+ 
+/home/aditya/Documents/Study/os-handbook/main.tex:20: File ended while scanning use of \TX@get@body.
+<inserted text> 
+                \par 
+l.20 ...entals/ch02_computer_architecture/chapter}
+                                                  
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[28] [29
+
+
+
+] [30]
 \openout2 = `chapters/part2_processes_threads/ch03_processes/chapter.aux'.
 
+ (./chapters/part2_processes_threads/ch03_processes/chapter.tex
+Chapter 3.
 
-No file chapters/part2_processes_threads/ch03_processes/chapter.tex.
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+|[]\T1/lmr/bx/n/14.4 (+20) Chapter Overview|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+|[]\T1/lmr/bx/n/14.4 (+20) Learning Ob-jec-tives|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+|[]\T1/lmr/bx/n/14.4 (+20) Process Con-cept|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+[31
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+|[]\T1/lmr/bx/n/12 (+20) Real-World Anal-ogy|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+|[]\T1/lmr/bx/n/12 (+20) Examples|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+|[]\T1/lmr/bx/n/14.4 (+20) Program vs Pro-cess|
+ []
+
+
+Overfull \hbox (11.42339pt too wide) in paragraph at lines 77--94
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+|[]\T1/lmr/bx/n/12 (+20) Interview Tip|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+|[]\T1/lmr/bx/n/14.4 (+20) Process Mem-ory Lay-out|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+|[]\T1/lmr/bx/n/12 (+20) Text Seg-ment|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+|[]\T1/lmr/bx/n/12 (+20) Data Seg-ment|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+|[]\T1/lmr/bx/n/12 (+20) BSS Seg-ment|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
+|[]\T1/lmr/bx/n/12 (+20) Heap|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+|[]\T1/lmr/bx/n/12 (+20) Stack|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+|[]\T1/lmr/bx/n/12 (+20) Interview Ques-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+|[]\T1/lmr/bx/n/14.4 (+20) Process States|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+|[]\T1/lmr/bx/n/12 (+20) Five-State Model|
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
+|[]\T1/lmr/bx/n/12 (+20) Ready State|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
+|[]\T1/lmr/bx/n/12 (+20) Running State|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+|[]\T1/lmr/bx/n/12 (+20) Waiting State|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+|[]\T1/lmr/bx/n/12 (+20) Terminated State|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+|[]\T1/lmr/bx/n/14.4 (+20) Process Con-trol Block (PCB)|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+|[]\T1/lmr/bx/n/12 (+20) Contents of PCB|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
+|[]\T1/lmr/bx/n/14.4 (+20) Context Switch-ing|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
+|[]\T1/lmr/bx/n/12 (+20) Steps|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+|[]\T1/lmr/bx/n/12 (+20) Interview In-sight|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
+|[]\T1/lmr/bx/n/14.4 (+20) Process Cre-ation|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+|[]\T1/lmr/bx/n/12 (+20) Linux Model|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+|[]\T1/lmr/bx/n/12 (+20) Windows Model|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+|[]\T1/lmr/bx/n/14.4 (+20) fork()|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+|[]\T1/lmr/bx/n/12 (+20) Return Val-ues|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 356.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[37{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 372--372
+|[]\T1/lmr/bx/n/12 (+20) Interview In-sight|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+|[]\T1/lmr/bx/n/14.4 (+20) exec()|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
+|[]\T1/lmr/bx/n/12 (+20) Common Vari-ants|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--398
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
+|[]\T1/lmr/bx/n/12 (+20) Important Point|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+|[]\T1/lmr/bx/n/14.4 (+20) wait()|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 424--424
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--439
+|[]\T1/lmr/bx/n/12 (+20) Purpose|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
+|[]\T1/lmr/bx/n/14.4 (+20) Process Schedul-ing Overview|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 469--469
+|[]\T1/lmr/bx/n/14.4 (+20) Process Ter-mi-na-tion|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
+|[]\T1/lmr/bx/n/14.4 (+20) Zombie Pro-cesses|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+|[]\T1/lmr/bx/n/12 (+20) Reason|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
+|[]\T1/lmr/bx/n/12 (+20) Characteristics|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--510
+|[]\T1/lmr/bx/n/12 (+20) Fix|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--519
+|[]\T1/lmr/bx/n/12 (+20) Linux Ex-am-ple|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 526--526
+|[]\T1/lmr/bx/n/14.4 (+20) Orphan Pro-cesses|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--529
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--533
+|[]\T1/lmr/bx/n/12 (+20) What Hap-pens?|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 547--547
+|[]\T1/lmr/bx/n/12 (+20) Interview Ques-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 558--558
+|[]\T1/lmr/bx/n/14.4 (+20) Daemon Pro-cesses|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--561
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
+|[]\T1/lmr/bx/n/12 (+20) Characteristics|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 589--589
+|[]\T1/lmr/bx/n/14.4 (+20) Process Hi-er-ar-chies|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 614--614
+|[]\T1/lmr/bx/n/14.4 (+20) Linux Pro-cess Man-age-ment|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 617--617
+|[]\T1/lmr/bx/n/12 (+20) Useful Com-mands|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+|[]\T1/lmr/bx/n/12 (+20) Examples|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 664--664
+|[]\T1/lmr/bx/n/14.4 (+20) Interview In-sights|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 689--689
+|[]\T1/lmr/bx/n/14.4 (+20) Key Take-aways|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 706--706
+|[]\T1/lmr/bx/n/14.4 (+20) 20 In-ter-view Ques-tions with An-swers|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 772--772
+|[]\T1/lmr/bx/n/14.4 (+20) 20 MCQs with An-swers|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 843--843
+|[]\T1/lmr/bx/n/14.4 (+20) Revision Notes|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 860--860
+|[]\T1/lmr/bx/n/14.4 (+20) Cheat Sheet|
+ []
+
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[46]
 \openout2 = `chapters/part2_processes_threads/ch04_threads/chapter.aux'.
 
-No file chapters/part2_processes_threads/ch04_threads/chapter.tex.
+ (./chapters/part2_processes_threads/ch04_threads/chapter.tex
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+|[]\T1/lmr/bx/n/14.4 (+20) Motivation for Threads|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+|[]\T1/lmr/bx/n/14.4 (+20) What is a Thread|
+ []
+
+[47
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+|[]\T1/lmr/bx/n/14.4 (+20) Process vs Thread|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+|[]\T1/lmr/bx/n/14.4 (+20) Thread States|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+|[]\T1/lmr/bx/n/14.4 (+20) User Threads|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+|[]\T1/lmr/bx/n/14.4 (+20) Kernel Threads|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+|[]\T1/lmr/bx/n/14.4 (+20) Multithreading Mod-els|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+|[]\T1/lmr/bx/n/14.4 (+20) Many-to-One|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+|[]\T1/lmr/bx/n/14.4 (+20) One-to-One|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--197
+|[]\T1/lmr/bx/n/14.4 (+20) Many-to-Many|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
+|[]\T1/lmr/bx/n/14.4 (+20) Thread Li-braries|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+|[]\T1/lmr/bx/n/14.4 (+20) POSIX Threads|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+|[]\T1/lmr/bx/n/12 (+20) Pthreads Ex-am-ple|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+|[]\T1/lmr/bx/n/14.4 (+20) Java Threads|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+|[]\T1/lmr/bx/n/12 (+20) Java Ex-am-ple|
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+|[]\T1/lmr/bx/n/14.4 (+20) Python Threads|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--276
+|[]\T1/lmr/bx/n/12 (+20) Python Ex-am-ple|
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+|[]\T1/lmr/bx/n/14.4 (+20) Thread Pools|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+|[]\T1/lmr/bx/n/14.4 (+20) Thread Safety|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--332
+|[]\T1/lmr/bx/n/14.4 (+20) Thread Lo-cal Stor-age|
+ []
+
+
+Underfull \vbox (badness 1048) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
+|[]\T1/lmr/bx/n/14.4 (+20) Multicore Ex-e-cu-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+|[]\T1/lmr/bx/n/14.4 (+20) Interview Notes|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+|[]\T1/lmr/bx/n/14.4 (+20) Key Take-aways|
+ []
+
+)
+Runaway argument?
+ 
+/home/aditya/Documents/Study/os-handbook/main.tex:25: File ended while scanning use of \TX@get@body.
+<inserted text> 
+                \par 
+l.25 ...t2_processes_threads/ch04_threads/chapter}
+                                                  
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[53]
 \openout2 = `chapters/part2_processes_threads/ch05_cpu_scheduling/chapter.aux'.
 
-No file chapters/part2_processes_threads/ch05_cpu_scheduling/chapter.tex.
-[5
+ (./chapters/part2_processes_threads/ch05_cpu_scheduling/chapter.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[54
 
 
 
 
+]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+|[]\T1/lmr/bx/n/14.4 (+20) Chapter Overview|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+|[]\T1/lmr/bx/n/14.4 (+20) Learning Ob-jec-tives|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+|[]\T1/lmr/bx/n/14.4 (+20) CPU Schedul-ing Ba-sics|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+|[]\T1/lmr/bx/n/12 (+20) Why Schedul-ing is Needed|
+ []
+
+
+Underfull \vbox (badness 2393) has occurred while \output is active []
+
+ [55]
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+|[]\T1/lmr/bx/n/12 (+20) Scheduling Cy-cle|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+|[]\T1/lmr/bx/n/14.4 (+20) Scheduling Goals|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+|[]\T1/lmr/bx/n/14.4 (+20) Throughput|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+|[]\T1/lmr/bx/n/14.4 (+20) Turnaround Time|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+|[]\T1/lmr/bx/n/14.4 (+20) Waiting Time|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+|[]\T1/lmr/bx/n/14.4 (+20) Response Time|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+|[]\T1/lmr/bx/n/12 (+20) Importance|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+|[]\T1/lmr/bx/n/14.4 (+20) CPU Uti-liza-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+|[]\T1/lmr/bx/n/12 (+20) Goal|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+|[]\T1/lmr/bx/n/14.4 (+20) Preemptive Schedul-ing|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--188
+|[]\T1/lmr/bx/n/12 (+20) Examples|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+|[]\T1/lmr/bx/n/14.4 (+20) Non-Preemptive Schedul-ing|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+|[]\T1/lmr/bx/n/12 (+20) Examples|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
+|[]\T1/lmr/bx/n/14.4 (+20) First Come First Serve (FCFS)|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--244
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
+|[]\T1/lmr/bx/n/12 (+20) Working|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
+|[]\T1/lmr/bx/n/12 (+20) Complexity|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+|[]\T1/lmr/bx/n/14.4 (+20) Shortest Job First (SJF)|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
+|[]\T1/lmr/bx/n/12 (+20) Working|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--325
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+|[]\T1/lmr/bx/n/12 (+20) Complexity|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+|[]\T1/lmr/bx/n/14.4 (+20) Shortest Re-main-ing Time First (SRTF)|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+|[]\T1/lmr/bx/n/12 (+20) Working|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--386
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--399
+|[]\T1/lmr/bx/n/12 (+20) Complexity|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[62]
+Underfull \hbox (badness 10000) in paragraph at lines 428--428
+|[]\T1/lmr/bx/n/14.4 (+20) Priority Schedul-ing|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
+|[]\T1/lmr/bx/n/12 (+20) Working|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--439
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--451
+|[]\T1/lmr/bx/n/12 (+20) Complexity|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--457
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
+|[]\T1/lmr/bx/n/14.4 (+20) Round Robin Schedul-ing|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--482
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+|[]\T1/lmr/bx/n/12 (+20) Working|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--509
+|[]\T1/lmr/bx/n/12 (+20) Complexity|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[64]
+Underfull \hbox (badness 10000) in paragraph at lines 534--534
+|[]\T1/lmr/bx/n/14.4 (+20) Multilevel Queue Schedul-ing|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--537
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--549
+|[]\T1/lmr/bx/n/12 (+20) Working|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 559--559
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 566--566
+|[]\T1/lmr/bx/n/12 (+20) Complexity|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
+|[]\T1/lmr/bx/n/14.4 (+20) Multilevel Feed-back Queue (MLFQ)|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--574
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--578
+|[]\T1/lmr/bx/n/12 (+20) Working|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 586--586
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--593
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 599--599
+|[]\T1/lmr/bx/n/12 (+20) Complexity|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 618--618
+|[]\T1/lmr/bx/n/14.4 (+20) Dispatcher|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--621
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--633
+|[]\T1/lmr/bx/n/12 (+20) Dispatch La-tency|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 638--638
+|[]\T1/lmr/bx/n/14.4 (+20) Context Switch Im-pact|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 655--655
+|[]\T1/lmr/bx/n/14.4 (+20) Starvation|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 658--658
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 662--662
+|[]\T1/lmr/bx/n/12 (+20) Common In|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--671
+|[]\T1/lmr/bx/n/14.4 (+20) Aging|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 674--674
+|[]\T1/lmr/bx/n/12 (+20) Definition|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--678
+|[]\T1/lmr/bx/n/12 (+20) Purpose|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--682
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[67]
+Underfull \hbox (badness 10000) in paragraph at lines 687--687
+|[]\T1/lmr/bx/n/14.4 (+20) Comparative Sum-mary|
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 693.
+
+Underfull \hbox (badness 10000) in paragraph at lines 716--716
+|[]\T1/lmr/bx/n/14.4 (+20) Common In-ter-view Traps|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--731
+|[]\T1/lmr/bx/n/14.4 (+20) How to Solve Schedul-ing Nu-mer-i-cals Quickly|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 734--734
+|[]\T1/lmr/bx/n/12 (+20) Step 1|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--738
+|[]\T1/lmr/bx/n/12 (+20) Step 2|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 742--742
+|[]\T1/lmr/bx/n/12 (+20) Step 3|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 746--746
+|[]\T1/lmr/bx/n/12 (+20) Step 4|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 762--762
+|[]\T1/lmr/bx/n/12 (+20) Step 5|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 766--766
+|[]\T1/lmr/bx/n/12 (+20) Golden In-ter-view For-mula|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 775--775
+|[]\T1/lmr/bx/n/14.4 (+20) Key Take-aways|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--792
+|[]\T1/lmr/bx/n/14.4 (+20) 25 In-ter-view Ques-tions with An-swers|
+ []
+
+
+Underfull \vbox (badness 3612) has occurred while \output is active []
 
 
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[69]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-] [6]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 873--873
+|[]\T1/lmr/bx/n/14.4 (+20) 25 MCQs with An-swers|
+ []
+
+
+Underfull \vbox (badness 1048) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[71]
+Underfull \hbox (badness 10000) in paragraph at lines 956--956
+|[]\T1/lmr/bx/n/14.4 (+20) Revision Notes|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 975--975
+|[]\T1/lmr/bx/n/14.4 (+20) Cheat Sheet|
+ []
+
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[72] [73
+
+
+
+] [74]
 \openout2 = `chapters/part3_synchronization/ch06_critical_section/chapter.aux'.
 
+ (./chapters/part3_synchronization/ch06_critical_section/chapter.tex
+Chapter 6.
 
-No file chapters/part3_synchronization/ch06_critical_section/chapter.tex.
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+|[]\T1/lmr/bx/n/14.4 (+20) Introduction to Con-cur-rency|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+|[]\T1/lmr/bx/n/12 (+20) Concurrent Ex-e-cu-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+|[]\T1/lmr/bx/n/14.4 (+20) Shared Re-sources|
+ []
+
+[75
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+|[]\T1/lmr/bx/n/12 (+20) Shared Counter Ex-am-ple|
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+|[]\T1/lmr/bx/n/14.4 (+20) Race Con-di-tions|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+|[]\T1/lmr/bx/n/12 (+20) Execution Time-line|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+|[]\T1/lmr/bx/n/14.4 (+20) Critical Sec-tions|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+|[]\T1/lmr/bx/n/12 (+20) Structure|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+|[]\T1/lmr/bx/n/14.4 (+20) The Crit-i-cal Sec-tion Prob-lem|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+|[]\T1/lmr/bx/n/14.4 (+20) Requirements for a Cor-rect So-lu-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+|[]\T1/lmr/bx/n/12 (+20) Mutual Ex-clu-sion|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
+|[]\T1/lmr/bx/n/12 (+20) Progress|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--190
+|[]\T1/lmr/bx/n/12 (+20) Bounded Wait-ing|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+|[]\T1/lmr/bx/n/14.4 (+20) Software-Based So-lu-tions|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+|[]\T1/lmr/bx/n/14.4 (+20) Peterson's Al-go-rithm|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+|[]\T1/lmr/bx/n/12 (+20) Shared Vari-ables|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+|[]\T1/lmr/bx/n/12 (+20) Process i|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
+|[]\T1/lmr/bx/n/12 (+20) Working Prin-ci-ple|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+|[]\T1/lmr/bx/n/12 (+20) State Di-a-gram|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+|[]\T1/lmr/bx/n/12 (+20) Interview Note|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+|[]\T1/lmr/bx/n/14.4 (+20) Bakery Al-go-rithm|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+|[]\T1/lmr/bx/n/12 (+20) Idea|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
+|[]\T1/lmr/bx/n/14.4 (+20) Hardware Sup-port for Syn-chro-niza-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
+|[]\T1/lmr/bx/n/14.4 (+20) Atomic Op-er-a-tions|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[80]
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+|[]\T1/lmr/bx/n/12 (+20) Atomicity Il-lus-tra-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
+|[]\T1/lmr/bx/n/14.4 (+20) Test-and-Set In-struc-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--358
+|[]\T1/lmr/bx/n/12 (+20) Pseudo Code|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+|[]\T1/lmr/bx/n/12 (+20) Spinlock Ex-am-ple|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
+|[]\T1/lmr/bx/n/14.4 (+20) Compare-and-Swap (CAS)|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+|[]\T1/lmr/bx/n/12 (+20) Pseudo Code|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--413
+|[]\T1/lmr/bx/n/14.4 (+20) Exchange In-struc-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+|[]\T1/lmr/bx/n/12 (+20) Pseudo Code|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
+|[]\T1/lmr/bx/n/12 (+20) Use Cases|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+|[]\T1/lmr/bx/n/14.4 (+20) Spinlocks|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
+|[]\T1/lmr/bx/n/12 (+20) Operation|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+|[]\T1/lmr/bx/n/12 (+20) Visualization|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--467
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--481
+|[]\T1/lmr/bx/n/14.4 (+20) Modern CPU Chal-lenges|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+|[]\T1/lmr/bx/n/14.4 (+20) Memory Re-order-ing Ba-sics|
+ []
+
+
+Underfull \vbox (badness 1596) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[83]
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--517
+|[]\T1/lmr/bx/n/12 (+20) Memory Il-lus-tra-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--536
+|[]\T1/lmr/bx/n/14.4 (+20) Real-World Race Con-di-tion Ex-am-ples|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--538
+|[]\T1/lmr/bx/n/12 (+20) Bank Ac-count Up-date|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--546
+|[]\T1/lmr/bx/n/12 (+20) Inventory Man-age-ment|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 554--554
+|[]\T1/lmr/bx/n/12 (+20) Ticket Book-ing|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[84]
+Underfull \hbox (badness 10000) in paragraph at lines 562--562
+|[]\T1/lmr/bx/n/12 (+20) Web Counter|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--570
+|[]\T1/lmr/bx/n/14.4 (+20) Interview Ex-pla-na-tions|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--572
+|[]\T1/lmr/bx/n/12 (+20) Why is the Crit-i-cal Sec-tion Prob-lem Im-por-tant?|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
+|[]\T1/lmr/bx/n/12 (+20) Why Isn't Pe-ter-son's Al-go-rithm Used in Prac-tice?|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--590
+|[]\T1/lmr/bx/n/12 (+20) Why Is CAS Pop-u-lar?|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
+|[]\T1/lmr/bx/n/12 (+20) Spinlock vs Mu-tex|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 604--604
+|[]\T1/lmr/bx/n/14.4 (+20) Common Mis-takes|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[85]
+Underfull \hbox (badness 10000) in paragraph at lines 616--616
+|[]\T1/lmr/bx/n/14.4 (+20) Key Take-aways|
+ []
+
+)
+Runaway argument?
+ 
+/home/aditya/Documents/Study/os-handbook/main.tex:30: File ended while scanning use of \TX@get@body.
+<inserted text> 
+                \par 
+l.30 ...hronization/ch06_critical_section/chapter}
+                                                  
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[86]
 \openout2 = `chapters/part3_synchronization/ch07_synchronization_mechanisms/chapter.aux'.
 
-No file chapters/part3_synchronization/ch07_synchronization_mechanisms/chapter.tex.
+ (./chapters/part3_synchronization/ch07_synchronization_mechanisms/chapter.tex
+Chapter 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+|[]\T1/lmr/bx/n/14.4 (+20) Introduction to Con-cur-rency|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+|[]\T1/lmr/bx/n/12 (+20) Concurrent Ex-e-cu-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+|[]\T1/lmr/bx/n/14.4 (+20) Shared Re-sources|
+ []
+
+[87
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+|[]\T1/lmr/bx/n/12 (+20) Shared Counter Ex-am-ple|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+|[]\T1/lmr/bx/n/14.4 (+20) Race Con-di-tions|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+|[]\T1/lmr/bx/n/12 (+20) Execution Time-line|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[88]
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+|[]\T1/lmr/bx/n/14.4 (+20) Critical Sec-tions|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+|[]\T1/lmr/bx/n/12 (+20) Structure|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+|[]\T1/lmr/bx/n/14.4 (+20) The Crit-i-cal Sec-tion Prob-lem|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+|[]\T1/lmr/bx/n/14.4 (+20) Requirements for a Cor-rect So-lu-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+|[]\T1/lmr/bx/n/12 (+20) Mutual Ex-clu-sion|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[89]
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
+|[]\T1/lmr/bx/n/12 (+20) Progress|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--190
+|[]\T1/lmr/bx/n/12 (+20) Bounded Wait-ing|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+|[]\T1/lmr/bx/n/14.4 (+20) Software-Based So-lu-tions|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+|[]\T1/lmr/bx/n/14.4 (+20) Peterson's Al-go-rithm|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+|[]\T1/lmr/bx/n/12 (+20) Shared Vari-ables|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[90]
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+|[]\T1/lmr/bx/n/12 (+20) Process i|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
+|[]\T1/lmr/bx/n/12 (+20) Working Prin-ci-ple|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+|[]\T1/lmr/bx/n/12 (+20) State Di-a-gram|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+|[]\T1/lmr/bx/n/12 (+20) Interview Note|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+|[]\T1/lmr/bx/n/14.4 (+20) Bakery Al-go-rithm|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+|[]\T1/lmr/bx/n/12 (+20) Idea|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[91]
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
+|[]\T1/lmr/bx/n/14.4 (+20) Hardware Sup-port for Syn-chro-niza-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
+|[]\T1/lmr/bx/n/14.4 (+20) Atomic Op-er-a-tions|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[92]
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+|[]\T1/lmr/bx/n/12 (+20) Atomicity Il-lus-tra-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
+|[]\T1/lmr/bx/n/14.4 (+20) Test-and-Set In-struc-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--358
+|[]\T1/lmr/bx/n/12 (+20) Pseudo Code|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+|[]\T1/lmr/bx/n/12 (+20) Spinlock Ex-am-ple|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
+|[]\T1/lmr/bx/n/14.4 (+20) Compare-and-Swap (CAS)|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+|[]\T1/lmr/bx/n/12 (+20) Pseudo Code|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--413
+|[]\T1/lmr/bx/n/14.4 (+20) Exchange In-struc-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+|[]\T1/lmr/bx/n/12 (+20) Pseudo Code|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
+|[]\T1/lmr/bx/n/12 (+20) Use Cases|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+|[]\T1/lmr/bx/n/14.4 (+20) Spinlocks|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
+|[]\T1/lmr/bx/n/12 (+20) Operation|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+|[]\T1/lmr/bx/n/12 (+20) Visualization|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--467
+|[]\T1/lmr/bx/n/12 (+20) Advantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
+|[]\T1/lmr/bx/n/12 (+20) Disadvantages|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--481
+|[]\T1/lmr/bx/n/14.4 (+20) Modern CPU Chal-lenges|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+|[]\T1/lmr/bx/n/14.4 (+20) Memory Re-order-ing Ba-sics|
+ []
+
+
+Underfull \vbox (badness 1596) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[95]
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+|[]\T1/lmr/bx/n/12 (+20) Example|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--517
+|[]\T1/lmr/bx/n/12 (+20) Memory Il-lus-tra-tion|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--536
+|[]\T1/lmr/bx/n/14.4 (+20) Real-World Race Con-di-tion Ex-am-ples|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--538
+|[]\T1/lmr/bx/n/12 (+20) Bank Ac-count Up-date|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--546
+|[]\T1/lmr/bx/n/12 (+20) Inventory Man-age-ment|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 554--554
+|[]\T1/lmr/bx/n/12 (+20) Ticket Book-ing|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 562--562
+|[]\T1/lmr/bx/n/12 (+20) Web Counter|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--570
+|[]\T1/lmr/bx/n/14.4 (+20) Interview Ex-pla-na-tions|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--572
+|[]\T1/lmr/bx/n/12 (+20) Why is the Crit-i-cal Sec-tion Prob-lem Im-por-tant?|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
+|[]\T1/lmr/bx/n/12 (+20) Why Isn't Pe-ter-son's Al-go-rithm Used in Prac-tice?|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--590
+|[]\T1/lmr/bx/n/12 (+20) Why Is CAS Pop-u-lar?|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
+|[]\T1/lmr/bx/n/12 (+20) Spinlock vs Mu-tex|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 604--604
+|[]\T1/lmr/bx/n/14.4 (+20) Common Mis-takes|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[97]
+Underfull \hbox (badness 10000) in paragraph at lines 616--616
+|[]\T1/lmr/bx/n/14.4 (+20) Key Take-aways|
+ []
+
+)
+Runaway argument?
+ 
+/home/aditya/Documents/Study/os-handbook/main.tex:31: File ended while scanning use of \TX@get@body.
+<inserted text> 
+                \par 
+l.31 ...n/ch07_synchronization_mechanisms/chapter}
+                                                  
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[98]
 \openout2 = `chapters/part3_synchronization/ch08_classical_sync_problems/chapter.aux'.
 
-No file chapters/part3_synchronization/ch08_classical_sync_problems/chapter.tex.
-[7
+ (./chapters/part3_synchronization/ch08_classical_sync_problems/chapter.tex) [99
 
 
 
 
 
 
-
-
-
-
-] [8]
+] [100]
 \openout2 = `chapters/part4_deadlocks/ch09_deadlocks/chapter.aux'.
 
-
-No file chapters/part4_deadlocks/ch09_deadlocks/chapter.tex.
+ (./chapters/part4_deadlocks/ch09_deadlocks/chapter.tex)
 \openout2 = `chapters/part4_deadlocks/ch10_deadlock_handling/chapter.aux'.
 
-No file chapters/part4_deadlocks/ch10_deadlock_handling/chapter.tex.
-[9
+ (./chapters/part4_deadlocks/ch10_deadlock_handling/chapter.tex) [101
 
 
 
@@ -927,27 +3803,25 @@ No file chapters/part4_deadlocks/ch10_deadlock_handling/chapter.tex.
 
 
 
-] [10]
+] [102]
 \openout2 = `chapters/part5_memory_management/ch11_memory_basics/chapter.aux'.
 
-
-No file chapters/part5_memory_management/ch11_memory_basics/chapter.tex.
+ (./chapters/part5_memory_management/ch11_memory_basics/chapter.tex)
 \openout2 = `chapters/part5_memory_management/ch12_paging/chapter.aux'.
 
-No file chapters/part5_memory_management/ch12_paging/chapter.tex.
+ (./chapters/part5_memory_management/ch12_paging/chapter.tex)
 \openout2 = `chapters/part5_memory_management/ch13_segmentation/chapter.aux'.
 
-No file chapters/part5_memory_management/ch13_segmentation/chapter.tex.
+ (./chapters/part5_memory_management/ch13_segmentation/chapter.tex)
 \openout2 = `chapters/part5_memory_management/ch14_virtual_memory/chapter.aux'.
 
-No file chapters/part5_memory_management/ch14_virtual_memory/chapter.tex.
+ (./chapters/part5_memory_management/ch14_virtual_memory/chapter.tex)
 \openout2 = `chapters/part5_memory_management/ch15_page_replacement/chapter.aux'.
 
-No file chapters/part5_memory_management/ch15_page_replacement/chapter.tex.
+ (./chapters/part5_memory_management/ch15_page_replacement/chapter.tex)
 \openout2 = `chapters/part5_memory_management/ch16_memory_allocation/chapter.aux'.
 
-No file chapters/part5_memory_management/ch16_memory_allocation/chapter.tex.
-[11
+ (./chapters/part5_memory_management/ch16_memory_allocation/chapter.tex) [103
 
 
 
@@ -967,18 +3841,16 @@ No file chapters/part5_memory_management/ch16_memory_allocation/chapter.tex.
 
 
 
-] [12]
+] [104]
 \openout2 = `chapters/part6_file_systems/ch17_file_system_basics/chapter.aux'.
 
-
-No file chapters/part6_file_systems/ch17_file_system_basics/chapter.tex.
+ (./chapters/part6_file_systems/ch17_file_system_basics/chapter.tex)
 \openout2 = `chapters/part6_file_systems/ch18_file_system_implementation/chapter.aux'.
 
-No file chapters/part6_file_systems/ch18_file_system_implementation/chapter.tex.
+ (./chapters/part6_file_systems/ch18_file_system_implementation/chapter.tex)
 \openout2 = `chapters/part6_file_systems/ch19_disk_management/chapter.aux'.
 
-No file chapters/part6_file_systems/ch19_disk_management/chapter.tex.
-[13
+ (./chapters/part6_file_systems/ch19_disk_management/chapter.tex) [105
 
 
 
@@ -989,31 +3861,27 @@ No file chapters/part6_file_systems/ch19_disk_management/chapter.tex.
 
 
 
-] [14]
+] [106]
 \openout2 = `chapters/part7_io/ch20_io_systems/chapter.aux'.
 
-
-No file chapters/part7_io/ch20_io_systems/chapter.tex.
-[15
+ (./chapters/part7_io/ch20_io_systems/chapter.tex) [107
 
 
 
 
-] [16]
+] [108]
 \openout2 = `chapters/part8_modern_os/ch21_linux_internals/chapter.aux'.
 
-
-No file chapters/part8_modern_os/ch21_linux_internals/chapter.tex.
+ (./chapters/part8_modern_os/ch21_linux_internals/chapter.tex)
 \openout2 = `chapters/part8_modern_os/ch22_modern_concurrency/chapter.aux'.
 
-No file chapters/part8_modern_os/ch22_modern_concurrency/chapter.tex.
+ (./chapters/part8_modern_os/ch22_modern_concurrency/chapter.tex)
 \openout2 = `chapters/part8_modern_os/ch23_virtualization_containers/chapter.aux'.
 
-No file chapters/part8_modern_os/ch23_virtualization_containers/chapter.tex.
+ (./chapters/part8_modern_os/ch23_virtualization_containers/chapter.tex)
 \openout2 = `chapters/part8_modern_os/ch24_os_security/chapter.aux'.
 
-No file chapters/part8_modern_os/ch24_os_security/chapter.tex.
-[17
+ (./chapters/part8_modern_os/ch24_os_security/chapter.tex) [109
 
 
 
@@ -1027,18 +3895,16 @@ No file chapters/part8_modern_os/ch24_os_security/chapter.tex.
 
 
 
-] [18]
+] [110]
 \openout2 = `chapters/part9_system_design/ch25_high_concurrency/chapter.aux'.
 
-
-No file chapters/part9_system_design/ch25_high_concurrency/chapter.tex.
+ (./chapters/part9_system_design/ch25_high_concurrency/chapter.tex)
 \openout2 = `chapters/part9_system_design/ch26_memory_performance/chapter.aux'.
 
-No file chapters/part9_system_design/ch26_memory_performance/chapter.tex.
+ (./chapters/part9_system_design/ch26_memory_performance/chapter.tex)
 \openout2 = `chapters/part9_system_design/ch27_distributed_systems_os/chapter.aux'.
 
-No file chapters/part9_system_design/ch27_distributed_systems_os/chapter.tex.
-[19
+ (./chapters/part9_system_design/ch27_distributed_systems_os/chapter.tex) [111
 
 
 
@@ -1049,25 +3915,23 @@ No file chapters/part9_system_design/ch27_distributed_systems_os/chapter.tex.
 
 
 
-] [20]
+] [112]
 \openout2 = `chapters/part10_interview_mastery/ch28_interview_questions/chapter.aux'.
 
-
-No file chapters/part10_interview_mastery/ch28_interview_questions/chapter.tex.
+ (./chapters/part10_interview_mastery/ch28_interview_questions/chapter.tex)
 \openout2 = `chapters/part10_interview_mastery/ch29_numericals/chapter.aux'.
 
-No file chapters/part10_interview_mastery/ch29_numericals/chapter.tex.
+ (./chapters/part10_interview_mastery/ch29_numericals/chapter.tex)
 \openout2 = `chapters/part10_interview_mastery/ch30_cheat_sheets/chapter.aux'.
 
-No file chapters/part10_interview_mastery/ch30_cheat_sheets/chapter.tex.
+ (./chapters/part10_interview_mastery/ch30_cheat_sheets/chapter.tex)
 \openout2 = `chapters/part10_interview_mastery/ch31_revision_notes/chapter.aux'.
 
-No file chapters/part10_interview_mastery/ch31_revision_notes/chapter.tex.
-(./main.bbl
+ (./chapters/part10_interview_mastery/ch31_revision_notes/chapter.tex) (./main.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [21
+) [113
 
 
 
@@ -1081,27 +3945,68 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 
 
-] (./main.aux (./chapters/part1_fundamentals/ch01_introduction/chapter.aux) (./chapters/part1_fundamentals/ch02_computer_architecture/chapter.aux) (./chapters/part2_processes_threads/ch03_processes/chapter.aux) (./chapters/part2_processes_threads/ch04_threads/chapter.aux) (./chapters/part2_processes_threads/ch05_cpu_scheduling/chapter.aux) (./chapters/part3_synchronization/ch06_critical_section/chapter.aux) (./chapters/part3_synchronization/ch07_synchronization_mechanisms/chapter.aux) (./chapters/part3_synchronization/ch08_classical_sync_problems/chapter.aux) (./chapters/part4_deadlocks/ch09_deadlocks/chapter.aux) (./chapters/part4_deadlocks/ch10_deadlock_handling/chapter.aux) (./chapters/part5_memory_management/ch11_memory_basics/chapter.aux) (./chapters/part5_memory_management/ch12_paging/chapter.aux) (./chapters/part5_memory_management/ch13_segmentation/chapter.aux) (./chapters/part5_memory_management/ch14_virtual_memory/chapter.aux) (./chapters/part5_memory_management/ch15_page_replacement/chapter.aux) (./chapters/part5_memory_management/ch16_memory_allocation/chapter.aux) (./chapters/part6_file_systems/ch17_file_system_basics/chapter.aux) (./chapters/part6_file_systems/ch18_file_system_implementation/chapter.aux) (./chapters/part6_file_systems/ch19_disk_management/chapter.aux) (./chapters/part7_io/ch20_io_systems/chapter.aux) (./chapters/part8_modern_os/ch21_linux_internals/chapter.aux) (./chapters/part8_modern_os/ch22_modern_concurrency/chapter.aux) (./chapters/part8_modern_os/ch23_virtualization_containers/chapter.aux) (./chapters/part8_modern_os/ch24_os_security/chapter.aux) (./chapters/part9_system_design/ch25_high_concurrency/chapter.aux) (./chapters/part9_system_design/ch26_memory_performance/chapter.aux) (./chapters/part9_system_design/ch27_distributed_systems_os/chapter.aux) (./chapters/part10_interview_mastery/ch28_interview_questions/chapter.aux) (./chapters/part10_interview_mastery/ch29_numericals/chapter.aux) (./chapters/part10_interview_mastery/ch30_cheat_sheets/chapter.aux) (./chapters/part10_interview_mastery/ch31_revision_notes/chapter.aux))
+]
+
+/home/aditya/Documents/Study/os-handbook/main.tex:81: LaTeX Error: \begin{tabularx} on input line 618 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(./main.aux (./chapters/part1_fundamentals/ch01_introduction/chapter.aux) (./chapters/part1_fundamentals/ch02_computer_architecture/chapter.aux) (./chapters/part2_processes_threads/ch03_processes/chapter.aux) (./chapters/part2_processes_threads/ch04_threads/chapter.aux) (./chapters/part2_processes_threads/ch05_cpu_scheduling/chapter.aux) (./chapters/part3_synchronization/ch06_critical_section/chapter.aux) (./chapters/part3_synchronization/ch07_synchronization_mechanisms/chapter.aux) (./chapters/part3_synchronization/ch08_classical_sync_problems/chapter.aux) (./chapters/part4_deadlocks/ch09_deadlocks/chapter.aux) (./chapters/part4_deadlocks/ch10_deadlock_handling/chapter.aux) (./chapters/part5_memory_management/ch11_memory_basics/chapter.aux) (./chapters/part5_memory_management/ch12_paging/chapter.aux) (./chapters/part5_memory_management/ch13_segmentation/chapter.aux) (./chapters/part5_memory_management/ch14_virtual_memory/chapter.aux) (./chapters/part5_memory_management/ch15_page_replacement/chapter.aux) (./chapters/part5_memory_management/ch16_memory_allocation/chapter.aux) (./chapters/part6_file_systems/ch17_file_system_basics/chapter.aux) (./chapters/part6_file_systems/ch18_file_system_implementation/chapter.aux) (./chapters/part6_file_systems/ch19_disk_management/chapter.aux) (./chapters/part7_io/ch20_io_systems/chapter.aux) (./chapters/part8_modern_os/ch21_linux_internals/chapter.aux) (./chapters/part8_modern_os/ch22_modern_concurrency/chapter.aux) (./chapters/part8_modern_os/ch23_virtualization_containers/chapter.aux) (./chapters/part8_modern_os/ch24_os_security/chapter.aux) (./chapters/part9_system_design/ch25_high_concurrency/chapter.aux) (./chapters/part9_system_design/ch26_memory_performance/chapter.aux) (./chapters/part9_system_design/ch27_distributed_systems_os/chapter.aux) (./chapters/part10_interview_mastery/ch28_interview_questions/chapter.aux) (./chapters/part10_interview_mastery/ch29_numericals/chapter.aux) (./chapters/part10_interview_mastery/ch30_cheat_sheets/chapter.aux) (./chapters/part10_interview_mastery/ch31_revision_notes/chapter.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 63C3C8FE20ECDD15965D73509EEC9DAD;1533.
- ) 
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  4803B79F14C6248DB5D492EEAF3376B2;77314.
+ )
+(\end occurred inside a group at level 17)
+
+### simple group (level 17) entered at line 618 ({)
+### semi simple group (level 16) entered at line 618 (\begingroup)
+### semi simple group (level 15) entered at line 618 (\begingroup)
+### semi simple group (level 14) entered at line 618 (\begingroup)
+### simple group (level 13) entered at line 618 ({)
+### semi simple group (level 12) entered at line 618 (\begingroup)
+### semi simple group (level 11) entered at line 618 (\begingroup)
+### semi simple group (level 10) entered at line 618 (\begingroup)
+### simple group (level 9) entered at line 377 ({)
+### semi simple group (level 8) entered at line 377 (\begingroup)
+### semi simple group (level 7) entered at line 377 (\begingroup)
+### semi simple group (level 6) entered at line 377 (\begingroup)
+### simple group (level 5) entered at line 611 ({)
+### semi simple group (level 4) entered at line 611 (\begingroup)
+### semi simple group (level 3) entered at line 611 (\begingroup)
+### semi simple group (level 2) entered at line 611 (\begingroup)
+### simple group (level 1) entered at line 436 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 28412 strings out of 474222
- 555087 string characters out of 5748733
- 1926975 words of memory out of 5000000
- 50008 multiletter control sequences out of 15000+600000
- 587865 words of font info for 65 fonts, out of 8000000 for 9000
+ 31123 strings out of 474222
+ 593324 string characters out of 5748733
+ 2018975 words of memory out of 5000000
+ 51611 multiletter control sequences out of 15000+600000
+ 627365 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,11n,96p,1042b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
-Output written on main.pdf (29 pages, 91305 bytes).
+ 89i,12n,96p,1042b,3170s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (121 pages, 417641 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 18525 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 1712 PDF objects out of 1728 (max. 8388607)
+ 1550 compressed objects within 16 object streams
+ 1028 named destinations out of 1200 (max. 500000)
+ 42509 words of extra memory for PDF output out of 42996 (max. 10000000)
 
