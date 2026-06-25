@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.13)  25 JUN 2026 11:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.13)  25 JUN 2026 11:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -791,11 +791,7 @@ Package hyperref Info: Link coloring ON on input line 5.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./frontmatter/title.tex) (./main.toc)
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
- [1
+(./frontmatter/title.tex [1
 
 
 
@@ -809,11 +805,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-] (./main.lof)
-\tf@lof=\write6
-\openout6 = `main.lof'.
+]) (./main.toc)
+\tf@toc=\write5
+\openout5 = `main.toc'.
 
- [3]
+ [3
+
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -823,9 +821,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4
 
-] (./main.lot)
-\tf@lot=\write7
-\openout7 = `main.lot'.
+] (./main.lof)
+\tf@lof=\write6
+\openout6 = `main.lof'.
 
  [5]
 
@@ -836,6 +834,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [6
+
+] (./main.lot)
+\tf@lot=\write7
+\openout7 = `main.lot'.
+
+ [7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8
 
 ] [1
 
@@ -1078,18 +1090,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 63C3C8FE20ECDD15965D73509EEC9DAD;1533.
  ) 
 Here is how much of TeX's memory you used:
- 28396 strings out of 474222
- 554840 string characters out of 5748733
- 1927975 words of memory out of 5000000
- 50002 multiletter control sequences out of 15000+600000
- 581459 words of font info for 59 fonts, out of 8000000 for 9000
+ 28412 strings out of 474222
+ 555087 string characters out of 5748733
+ 1926975 words of memory out of 5000000
+ 50008 multiletter control sequences out of 15000+600000
+ 587865 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,11n,96p,1042b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb>
-Output written on main.pdf (27 pages, 65258 bytes).
+ 89i,11n,96p,1042b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
+Output written on main.pdf (29 pages, 91305 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 14429 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 215 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 18525 words of extra memory for PDF output out of 20736 (max. 10000000)
 
