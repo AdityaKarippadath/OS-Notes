@@ -1,0 +1,81 @@
+\documentclass[a4paper,11pt]{book}
+
+\input{preamble.tex}
+
+\begin{document}
+
+\frontmatter
+
+\input{frontmatter/title.tex}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+
+\part{Fundamentals}
+
+\include{chapters/part1_fundamentals/ch01_introduction/chapter}
+\include{chapters/part1_fundamentals/ch02_computer_architecture/chapter}
+
+\part{Processes and Threads}
+
+\include{chapters/part2_processes_threads/ch03_processes/chapter}
+\include{chapters/part2_processes_threads/ch04_threads/chapter}
+\include{chapters/part2_processes_threads/ch05_cpu_scheduling/chapter}
+
+\part{Synchronization}
+
+\include{chapters/part3_synchronization/ch06_critical_section/chapter}
+\include{chapters/part3_synchronization/ch07_synchronization_mechanisms/chapter}
+\include{chapters/part3_synchronization/ch08_classical_sync_problems/chapter}
+
+\part{Deadlocks}
+
+\include{chapters/part4_deadlocks/ch09_deadlocks/chapter}
+\include{chapters/part4_deadlocks/ch10_deadlock_handling/chapter}
+
+\part{Memory Management}
+
+\include{chapters/part5_memory_management/ch11_memory_basics/chapter}
+\include{chapters/part5_memory_management/ch12_paging/chapter}
+\include{chapters/part5_memory_management/ch13_segmentation/chapter}
+\include{chapters/part5_memory_management/ch14_virtual_memory/chapter}
+\include{chapters/part5_memory_management/ch15_page_replacement/chapter}
+\include{chapters/part5_memory_management/ch16_memory_allocation/chapter}
+
+\part{File Systems}
+
+\include{chapters/part6_file_systems/ch17_file_system_basics/chapter}
+\include{chapters/part6_file_systems/ch18_file_system_implementation/chapter}
+\include{chapters/part6_file_systems/ch19_disk_management/chapter}
+
+\part{Input/Output Systems}
+
+\include{chapters/part7_io/ch20_io_systems/chapter}
+
+\part{Modern Operating Systems}
+
+\include{chapters/part8_modern_os/ch21_linux_internals/chapter}
+\include{chapters/part8_modern_os/ch22_modern_concurrency/chapter}
+\include{chapters/part8_modern_os/ch23_virtualization_containers/chapter}
+\include{chapters/part8_modern_os/ch24_os_security/chapter}
+
+\part{Operating Systems for System Design}
+
+\include{chapters/part9_system_design/ch25_high_concurrency/chapter}
+\include{chapters/part9_system_design/ch26_memory_performance/chapter}
+\include{chapters/part9_system_design/ch27_distributed_systems_os/chapter}
+
+\part{Interview Mastery}
+
+\include{chapters/part10_interview_mastery/ch28_interview_questions/chapter}
+\include{chapters/part10_interview_mastery/ch29_numericals/chapter}
+\include{chapters/part10_interview_mastery/ch30_cheat_sheets/chapter}
+\include{chapters/part10_interview_mastery/ch31_revision_notes/chapter}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

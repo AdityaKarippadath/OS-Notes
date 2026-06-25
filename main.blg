@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: chapters/part1_fundamentals/ch01_introduction/chapter.aux
+A level-1 auxiliary file: chapters/part1_fundamentals/ch02_computer_architecture/chapter.aux
+A level-1 auxiliary file: chapters/part2_processes_threads/ch03_processes/chapter.aux
+A level-1 auxiliary file: chapters/part2_processes_threads/ch04_threads/chapter.aux
+A level-1 auxiliary file: chapters/part2_processes_threads/ch05_cpu_scheduling/chapter.aux
+A level-1 auxiliary file: chapters/part3_synchronization/ch06_critical_section/chapter.aux
+A level-1 auxiliary file: chapters/part3_synchronization/ch07_synchronization_mechanisms/chapter.aux
+A level-1 auxiliary file: chapters/part3_synchronization/ch08_classical_sync_problems/chapter.aux
+A level-1 auxiliary file: chapters/part4_deadlocks/ch09_deadlocks/chapter.aux
+A level-1 auxiliary file: chapters/part4_deadlocks/ch10_deadlock_handling/chapter.aux
+A level-1 auxiliary file: chapters/part5_memory_management/ch11_memory_basics/chapter.aux
+A level-1 auxiliary file: chapters/part5_memory_management/ch12_paging/chapter.aux
+A level-1 auxiliary file: chapters/part5_memory_management/ch13_segmentation/chapter.aux
+A level-1 auxiliary file: chapters/part5_memory_management/ch14_virtual_memory/chapter.aux
+A level-1 auxiliary file: chapters/part5_memory_management/ch15_page_replacement/chapter.aux
+A level-1 auxiliary file: chapters/part5_memory_management/ch16_memory_allocation/chapter.aux
+A level-1 auxiliary file: chapters/part6_file_systems/ch17_file_system_basics/chapter.aux
+A level-1 auxiliary file: chapters/part6_file_systems/ch18_file_system_implementation/chapter.aux
+A level-1 auxiliary file: chapters/part6_file_systems/ch19_disk_management/chapter.aux
+A level-1 auxiliary file: chapters/part7_io/ch20_io_systems/chapter.aux
+A level-1 auxiliary file: chapters/part8_modern_os/ch21_linux_internals/chapter.aux
+A level-1 auxiliary file: chapters/part8_modern_os/ch22_modern_concurrency/chapter.aux
+A level-1 auxiliary file: chapters/part8_modern_os/ch23_virtualization_containers/chapter.aux
+A level-1 auxiliary file: chapters/part8_modern_os/ch24_os_security/chapter.aux
+A level-1 auxiliary file: chapters/part9_system_design/ch25_high_concurrency/chapter.aux
+A level-1 auxiliary file: chapters/part9_system_design/ch26_memory_performance/chapter.aux
+A level-1 auxiliary file: chapters/part9_system_design/ch27_distributed_systems_os/chapter.aux
+A level-1 auxiliary file: chapters/part10_interview_mastery/ch28_interview_questions/chapter.aux
+A level-1 auxiliary file: chapters/part10_interview_mastery/ch29_numericals/chapter.aux
+A level-1 auxiliary file: chapters/part10_interview_mastery/ch30_cheat_sheets/chapter.aux
+A level-1 auxiliary file: chapters/part10_interview_mastery/ch31_revision_notes/chapter.aux
+The style file: plain.bst
+I found no \citation commands---while reading file main.aux
+Database file #1: references.bib
+You've used 0 entries,
+            2118 wiz_defined-function locations,
+            528 strings with 5920 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There was 1 error message)

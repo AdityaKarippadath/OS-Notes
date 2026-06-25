@@ -1,0 +1,260 @@
+% Encoding and Fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Mathematics
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{tikz}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+
+% Lists
+\usepackage{enumitem}
+
+% Code
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Hyperlinks
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+
+% Page Formatting
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{fancyhdr}
+
+% Miscellaneous
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{caption}
+
+% ------------------------------------------------------------------
+% Metadata
+% ------------------------------------------------------------------
+
+\newcommand{\booktitle}{Operating Systems for Software Development Engineers}
+\newcommand{\bookauthor}{Aditya Udai}
+
+% ------------------------------------------------------------------
+% Typography
+% ------------------------------------------------------------------
+
+\onehalfspacing
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+% ------------------------------------------------------------------
+% Hyperref Setup
+% ------------------------------------------------------------------
+
+\hypersetup{
+pdftitle={\booktitle},
+pdfauthor={\bookauthor},
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=blue,
+bookmarksopen=true,
+bookmarksnumbered=true
+}
+
+% ------------------------------------------------------------------
+% Header and Footer
+% ------------------------------------------------------------------
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[LE]{\nouppercase{\leftmark}}
+\fancyhead[RO]{\nouppercase{\rightmark}}
+\fancyhead[RE,LO]{\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ------------------------------------------------------------------
+% Chapter Formatting
+% ------------------------------------------------------------------
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\Huge}
+{\filleft\Large\chaptername\ \thechapter}
+{1.5ex}
+{\titlerule\vspace{1ex}\filright}
+[\vspace{1ex}\titlerule]
+
+\titlespacing*{\chapter}
+{0pt}
+{-10pt}
+{30pt}
+
+\titleformat{\section}
+{\Large\bfseries}
+{\thesection}
+{0.75em}
+{}
+
+\titleformat{\subsection}
+{\large\bfseries}
+{\thesubsection}
+{0.75em}
+{}
+
+\titleformat{\subsubsection}
+{\normalsize\bfseries}
+{\thesubsubsection}
+{0.75em}
+{}
+
+% ------------------------------------------------------------------
+% Captions
+% ------------------------------------------------------------------
+
+\captionsetup{
+font=small,
+labelfont=bf
+}
+
+% ------------------------------------------------------------------
+% Lists
+% ------------------------------------------------------------------
+
+\setlist[itemize]{
+topsep=4pt,
+itemsep=2pt,
+parsep=0pt
+}
+
+\setlist[enumerate]{
+topsep=4pt,
+itemsep=2pt,
+parsep=0pt
+}
+
+% ------------------------------------------------------------------
+% Colors for Listings
+% ------------------------------------------------------------------
+
+\definecolor{codebg}{RGB}{248,248,248}
+\definecolor{codeframe}{RGB}{220,220,220}
+\definecolor{codekeyword}{RGB}{0,0,140}
+\definecolor{codecomment}{RGB}{0,120,0}
+\definecolor{codestring}{RGB}{140,20,20}
+\definecolor{codenumber}{RGB}{110,110,110}
+
+% ------------------------------------------------------------------
+% Listings Style
+% ------------------------------------------------------------------
+
+\lstdefinestyle{interviewcode}{
+backgroundcolor=\color{codebg},
+basicstyle=\ttfamily\small,
+keywordstyle=\bfseries\color{codekeyword},
+commentstyle=\itshape\color{codecomment},
+stringstyle=\color{codestring},
+numberstyle=\scriptsize\color{codenumber},
+numbers=left,
+numbersep=8pt,
+frame=single,
+rulecolor=\color{codeframe},
+breaklines=true,
+breakatwhitespace=true,
+showstringspaces=false,
+tabsize=4,
+keepspaces=true,
+columns=fullflexible,
+captionpos=b,
+xleftmargin=0.5em,
+framexleftmargin=0.5em
+}
+
+\lstset{style=interviewcode}
+
+% ------------------------------------------------------------------
+% Theorem Styles
+% ------------------------------------------------------------------
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+
+% ------------------------------------------------------------------
+% Reusable Environments
+% ------------------------------------------------------------------
+
+\newenvironment{keytakeaways}
+{
+\begin{center}
+\begin{tabularx}{0.95\linewidth}{|>{\bfseries}p{0.16\linewidth}|X|}
+\hline
+Key Takeaways &
+}
+{
+\
+\hline
+\end{tabularx}
+\end{center}
+}
+
+\newenvironment{interviewquestion}
+{
+\begin{quote}
+\hrule
+\vspace{0.5em}
+\textbf{Interview Question}
+\par\medskip
+}
+{
+\vspace{0.5em}
+\hrule
+\end{quote}
+}
+
+\newenvironment{revisionnotes}
+{
+\begin{quote}
+\textbf{Revision Notes}
+\par\medskip
+\begin{itemize}
+}
+{
+\end{itemize}
+\end{quote}
+}
+
+% ------------------------------------------------------------------
+% Useful Column Types
+% ------------------------------------------------------------------
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% ------------------------------------------------------------------
+% TikZ Libraries
+% ------------------------------------------------------------------
+
+\usetikzlibrary{
+arrows.meta,
+positioning,
+shapes.geometric,
+calc
+}
