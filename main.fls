@@ -458,6 +458,16 @@ OUTPUT chapters/part5_memory_management/ch11_memory_basics/chapter.aux
 INPUT ./chapters/part5_memory_management/ch11_memory_basics/chapter.tex
 INPUT ./chapters/part5_memory_management/ch11_memory_basics/chapter.tex
 INPUT chapters/part5_memory_management/ch11_memory_basics/chapter.tex
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT ./chapters/part5_memory_management/ch12_paging/chapter.tex
 INPUT ./chapters/part5_memory_management/ch12_paging/chapter.tex
 OUTPUT chapters/part5_memory_management/ch12_paging/chapter.aux
@@ -476,6 +486,12 @@ OUTPUT chapters/part5_memory_management/ch14_virtual_memory/chapter.aux
 INPUT ./chapters/part5_memory_management/ch14_virtual_memory/chapter.tex
 INPUT ./chapters/part5_memory_management/ch14_virtual_memory/chapter.tex
 INPUT chapters/part5_memory_management/ch14_virtual_memory/chapter.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT ./chapters/part5_memory_management/ch15_page_replacement/chapter.tex
 INPUT ./chapters/part5_memory_management/ch15_page_replacement/chapter.tex
 OUTPUT chapters/part5_memory_management/ch15_page_replacement/chapter.aux
@@ -680,6 +696,7 @@ INPUT ./main.out
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb

@@ -447,10 +447,1574 @@
 \contentsline {subsection}{\numberline {7.19.4}Spinlock vs Mutex}{97}{subsection.7.19.4}%
 \contentsline {section}{\numberline {7.20}Common Mistakes}{97}{section.7.20}%
 \contentsline {section}{\numberline {7.21}Key Takeaways}{98}{section.7.21}%
-\contentsline {part}{IV\hspace {1em}Deadlocks}{99}{part.4}%
-\contentsline {part}{V\hspace {1em}Memory Management}{101}{part.5}%
-\contentsline {part}{VI\hspace {1em}File Systems}{103}{part.6}%
-\contentsline {part}{VII\hspace {1em}Input/Output Systems}{105}{part.7}%
-\contentsline {part}{VIII\hspace {1em}Modern Operating Systems}{107}{part.8}%
-\contentsline {part}{IX\hspace {1em}Operating Systems for System Design}{109}{part.9}%
-\contentsline {part}{X\hspace {1em}Interview Mastery}{111}{part.10}%
+\contentsline {chapter}{\numberline {8}Classical Synchronization Problems}{99}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Introduction}{99}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Producer Consumer Problem}{99}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Problem Statement}{99}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Visualization}{100}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Synchronization Challenges}{100}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Semaphore Solution}{100}{subsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.2.5}Monitor Solution}{100}{subsection.8.2.5}%
+\contentsline {subsection}{\numberline {8.2.6}Modern Implementation}{100}{subsection.8.2.6}%
+\contentsline {subsection}{\numberline {8.2.7}Complexity Discussion}{101}{subsection.8.2.7}%
+\contentsline {subsection}{\numberline {8.2.8}Execution Example}{101}{subsection.8.2.8}%
+\contentsline {subsection}{\numberline {8.2.9}C Example}{101}{subsection.8.2.9}%
+\contentsline {subsection}{\numberline {8.2.10}Java Example}{101}{subsection.8.2.10}%
+\contentsline {subsection}{\numberline {8.2.11}Python Example}{101}{subsection.8.2.11}%
+\contentsline {subsection}{\numberline {8.2.12}Interview Follow-Up}{101}{subsection.8.2.12}%
+\contentsline {section}{\numberline {8.3}Bounded Buffer Problem}{102}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Problem Statement}{102}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Visualization}{102}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Synchronization Challenges}{102}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Semaphore Solution}{102}{subsection.8.3.4}%
+\contentsline {subsection}{\numberline {8.3.5}Monitor Solution}{102}{subsection.8.3.5}%
+\contentsline {subsection}{\numberline {8.3.6}Modern Implementation}{102}{subsection.8.3.6}%
+\contentsline {subsection}{\numberline {8.3.7}Complexity Discussion}{102}{subsection.8.3.7}%
+\contentsline {section}{\numberline {8.4}Readers Writers Problem}{103}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Problem Statement}{103}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Visualization}{103}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Synchronization Challenges}{103}{subsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.4.4}Semaphore Solution}{103}{subsection.8.4.4}%
+\contentsline {subsection}{\numberline {8.4.5}Monitor Solution}{103}{subsection.8.4.5}%
+\contentsline {subsection}{\numberline {8.4.6}Modern Implementation}{104}{subsection.8.4.6}%
+\contentsline {subsection}{\numberline {8.4.7}Complexity Discussion}{104}{subsection.8.4.7}%
+\contentsline {subsection}{\numberline {8.4.8}Interview Follow-Up}{104}{subsection.8.4.8}%
+\contentsline {section}{\numberline {8.5}Dining Philosophers Problem}{104}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Problem Statement}{104}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Visualization}{104}{subsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.5.3}Synchronization Challenges}{104}{subsection.8.5.3}%
+\contentsline {subsection}{\numberline {8.5.4}Semaphore Solution}{105}{subsection.8.5.4}%
+\contentsline {subsection}{\numberline {8.5.5}Monitor Solution}{105}{subsection.8.5.5}%
+\contentsline {subsection}{\numberline {8.5.6}Modern Implementation}{105}{subsection.8.5.6}%
+\contentsline {subsection}{\numberline {8.5.7}Complexity Discussion}{105}{subsection.8.5.7}%
+\contentsline {subsection}{\numberline {8.5.8}C Example}{105}{subsection.8.5.8}%
+\contentsline {subsection}{\numberline {8.5.9}Interview Follow-Up}{105}{subsection.8.5.9}%
+\contentsline {section}{\numberline {8.6}Sleeping Barber Problem}{105}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Problem Statement}{105}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Visualization}{106}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}Synchronization Challenges}{106}{subsection.8.6.3}%
+\contentsline {subsection}{\numberline {8.6.4}Semaphore Solution}{106}{subsection.8.6.4}%
+\contentsline {subsection}{\numberline {8.6.5}Monitor Solution}{106}{subsection.8.6.5}%
+\contentsline {subsection}{\numberline {8.6.6}Modern Implementation}{106}{subsection.8.6.6}%
+\contentsline {subsection}{\numberline {8.6.7}Complexity Discussion}{106}{subsection.8.6.7}%
+\contentsline {section}{\numberline {8.7}Cigarette Smokers Problem}{107}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Problem Statement}{107}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}Visualization}{107}{subsection.8.7.2}%
+\contentsline {subsection}{\numberline {8.7.3}Synchronization Challenges}{107}{subsection.8.7.3}%
+\contentsline {subsection}{\numberline {8.7.4}Semaphore Solution}{107}{subsection.8.7.4}%
+\contentsline {subsection}{\numberline {8.7.5}Monitor Solution}{107}{subsection.8.7.5}%
+\contentsline {subsection}{\numberline {8.7.6}Modern Implementation}{107}{subsection.8.7.6}%
+\contentsline {subsection}{\numberline {8.7.7}Complexity Discussion}{107}{subsection.8.7.7}%
+\contentsline {section}{\numberline {8.8}River Crossing Problem}{107}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Problem Statement}{107}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Visualization}{108}{subsection.8.8.2}%
+\contentsline {subsection}{\numberline {8.8.3}Synchronization Challenges}{108}{subsection.8.8.3}%
+\contentsline {subsection}{\numberline {8.8.4}Semaphore Solution}{108}{subsection.8.8.4}%
+\contentsline {subsection}{\numberline {8.8.5}Monitor Solution}{108}{subsection.8.8.5}%
+\contentsline {subsection}{\numberline {8.8.6}Modern Implementation}{108}{subsection.8.8.6}%
+\contentsline {subsection}{\numberline {8.8.7}Complexity Discussion}{108}{subsection.8.8.7}%
+\contentsline {section}{\numberline {8.9}Barrier Synchronization Problem}{108}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Problem Statement}{108}{subsection.8.9.1}%
+\contentsline {subsection}{\numberline {8.9.2}Visualization}{109}{subsection.8.9.2}%
+\contentsline {subsection}{\numberline {8.9.3}Synchronization Challenges}{109}{subsection.8.9.3}%
+\contentsline {subsection}{\numberline {8.9.4}Semaphore Solution}{109}{subsection.8.9.4}%
+\contentsline {subsection}{\numberline {8.9.5}Monitor Solution}{109}{subsection.8.9.5}%
+\contentsline {subsection}{\numberline {8.9.6}Modern Implementation}{109}{subsection.8.9.6}%
+\contentsline {subsection}{\numberline {8.9.7}Complexity Discussion}{109}{subsection.8.9.7}%
+\contentsline {subsection}{\numberline {8.9.8}Java Example}{109}{subsection.8.9.8}%
+\contentsline {subsection}{\numberline {8.9.9}Python Example}{110}{subsection.8.9.9}%
+\contentsline {section}{\numberline {8.10}Key Takeaways}{110}{section.8.10}%
+\contentsline {part}{IV\hspace {1em}Deadlocks}{111}{part.4}%
+\contentsline {chapter}{\numberline {9}Deadlocks}{113}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Chapter Overview}{113}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Learning Objectives}{113}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Introduction to Deadlocks}{114}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Motivation}{114}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Real-World Analogy}{114}{subsection.9.3.2}%
+\contentsline {section}{\numberline {9.4}Resource Allocation Concepts}{115}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Resource}{115}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Resource Usage Cycle}{115}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}Example}{115}{subsection.9.4.3}%
+\contentsline {section}{\numberline {9.5}Reusable Resources}{115}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Definition}{115}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}Characteristics}{115}{subsection.9.5.2}%
+\contentsline {subsection}{\numberline {9.5.3}Examples}{116}{subsection.9.5.3}%
+\contentsline {subsection}{\numberline {9.5.4}Illustration}{116}{subsection.9.5.4}%
+\contentsline {section}{\numberline {9.6}Consumable Resources}{116}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}Definition}{116}{subsection.9.6.1}%
+\contentsline {subsection}{\numberline {9.6.2}Characteristics}{116}{subsection.9.6.2}%
+\contentsline {subsection}{\numberline {9.6.3}Examples}{116}{subsection.9.6.3}%
+\contentsline {subsection}{\numberline {9.6.4}Example}{116}{subsection.9.6.4}%
+\contentsline {section}{\numberline {9.7}Deadlock Definition}{117}{section.9.7}%
+\contentsline {subsection}{\numberline {9.7.1}Formal Definition}{117}{subsection.9.7.1}%
+\contentsline {subsection}{\numberline {9.7.2}Example}{117}{subsection.9.7.2}%
+\contentsline {subsection}{\numberline {9.7.3}Visualization}{117}{subsection.9.7.3}%
+\contentsline {section}{\numberline {9.8}Coffman Conditions}{117}{section.9.8}%
+\contentsline {subsection}{\numberline {9.8.1}Overview}{117}{subsection.9.8.1}%
+\contentsline {subsection}{\numberline {9.8.2}Mutual Exclusion}{118}{subsection.9.8.2}%
+\contentsline {subsubsection}{Definition}{118}{subsection.9.8.2}%
+\contentsline {subsubsection}{Example}{118}{subsection.9.8.2}%
+\contentsline {subsubsection}{Interview Insight}{118}{subsection.9.8.2}%
+\contentsline {subsection}{\numberline {9.8.3}Hold and Wait}{118}{subsection.9.8.3}%
+\contentsline {subsubsection}{Definition}{118}{subsection.9.8.3}%
+\contentsline {subsubsection}{Example}{118}{subsection.9.8.3}%
+\contentsline {subsubsection}{Visualization}{118}{subsection.9.8.3}%
+\contentsline {subsection}{\numberline {9.8.4}No Preemption}{119}{subsection.9.8.4}%
+\contentsline {subsubsection}{Definition}{119}{subsection.9.8.4}%
+\contentsline {subsubsection}{Example}{119}{subsection.9.8.4}%
+\contentsline {subsubsection}{Interview Insight}{119}{subsection.9.8.4}%
+\contentsline {subsection}{\numberline {9.8.5}Circular Wait}{119}{subsection.9.8.5}%
+\contentsline {subsubsection}{Definition}{119}{subsection.9.8.5}%
+\contentsline {subsubsection}{Example}{119}{subsection.9.8.5}%
+\contentsline {subsubsection}{Visualization}{120}{subsection.9.8.5}%
+\contentsline {section}{\numberline {9.9}Resource Allocation Graphs}{120}{section.9.9}%
+\contentsline {subsection}{\numberline {9.9.1}Definition}{120}{subsection.9.9.1}%
+\contentsline {subsection}{\numberline {9.9.2}Components}{120}{subsection.9.9.2}%
+\contentsline {subsection}{\numberline {9.9.3}Edges}{120}{subsection.9.9.3}%
+\contentsline {subsection}{\numberline {9.9.4}Example}{121}{subsection.9.9.4}%
+\contentsline {subsection}{\numberline {9.9.5}Important Observation}{121}{subsection.9.9.5}%
+\contentsline {section}{\numberline {9.10}Wait-For Graphs}{121}{section.9.10}%
+\contentsline {subsection}{\numberline {9.10.1}Definition}{121}{subsection.9.10.1}%
+\contentsline {subsection}{\numberline {9.10.2}Construction}{121}{subsection.9.10.2}%
+\contentsline {subsection}{\numberline {9.10.3}Example}{122}{subsection.9.10.3}%
+\contentsline {subsection}{\numberline {9.10.4}Deadlock Rule}{122}{subsection.9.10.4}%
+\contentsline {section}{\numberline {9.11}Deadlock Examples}{122}{section.9.11}%
+\contentsline {subsection}{\numberline {9.11.1}Example 1: Printer and Scanner}{122}{subsection.9.11.1}%
+\contentsline {subsection}{\numberline {9.11.2}Example 2: Two Mutex Locks}{122}{subsection.9.11.2}%
+\contentsline {subsection}{\numberline {9.11.3}Example 3: Dining Philosophers}{123}{subsection.9.11.3}%
+\contentsline {section}{\numberline {9.12}Deadlocks in Databases}{123}{section.9.12}%
+\contentsline {subsection}{\numberline {9.12.1}Scenario}{123}{subsection.9.12.1}%
+\contentsline {subsection}{\numberline {9.12.2}Example}{123}{subsection.9.12.2}%
+\contentsline {subsection}{\numberline {9.12.3}Database Handling}{123}{subsection.9.12.3}%
+\contentsline {subsection}{\numberline {9.12.4}Case Study}{124}{subsection.9.12.4}%
+\contentsline {section}{\numberline {9.13}Deadlocks in Distributed Systems}{124}{section.9.13}%
+\contentsline {subsection}{\numberline {9.13.1}Challenge}{124}{subsection.9.13.1}%
+\contentsline {subsection}{\numberline {9.13.2}Examples}{124}{subsection.9.13.2}%
+\contentsline {subsection}{\numberline {9.13.3}Problem}{124}{subsection.9.13.3}%
+\contentsline {subsection}{\numberline {9.13.4}Case Study}{124}{subsection.9.13.4}%
+\contentsline {section}{\numberline {9.14}Deadlocks in Modern Applications}{125}{section.9.14}%
+\contentsline {subsection}{\numberline {9.14.1}Microservices}{125}{subsection.9.14.1}%
+\contentsline {subsection}{\numberline {9.14.2}Cloud Systems}{125}{subsection.9.14.2}%
+\contentsline {subsection}{\numberline {9.14.3}Multithreaded Applications}{125}{subsection.9.14.3}%
+\contentsline {section}{\numberline {9.15}Deadlock Detection Concepts}{125}{section.9.15}%
+\contentsline {subsection}{\numberline {9.15.1}Purpose}{125}{subsection.9.15.1}%
+\contentsline {subsection}{\numberline {9.15.2}Basic Idea}{125}{subsection.9.15.2}%
+\contentsline {subsection}{\numberline {9.15.3}For Single Instance Resources}{126}{subsection.9.15.3}%
+\contentsline {subsection}{\numberline {9.15.4}For Multiple Instances}{126}{subsection.9.15.4}%
+\contentsline {subsection}{\numberline {9.15.5}Detection Frequency}{126}{subsection.9.15.5}%
+\contentsline {subsection}{\numberline {9.15.6}Deadlock Recovery}{126}{subsection.9.15.6}%
+\contentsline {section}{\numberline {9.16}Interview Case Studies}{126}{section.9.16}%
+\contentsline {subsection}{\numberline {9.16.1}Case Study 1}{126}{subsection.9.16.1}%
+\contentsline {subsection}{\numberline {9.16.2}Case Study 2}{126}{subsection.9.16.2}%
+\contentsline {subsection}{\numberline {9.16.3}Case Study 3}{127}{subsection.9.16.3}%
+\contentsline {section}{\numberline {9.17}Key Takeaways}{127}{section.9.17}%
+\contentsline {section}{\numberline {9.18}20 Interview Questions with Answers}{127}{section.9.18}%
+\contentsline {section}{\numberline {9.19}20 MCQs with Answers}{128}{section.9.19}%
+\contentsline {section}{\numberline {9.20}Revision Notes}{129}{section.9.20}%
+\contentsline {section}{\numberline {9.21}Cheat Sheet}{130}{section.9.21}%
+\contentsline {chapter}{\numberline {10}Deadlock Handling}{131}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Introduction}{131}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Deadlock Prevention}{131}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Necessary Conditions}{131}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Prevention Techniques}{131}{subsection.10.2.2}%
+\contentsline {section}{\numberline {10.3}Resource Ordering}{132}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Advantages}{132}{subsection.10.3.1}%
+\contentsline {section}{\numberline {10.4}Resource Preemption}{132}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Example}{132}{subsection.10.4.1}%
+\contentsline {section}{\numberline {10.5}Deadlock Avoidance}{133}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Safe State}{133}{section.10.6}%
+\contentsline {subsection}{\numberline {10.6.1}Safe Sequence}{133}{subsection.10.6.1}%
+\contentsline {subsection}{\numberline {10.6.2}Visualization}{133}{subsection.10.6.2}%
+\contentsline {section}{\numberline {10.7}Unsafe State}{133}{section.10.7}%
+\contentsline {section}{\numberline {10.8}Banker's Algorithm}{134}{section.10.8}%
+\contentsline {subsection}{\numberline {10.8.1}Data Structures}{134}{subsection.10.8.1}%
+\contentsline {section}{\numberline {10.9}Numerical Example}{134}{section.10.9}%
+\contentsline {subsection}{\numberline {10.9.1}Available}{134}{subsection.10.9.1}%
+\contentsline {subsection}{\numberline {10.9.2}Allocation Matrix}{134}{subsection.10.9.2}%
+\contentsline {subsection}{\numberline {10.9.3}Max Matrix}{135}{subsection.10.9.3}%
+\contentsline {subsection}{\numberline {10.9.4}Need Matrix}{135}{subsection.10.9.4}%
+\contentsline {section}{\numberline {10.10}Safety Algorithm}{135}{section.10.10}%
+\contentsline {subsection}{\numberline {10.10.1}Algorithm Steps}{135}{subsection.10.10.1}%
+\contentsline {subsection}{\numberline {10.10.2}Walkthrough}{135}{subsection.10.10.2}%
+\contentsline {section}{\numberline {10.11}Resource Request Algorithm}{137}{section.10.11}%
+\contentsline {subsection}{\numberline {10.11.1}Checks}{137}{subsection.10.11.1}%
+\contentsline {subsection}{\numberline {10.11.2}Example}{137}{subsection.10.11.2}%
+\contentsline {section}{\numberline {10.12}Deadlock Detection}{137}{section.10.12}%
+\contentsline {subsection}{\numberline {10.12.1}Resource Allocation Graph}{138}{subsection.10.12.1}%
+\contentsline {subsection}{\numberline {10.12.2}Detection Algorithm}{138}{subsection.10.12.2}%
+\contentsline {section}{\numberline {10.13}Deadlock Recovery}{138}{section.10.13}%
+\contentsline {section}{\numberline {10.14}Recovery by Process Termination}{138}{section.10.14}%
+\contentsline {subsection}{\numberline {10.14.1}Option 1}{138}{subsection.10.14.1}%
+\contentsline {subsection}{\numberline {10.14.2}Option 2}{139}{subsection.10.14.2}%
+\contentsline {section}{\numberline {10.15}Recovery by Resource Preemption}{139}{section.10.15}%
+\contentsline {subsection}{\numberline {10.15.1}Steps}{139}{subsection.10.15.1}%
+\contentsline {subsection}{\numberline {10.15.2}Victim Selection Criteria}{139}{subsection.10.15.2}%
+\contentsline {section}{\numberline {10.16}Flowchart for Deadlock Handling}{139}{section.10.16}%
+\contentsline {section}{\numberline {10.17}Practical Deadlock Handling}{140}{section.10.17}%
+\contentsline {section}{\numberline {10.18}Database Deadlock Handling}{140}{section.10.18}%
+\contentsline {subsection}{\numberline {10.18.1}Solutions}{140}{subsection.10.18.1}%
+\contentsline {subsection}{\numberline {10.18.2}Wait-Die}{140}{subsection.10.18.2}%
+\contentsline {subsection}{\numberline {10.18.3}Wound-Wait}{141}{subsection.10.18.3}%
+\contentsline {section}{\numberline {10.19}Distributed Deadlock Handling}{141}{section.10.19}%
+\contentsline {subsection}{\numberline {10.19.1}Techniques}{141}{subsection.10.19.1}%
+\contentsline {subsection}{\numberline {10.19.2}Probe-Based Detection}{141}{subsection.10.19.2}%
+\contentsline {section}{\numberline {10.20}Interview Strategies}{141}{section.10.20}%
+\contentsline {section}{\numberline {10.21}Common Pitfalls}{141}{section.10.21}%
+\contentsline {section}{\numberline {10.22}Key Takeaways}{142}{section.10.22}%
+\contentsline {part}{V\hspace {1em}Memory Management}{143}{part.5}%
+\contentsline {chapter}{\numberline {11}Memory Management Fundamentals}{145}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Chapter Overview}{145}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Learning Objectives}{145}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Memory Management Overview}{146}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Definition}{146}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Responsibilities}{146}{subsection.11.3.2}%
+\contentsline {subsection}{\numberline {11.3.3}Why It Matters}{146}{subsection.11.3.3}%
+\contentsline {subsection}{\numberline {11.3.4}Real-World Analogy}{146}{subsection.11.3.4}%
+\contentsline {section}{\numberline {11.4}Address Binding}{147}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Definition}{147}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Why Binding is Needed}{147}{subsection.11.4.2}%
+\contentsline {subsection}{\numberline {11.4.3}Stages}{147}{subsection.11.4.3}%
+\contentsline {section}{\numberline {11.5}Compile-Time Binding}{147}{section.11.5}%
+\contentsline {subsection}{\numberline {11.5.1}Definition}{147}{subsection.11.5.1}%
+\contentsline {subsection}{\numberline {11.5.2}Characteristics}{147}{subsection.11.5.2}%
+\contentsline {subsection}{\numberline {11.5.3}Example}{147}{subsection.11.5.3}%
+\contentsline {subsection}{\numberline {11.5.4}Advantages}{148}{subsection.11.5.4}%
+\contentsline {subsection}{\numberline {11.5.5}Disadvantages}{148}{subsection.11.5.5}%
+\contentsline {section}{\numberline {11.6}Load-Time Binding}{148}{section.11.6}%
+\contentsline {subsection}{\numberline {11.6.1}Definition}{148}{subsection.11.6.1}%
+\contentsline {subsection}{\numberline {11.6.2}Characteristics}{148}{subsection.11.6.2}%
+\contentsline {subsection}{\numberline {11.6.3}Example}{148}{subsection.11.6.3}%
+\contentsline {subsection}{\numberline {11.6.4}Advantages}{149}{subsection.11.6.4}%
+\contentsline {subsection}{\numberline {11.6.5}Disadvantages}{149}{subsection.11.6.5}%
+\contentsline {section}{\numberline {11.7}Execution-Time Binding}{149}{section.11.7}%
+\contentsline {subsection}{\numberline {11.7.1}Definition}{149}{subsection.11.7.1}%
+\contentsline {subsection}{\numberline {11.7.2}Characteristics}{149}{subsection.11.7.2}%
+\contentsline {subsection}{\numberline {11.7.3}Advantages}{149}{subsection.11.7.3}%
+\contentsline {subsection}{\numberline {11.7.4}Disadvantages}{149}{subsection.11.7.4}%
+\contentsline {section}{\numberline {11.8}Logical Addresses}{150}{section.11.8}%
+\contentsline {subsection}{\numberline {11.8.1}Definition}{150}{subsection.11.8.1}%
+\contentsline {subsection}{\numberline {11.8.2}Characteristics}{150}{subsection.11.8.2}%
+\contentsline {subsection}{\numberline {11.8.3}Example}{150}{subsection.11.8.3}%
+\contentsline {section}{\numberline {11.9}Physical Addresses}{150}{section.11.9}%
+\contentsline {subsection}{\numberline {11.9.1}Definition}{150}{subsection.11.9.1}%
+\contentsline {subsection}{\numberline {11.9.2}Characteristics}{150}{subsection.11.9.2}%
+\contentsline {subsection}{\numberline {11.9.3}Example}{150}{subsection.11.9.3}%
+\contentsline {section}{\numberline {11.10}MMU (Memory Management Unit)}{151}{section.11.10}%
+\contentsline {subsection}{\numberline {11.10.1}Definition}{151}{subsection.11.10.1}%
+\contentsline {subsection}{\numberline {11.10.2}Working}{151}{subsection.11.10.2}%
+\contentsline {subsection}{\numberline {11.10.3}Example}{151}{subsection.11.10.3}%
+\contentsline {subsection}{\numberline {11.10.4}Interview Note}{152}{subsection.11.10.4}%
+\contentsline {section}{\numberline {11.11}Dynamic Loading}{152}{section.11.11}%
+\contentsline {subsection}{\numberline {11.11.1}Definition}{152}{subsection.11.11.1}%
+\contentsline {subsection}{\numberline {11.11.2}Example}{152}{subsection.11.11.2}%
+\contentsline {subsection}{\numberline {11.11.3}Advantages}{152}{subsection.11.11.3}%
+\contentsline {subsection}{\numberline {11.11.4}Disadvantages}{152}{subsection.11.11.4}%
+\contentsline {section}{\numberline {11.12}Dynamic Linking}{152}{section.11.12}%
+\contentsline {subsection}{\numberline {11.12.1}Definition}{152}{subsection.11.12.1}%
+\contentsline {subsection}{\numberline {11.12.2}Working}{152}{subsection.11.12.2}%
+\contentsline {subsection}{\numberline {11.12.3}Advantages}{153}{subsection.11.12.3}%
+\contentsline {subsection}{\numberline {11.12.4}Disadvantages}{153}{subsection.11.12.4}%
+\contentsline {section}{\numberline {11.13}Shared Libraries}{153}{section.11.13}%
+\contentsline {subsection}{\numberline {11.13.1}Definition}{153}{subsection.11.13.1}%
+\contentsline {subsection}{\numberline {11.13.2}Linux Examples}{153}{subsection.11.13.2}%
+\contentsline {subsection}{\numberline {11.13.3}Windows Examples}{153}{subsection.11.13.3}%
+\contentsline {subsection}{\numberline {11.13.4}Advantages}{153}{subsection.11.13.4}%
+\contentsline {section}{\numberline {11.14}Static Linking vs Dynamic Linking}{154}{section.11.14}%
+\contentsline {section}{\numberline {11.15}Swapping}{154}{section.11.15}%
+\contentsline {subsection}{\numberline {11.15.1}Definition}{154}{subsection.11.15.1}%
+\contentsline {subsection}{\numberline {11.15.2}Purpose}{154}{subsection.11.15.2}%
+\contentsline {subsection}{\numberline {11.15.3}Diagram}{154}{subsection.11.15.3}%
+\contentsline {subsection}{\numberline {11.15.4}Advantages}{154}{subsection.11.15.4}%
+\contentsline {subsection}{\numberline {11.15.5}Disadvantages}{154}{subsection.11.15.5}%
+\contentsline {section}{\numberline {11.16}Memory Protection}{155}{section.11.16}%
+\contentsline {subsection}{\numberline {11.16.1}Definition}{155}{subsection.11.16.1}%
+\contentsline {subsection}{\numberline {11.16.2}Need}{155}{subsection.11.16.2}%
+\contentsline {subsection}{\numberline {11.16.3}Protection Mechanisms}{155}{subsection.11.16.3}%
+\contentsline {subsection}{\numberline {11.16.4}Example}{155}{subsection.11.16.4}%
+\contentsline {section}{\numberline {11.17}Relocation}{155}{section.11.17}%
+\contentsline {subsection}{\numberline {11.17.1}Definition}{155}{subsection.11.17.1}%
+\contentsline {subsection}{\numberline {11.17.2}Why Needed}{155}{subsection.11.17.2}%
+\contentsline {subsection}{\numberline {11.17.3}Interview Insight}{156}{subsection.11.17.3}%
+\contentsline {section}{\numberline {11.18}Contiguous Memory Allocation}{156}{section.11.18}%
+\contentsline {subsection}{\numberline {11.18.1}Definition}{156}{subsection.11.18.1}%
+\contentsline {subsection}{\numberline {11.18.2}Example}{156}{subsection.11.18.2}%
+\contentsline {subsection}{\numberline {11.18.3}Advantages}{156}{subsection.11.18.3}%
+\contentsline {subsection}{\numberline {11.18.4}Disadvantages}{156}{subsection.11.18.4}%
+\contentsline {section}{\numberline {11.19}Fragmentation}{157}{section.11.19}%
+\contentsline {subsection}{\numberline {11.19.1}Definition}{157}{subsection.11.19.1}%
+\contentsline {section}{\numberline {11.20}Internal Fragmentation}{157}{section.11.20}%
+\contentsline {subsection}{\numberline {11.20.1}Definition}{157}{subsection.11.20.1}%
+\contentsline {subsection}{\numberline {11.20.2}Example}{157}{subsection.11.20.2}%
+\contentsline {subsection}{\numberline {11.20.3}Visualization}{157}{subsection.11.20.3}%
+\contentsline {section}{\numberline {11.21}External Fragmentation}{158}{section.11.21}%
+\contentsline {subsection}{\numberline {11.21.1}Definition}{158}{subsection.11.21.1}%
+\contentsline {subsection}{\numberline {11.21.2}Example}{158}{subsection.11.21.2}%
+\contentsline {subsection}{\numberline {11.21.3}Visualization}{158}{subsection.11.21.3}%
+\contentsline {section}{\numberline {11.22}Memory Compaction}{158}{section.11.22}%
+\contentsline {subsection}{\numberline {11.22.1}Definition}{158}{subsection.11.22.1}%
+\contentsline {subsection}{\numberline {11.22.2}Before Compaction}{158}{subsection.11.22.2}%
+\contentsline {subsection}{\numberline {11.22.3}After Compaction}{159}{subsection.11.22.3}%
+\contentsline {subsection}{\numberline {11.22.4}Advantages}{159}{subsection.11.22.4}%
+\contentsline {subsection}{\numberline {11.22.5}Disadvantages}{159}{subsection.11.22.5}%
+\contentsline {section}{\numberline {11.23}Linux Examples}{159}{section.11.23}%
+\contentsline {section}{\numberline {11.24}Windows Examples}{159}{section.11.24}%
+\contentsline {section}{\numberline {11.25}Interview Notes}{160}{section.11.25}%
+\contentsline {subsection}{\numberline {11.25.1}Golden Rule}{160}{subsection.11.25.1}%
+\contentsline {section}{\numberline {11.26}Key Takeaways}{160}{section.11.26}%
+\contentsline {section}{\numberline {11.27}20 Interview Questions with Answers}{160}{section.11.27}%
+\contentsline {section}{\numberline {11.28}20 MCQs with Answers}{161}{section.11.28}%
+\contentsline {section}{\numberline {11.29}Revision Notes}{162}{section.11.29}%
+\contentsline {section}{\numberline {11.30}Cheat Sheet}{163}{section.11.30}%
+\contentsline {chapter}{\numberline {12}Paging}{165}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Motivation for Paging}{165}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Paging Fundamentals}{165}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Pages and Frames}{166}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Pages}{166}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}Frames}{166}{subsection.12.3.2}%
+\contentsline {section}{\numberline {12.4}Logical Address Structure}{167}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Physical Address Structure}{167}{section.12.5}%
+\contentsline {section}{\numberline {12.6}Address Translation}{168}{section.12.6}%
+\contentsline {subsection}{\numberline {12.6.1}Example}{168}{subsection.12.6.1}%
+\contentsline {section}{\numberline {12.7}Page Tables}{168}{section.12.7}%
+\contentsline {subsection}{\numberline {12.7.1}Example}{169}{subsection.12.7.1}%
+\contentsline {subsection}{\numberline {12.7.2}Purpose}{169}{subsection.12.7.2}%
+\contentsline {section}{\numberline {12.8}Page Table Entries}{169}{section.12.8}%
+\contentsline {section}{\numberline {12.9}Translation Lookaside Buffer (TLB)}{169}{section.12.9}%
+\contentsline {subsection}{\numberline {12.9.1}Motivation}{169}{subsection.12.9.1}%
+\contentsline {section}{\numberline {12.10}Effective Memory Access Time}{170}{section.12.10}%
+\contentsline {subsection}{\numberline {12.10.1}Formula}{170}{subsection.12.10.1}%
+\contentsline {subsection}{\numberline {12.10.2}Numerical Example}{170}{subsection.12.10.2}%
+\contentsline {section}{\numberline {12.11}Hierarchical Paging}{171}{section.12.11}%
+\contentsline {section}{\numberline {12.12}Multilevel Paging}{171}{section.12.12}%
+\contentsline {section}{\numberline {12.13}Inverted Page Tables}{172}{section.12.13}%
+\contentsline {subsection}{\numberline {12.13.1}Advantages}{172}{subsection.12.13.1}%
+\contentsline {subsection}{\numberline {12.13.2}Disadvantages}{172}{subsection.12.13.2}%
+\contentsline {section}{\numberline {12.14}Hashed Page Tables}{172}{section.12.14}%
+\contentsline {section}{\numberline {12.15}Shared Pages}{173}{section.12.15}%
+\contentsline {section}{\numberline {12.16}Huge Pages}{173}{section.12.16}%
+\contentsline {subsection}{\numberline {12.16.1}Advantages}{173}{subsection.12.16.1}%
+\contentsline {section}{\numberline {12.17}Paging in Linux}{174}{section.12.17}%
+\contentsline {section}{\numberline {12.18}Paging in Windows}{174}{section.12.18}%
+\contentsline {section}{\numberline {12.19}TLB Miss Handling}{174}{section.12.19}%
+\contentsline {subsection}{\numberline {12.19.1}TLB Hit}{174}{subsection.12.19.1}%
+\contentsline {subsection}{\numberline {12.19.2}TLB Miss}{175}{subsection.12.19.2}%
+\contentsline {section}{\numberline {12.20}TLB Shootdown}{175}{section.12.20}%
+\contentsline {section}{\numberline {12.21}Interview-Focused Explanations}{175}{section.12.21}%
+\contentsline {subsection}{\numberline {12.21.1}Why Paging?}{175}{subsection.12.21.1}%
+\contentsline {subsection}{\numberline {12.21.2}Why TLB?}{175}{subsection.12.21.2}%
+\contentsline {subsection}{\numberline {12.21.3}Why Multilevel Paging?}{176}{subsection.12.21.3}%
+\contentsline {subsection}{\numberline {12.21.4}Why Huge Pages?}{176}{subsection.12.21.4}%
+\contentsline {subsection}{\numberline {12.21.5}Most Common Interview Formula}{176}{subsection.12.21.5}%
+\contentsline {section}{\numberline {12.22}Key Takeaways}{176}{section.12.22}%
+\contentsline {chapter}{\numberline {13}Segmentation}{177}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Introduction}{177}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Motivation for Segmentation}{177}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Problem with Linear Address Spaces}{177}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Logical Organization}{178}{subsection.13.2.2}%
+\contentsline {section}{\numberline {13.3}Segmentation Fundamentals}{178}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Definition}{178}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}Examples}{178}{subsection.13.3.2}%
+\contentsline {subsection}{\numberline {13.3.3}Logical Address Format}{178}{subsection.13.3.3}%
+\contentsline {section}{\numberline {13.4}User View vs Physical Memory View}{179}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}User View}{179}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {13.4.2}Physical Memory View}{179}{subsection.13.4.2}%
+\contentsline {subsection}{\numberline {13.4.3}Illustration}{179}{subsection.13.4.3}%
+\contentsline {section}{\numberline {13.5}Segment Structure}{179}{section.13.5}%
+\contentsline {subsection}{\numberline {13.5.1}Example}{180}{subsection.13.5.1}%
+\contentsline {section}{\numberline {13.6}Segment Tables}{180}{section.13.6}%
+\contentsline {subsection}{\numberline {13.6.1}Definition}{180}{subsection.13.6.1}%
+\contentsline {subsection}{\numberline {13.6.2}Fields}{180}{subsection.13.6.2}%
+\contentsline {subsection}{\numberline {13.6.3}Example Segment Table}{180}{subsection.13.6.3}%
+\contentsline {section}{\numberline {13.7}Address Translation in Segmentation}{180}{section.13.7}%
+\contentsline {subsection}{\numberline {13.7.1}Translation Process}{180}{subsection.13.7.1}%
+\contentsline {subsection}{\numberline {13.7.2}Formula}{181}{subsection.13.7.2}%
+\contentsline {subsection}{\numberline {13.7.3}Numerical Example}{181}{subsection.13.7.3}%
+\contentsline {section}{\numberline {13.8}Address Translation Diagram}{181}{section.13.8}%
+\contentsline {section}{\numberline {13.9}Protection Mechanisms}{181}{section.13.9}%
+\contentsline {subsection}{\numberline {13.9.1}Protection Bits}{182}{subsection.13.9.1}%
+\contentsline {subsection}{\numberline {13.9.2}Example}{182}{subsection.13.9.2}%
+\contentsline {section}{\numberline {13.10}Sharing Mechanisms}{182}{section.13.10}%
+\contentsline {subsection}{\numberline {13.10.1}Example}{182}{subsection.13.10.1}%
+\contentsline {subsection}{\numberline {13.10.2}Benefits}{182}{subsection.13.10.2}%
+\contentsline {section}{\numberline {13.11}Segmentation Hardware}{182}{section.13.11}%
+\contentsline {subsection}{\numberline {13.11.1}STBR}{183}{subsection.13.11.1}%
+\contentsline {subsection}{\numberline {13.11.2}STLR}{183}{subsection.13.11.2}%
+\contentsline {section}{\numberline {13.12}External Fragmentation}{183}{section.13.12}%
+\contentsline {subsection}{\numberline {13.12.1}Problem}{183}{subsection.13.12.1}%
+\contentsline {subsection}{\numberline {13.12.2}Example}{183}{subsection.13.12.2}%
+\contentsline {subsection}{\numberline {13.12.3}Result}{183}{subsection.13.12.3}%
+\contentsline {section}{\numberline {13.13}Compaction}{183}{section.13.13}%
+\contentsline {subsection}{\numberline {13.13.1}Definition}{183}{subsection.13.13.1}%
+\contentsline {subsection}{\numberline {13.13.2}Before}{183}{subsection.13.13.2}%
+\contentsline {subsection}{\numberline {13.13.3}After}{184}{subsection.13.13.3}%
+\contentsline {subsection}{\numberline {13.13.4}Drawback}{184}{subsection.13.13.4}%
+\contentsline {section}{\numberline {13.14}Pure Segmentation}{184}{section.13.14}%
+\contentsline {subsection}{\numberline {13.14.1}Definition}{184}{subsection.13.14.1}%
+\contentsline {subsection}{\numberline {13.14.2}Characteristics}{184}{subsection.13.14.2}%
+\contentsline {section}{\numberline {13.15}Segmentation with Paging}{184}{section.13.15}%
+\contentsline {subsection}{\numberline {13.15.1}Motivation}{184}{subsection.13.15.1}%
+\contentsline {subsection}{\numberline {13.15.2}Approach}{184}{subsection.13.15.2}%
+\contentsline {subsection}{\numberline {13.15.3}Benefits}{184}{subsection.13.15.3}%
+\contentsline {subsection}{\numberline {13.15.4}Architecture}{185}{subsection.13.15.4}%
+\contentsline {section}{\numberline {13.16}Intel x86 Segmentation Overview}{185}{section.13.16}%
+\contentsline {subsection}{\numberline {13.16.1}Historical Design}{185}{subsection.13.16.1}%
+\contentsline {subsection}{\numberline {13.16.2}Segment Registers}{185}{subsection.13.16.2}%
+\contentsline {subsection}{\numberline {13.16.3}Modern x86}{185}{subsection.13.16.3}%
+\contentsline {section}{\numberline {13.17}Modern Operating Systems and Segmentation}{185}{section.13.17}%
+\contentsline {subsection}{\numberline {13.17.1}Linux}{185}{subsection.13.17.1}%
+\contentsline {subsection}{\numberline {13.17.2}Windows}{186}{subsection.13.17.2}%
+\contentsline {subsection}{\numberline {13.17.3}Reason}{186}{subsection.13.17.3}%
+\contentsline {section}{\numberline {13.18}Advantages of Segmentation}{186}{section.13.18}%
+\contentsline {section}{\numberline {13.19}Disadvantages of Segmentation}{186}{section.13.19}%
+\contentsline {section}{\numberline {13.20}Real-World Use Cases}{187}{section.13.20}%
+\contentsline {subsection}{\numberline {13.20.1}Program Organization}{187}{subsection.13.20.1}%
+\contentsline {subsection}{\numberline {13.20.2}Shared Libraries}{187}{subsection.13.20.2}%
+\contentsline {subsection}{\numberline {13.20.3}Security}{187}{subsection.13.20.3}%
+\contentsline {subsection}{\numberline {13.20.4}Legacy x86 Systems}{187}{subsection.13.20.4}%
+\contentsline {section}{\numberline {13.21}Segmentation vs Paging}{187}{section.13.21}%
+\contentsline {section}{\numberline {13.22}Key Takeaways}{187}{section.13.22}%
+\contentsline {section}{\numberline {13.23}20 Interview Questions with Answers}{188}{section.13.23}%
+\contentsline {section}{\numberline {13.24}20 MCQs with Answers}{188}{section.13.24}%
+\contentsline {section}{\numberline {13.25}Revision Notes}{190}{section.13.25}%
+\contentsline {section}{\numberline {13.26}Cheat Sheet}{190}{section.13.26}%
+\contentsline {chapter}{\numberline {14}Virtual Memory}{191}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Introduction}{191}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Motivation for Virtual Memory}{191}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Virtual Address Space}{192}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Advantages}{192}{subsection.14.3.1}%
+\contentsline {section}{\numberline {14.4}Demand Paging}{193}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Demand Segmentation}{193}{section.14.5}%
+\contentsline {section}{\numberline {14.6}Lazy Loading}{193}{section.14.6}%
+\contentsline {section}{\numberline {14.7}Page Faults}{194}{section.14.7}%
+\contentsline {subsection}{\numberline {14.7.1}Causes}{194}{subsection.14.7.1}%
+\contentsline {section}{\numberline {14.8}Page Fault Handling Procedure}{194}{section.14.8}%
+\contentsline {subsection}{\numberline {14.8.1}Detailed Walkthrough}{194}{subsection.14.8.1}%
+\contentsline {section}{\numberline {14.9}Valid and Invalid References}{195}{section.14.9}%
+\contentsline {subsection}{\numberline {14.9.1}Valid Reference}{195}{subsection.14.9.1}%
+\contentsline {subsection}{\numberline {14.9.2}Invalid Reference}{195}{subsection.14.9.2}%
+\contentsline {section}{\numberline {14.10}Copy-on-Write (COW)}{196}{section.14.10}%
+\contentsline {subsection}{\numberline {14.10.1}Motivation}{196}{subsection.14.10.1}%
+\contentsline {subsection}{\numberline {14.10.2}Operation}{196}{subsection.14.10.2}%
+\contentsline {section}{\numberline {14.11}Memory Mapped Files}{196}{section.14.11}%
+\contentsline {subsection}{\numberline {14.11.1}Example}{197}{subsection.14.11.1}%
+\contentsline {section}{\numberline {14.12}Shared Memory}{197}{section.14.12}%
+\contentsline {section}{\numberline {14.13}Working Set Model}{197}{section.14.13}%
+\contentsline {section}{\numberline {14.14}Thrashing}{198}{section.14.14}%
+\contentsline {subsection}{\numberline {14.14.1}Solutions}{198}{subsection.14.14.1}%
+\contentsline {section}{\numberline {14.15}Local Allocation Policies}{198}{section.14.15}%
+\contentsline {section}{\numberline {14.16}Global Allocation Policies}{199}{section.14.16}%
+\contentsline {section}{\numberline {14.17}Overcommitment}{199}{section.14.17}%
+\contentsline {section}{\numberline {14.18}Swap Space}{200}{section.14.18}%
+\contentsline {subsection}{\numberline {14.18.1}Purpose}{200}{subsection.14.18.1}%
+\contentsline {subsection}{\numberline {14.18.2}Drawbacks}{200}{subsection.14.18.2}%
+\contentsline {section}{\numberline {14.19}Virtual Memory in Linux}{200}{section.14.19}%
+\contentsline {subsection}{\numberline {14.19.1}Linux Commands}{200}{subsection.14.19.1}%
+\contentsline {section}{\numberline {14.20}Virtual Memory in Windows}{201}{section.14.20}%
+\contentsline {subsection}{\numberline {14.20.1}Important Components}{201}{subsection.14.20.1}%
+\contentsline {section}{\numberline {14.21}Case Study: Launching a Large Application}{201}{section.14.21}%
+\contentsline {section}{\numberline {14.22}Case Study: fork() in Linux}{201}{section.14.22}%
+\contentsline {section}{\numberline {14.23}Interview Focus: What Happens During a Page Fault?}{202}{section.14.23}%
+\contentsline {section}{\numberline {14.24}Interview Focus: Why Virtual Memory Exists}{202}{section.14.24}%
+\contentsline {section}{\numberline {14.25}Interview Focus: How Copy-on-Write Works}{202}{section.14.25}%
+\contentsline {section}{\numberline {14.26}Key Takeaways}{203}{section.14.26}%
+\contentsline {chapter}{\numberline {15}Page Replacement Algorithms}{205}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Introduction}{205}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Learning Objectives}{205}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Why Page Replacement is Needed}{205}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Example}{206}{subsection.15.3.1}%
+\contentsline {section}{\numberline {15.4}Frame Allocation Basics}{206}{section.15.4}%
+\contentsline {subsection}{\numberline {15.4.1}Frame}{206}{subsection.15.4.1}%
+\contentsline {subsection}{\numberline {15.4.2}Page}{206}{subsection.15.4.2}%
+\contentsline {subsection}{\numberline {15.4.3}Relationship}{206}{subsection.15.4.3}%
+\contentsline {subsection}{\numberline {15.4.4}Allocation Strategies}{206}{subsection.15.4.4}%
+\contentsline {section}{\numberline {15.5}Page Faults}{207}{section.15.5}%
+\contentsline {subsection}{\numberline {15.5.1}Definition}{207}{subsection.15.5.1}%
+\contentsline {subsection}{\numberline {15.5.2}Steps}{207}{subsection.15.5.2}%
+\contentsline {subsection}{\numberline {15.5.3}Impact}{207}{subsection.15.5.3}%
+\contentsline {section}{\numberline {15.6}Reference Strings}{207}{section.15.6}%
+\contentsline {subsection}{\numberline {15.6.1}Definition}{207}{subsection.15.6.1}%
+\contentsline {subsection}{\numberline {15.6.2}Example}{207}{subsection.15.6.2}%
+\contentsline {section}{\numberline {15.7}Performance Considerations}{207}{section.15.7}%
+\contentsline {subsection}{\numberline {15.7.1}Goal}{208}{subsection.15.7.1}%
+\contentsline {section}{\numberline {15.8}FIFO (First-In First-Out)}{208}{section.15.8}%
+\contentsline {subsection}{\numberline {15.8.1}Theory}{208}{subsection.15.8.1}%
+\contentsline {subsection}{\numberline {15.8.2}Working Principle}{208}{subsection.15.8.2}%
+\contentsline {subsection}{\numberline {15.8.3}Example}{208}{subsection.15.8.3}%
+\contentsline {subsection}{\numberline {15.8.4}Advantages}{208}{subsection.15.8.4}%
+\contentsline {subsection}{\numberline {15.8.5}Disadvantages}{208}{subsection.15.8.5}%
+\contentsline {subsection}{\numberline {15.8.6}Complexity}{209}{subsection.15.8.6}%
+\contentsline {section}{\numberline {15.9}Optimal Page Replacement}{209}{section.15.9}%
+\contentsline {subsection}{\numberline {15.9.1}Theory}{209}{subsection.15.9.1}%
+\contentsline {subsection}{\numberline {15.9.2}Example}{209}{subsection.15.9.2}%
+\contentsline {subsection}{\numberline {15.9.3}Advantages}{209}{subsection.15.9.3}%
+\contentsline {subsection}{\numberline {15.9.4}Disadvantages}{209}{subsection.15.9.4}%
+\contentsline {subsection}{\numberline {15.9.5}Complexity}{209}{subsection.15.9.5}%
+\contentsline {section}{\numberline {15.10}LRU (Least Recently Used)}{210}{section.15.10}%
+\contentsline {subsection}{\numberline {15.10.1}Theory}{210}{subsection.15.10.1}%
+\contentsline {subsection}{\numberline {15.10.2}Example}{210}{subsection.15.10.2}%
+\contentsline {subsection}{\numberline {15.10.3}Advantages}{210}{subsection.15.10.3}%
+\contentsline {subsection}{\numberline {15.10.4}Disadvantages}{210}{subsection.15.10.4}%
+\contentsline {subsection}{\numberline {15.10.5}Complexity}{210}{subsection.15.10.5}%
+\contentsline {section}{\numberline {15.11}Second Chance Algorithm}{210}{section.15.11}%
+\contentsline {subsection}{\numberline {15.11.1}Theory}{210}{subsection.15.11.1}%
+\contentsline {subsection}{\numberline {15.11.2}Working}{210}{subsection.15.11.2}%
+\contentsline {subsection}{\numberline {15.11.3}Advantages}{211}{subsection.15.11.3}%
+\contentsline {subsection}{\numberline {15.11.4}Disadvantages}{211}{subsection.15.11.4}%
+\contentsline {subsection}{\numberline {15.11.5}Complexity}{211}{subsection.15.11.5}%
+\contentsline {section}{\numberline {15.12}Clock Algorithm}{211}{section.15.12}%
+\contentsline {subsection}{\numberline {15.12.1}Theory}{211}{subsection.15.12.1}%
+\contentsline {subsection}{\numberline {15.12.2}Structure}{211}{subsection.15.12.2}%
+\contentsline {subsection}{\numberline {15.12.3}Advantages}{211}{subsection.15.12.3}%
+\contentsline {subsection}{\numberline {15.12.4}Disadvantages}{211}{subsection.15.12.4}%
+\contentsline {section}{\numberline {15.13}Enhanced Clock Algorithm}{212}{section.15.13}%
+\contentsline {subsection}{\numberline {15.13.1}Theory}{212}{subsection.15.13.1}%
+\contentsline {subsection}{\numberline {15.13.2}Priority Order}{212}{subsection.15.13.2}%
+\contentsline {subsection}{\numberline {15.13.3}Advantages}{212}{subsection.15.13.3}%
+\contentsline {subsection}{\numberline {15.13.4}Disadvantages}{212}{subsection.15.13.4}%
+\contentsline {section}{\numberline {15.14}LFU (Least Frequently Used)}{213}{section.15.14}%
+\contentsline {subsection}{\numberline {15.14.1}Theory}{213}{subsection.15.14.1}%
+\contentsline {subsection}{\numberline {15.14.2}Example}{213}{subsection.15.14.2}%
+\contentsline {subsection}{\numberline {15.14.3}Advantages}{213}{subsection.15.14.3}%
+\contentsline {subsection}{\numberline {15.14.4}Disadvantages}{213}{subsection.15.14.4}%
+\contentsline {subsection}{\numberline {15.14.5}Complexity}{213}{subsection.15.14.5}%
+\contentsline {section}{\numberline {15.15}MFU (Most Frequently Used)}{213}{section.15.15}%
+\contentsline {subsection}{\numberline {15.15.1}Theory}{213}{subsection.15.15.1}%
+\contentsline {subsection}{\numberline {15.15.2}Idea}{213}{subsection.15.15.2}%
+\contentsline {subsection}{\numberline {15.15.3}Advantages}{214}{subsection.15.15.3}%
+\contentsline {subsection}{\numberline {15.15.4}Disadvantages}{214}{subsection.15.15.4}%
+\contentsline {subsection}{\numberline {15.15.5}Complexity}{214}{subsection.15.15.5}%
+\contentsline {section}{\numberline {15.16}NRU (Not Recently Used)}{214}{section.15.16}%
+\contentsline {subsection}{\numberline {15.16.1}Theory}{214}{subsection.15.16.1}%
+\contentsline {subsection}{\numberline {15.16.2}Classes}{214}{subsection.15.16.2}%
+\contentsline {subsection}{\numberline {15.16.3}Advantages}{214}{subsection.15.16.3}%
+\contentsline {subsection}{\numberline {15.16.4}Disadvantages}{214}{subsection.15.16.4}%
+\contentsline {section}{\numberline {15.17}Random Replacement}{215}{section.15.17}%
+\contentsline {subsection}{\numberline {15.17.1}Theory}{215}{subsection.15.17.1}%
+\contentsline {subsection}{\numberline {15.17.2}Advantages}{215}{subsection.15.17.2}%
+\contentsline {subsection}{\numberline {15.17.3}Disadvantages}{215}{subsection.15.17.3}%
+\contentsline {subsection}{\numberline {15.17.4}Complexity}{215}{subsection.15.17.4}%
+\contentsline {section}{\numberline {15.18}Solved Numerical Example 1}{215}{section.15.18}%
+\contentsline {section}{\numberline {15.19}Solved Numerical Example 2}{216}{section.15.19}%
+\contentsline {section}{\numberline {15.20}Solved Numerical Example 3}{216}{section.15.20}%
+\contentsline {section}{\numberline {15.21}Belady's Anomaly}{216}{section.15.21}%
+\contentsline {subsection}{\numberline {15.21.1}Definition}{216}{subsection.15.21.1}%
+\contentsline {subsection}{\numberline {15.21.2}Example}{216}{subsection.15.21.2}%
+\contentsline {subsection}{\numberline {15.21.3}Observation}{217}{subsection.15.21.3}%
+\contentsline {section}{\numberline {15.22}Stack Algorithms}{217}{section.15.22}%
+\contentsline {subsection}{\numberline {15.22.1}Definition}{217}{subsection.15.22.1}%
+\contentsline {subsection}{\numberline {15.22.2}Examples}{217}{subsection.15.22.2}%
+\contentsline {subsection}{\numberline {15.22.3}Property}{217}{subsection.15.22.3}%
+\contentsline {section}{\numberline {15.23}Working Set Based Replacement}{217}{section.15.23}%
+\contentsline {subsection}{\numberline {15.23.1}Theory}{217}{subsection.15.23.1}%
+\contentsline {subsection}{\numberline {15.23.2}Working Set}{217}{subsection.15.23.2}%
+\contentsline {subsection}{\numberline {15.23.3}Advantages}{218}{subsection.15.23.3}%
+\contentsline {subsection}{\numberline {15.23.4}Disadvantages}{218}{subsection.15.23.4}%
+\contentsline {section}{\numberline {15.24}Page Buffering}{218}{section.15.24}%
+\contentsline {subsection}{\numberline {15.24.1}Definition}{218}{subsection.15.24.1}%
+\contentsline {subsection}{\numberline {15.24.2}Benefits}{218}{subsection.15.24.2}%
+\contentsline {subsection}{\numberline {15.24.3}Working}{218}{subsection.15.24.3}%
+\contentsline {section}{\numberline {15.25}Algorithm Comparison}{218}{section.15.25}%
+\contentsline {section}{\numberline {15.26}Interview Shortcuts}{219}{section.15.26}%
+\contentsline {subsection}{\numberline {15.26.1}Shortcut 1}{219}{subsection.15.26.1}%
+\contentsline {subsection}{\numberline {15.26.2}Shortcut 2}{219}{subsection.15.26.2}%
+\contentsline {subsection}{\numberline {15.26.3}Shortcut 3}{219}{subsection.15.26.3}%
+\contentsline {subsection}{\numberline {15.26.4}Shortcut 4}{219}{subsection.15.26.4}%
+\contentsline {subsection}{\numberline {15.26.5}Shortcut 5}{219}{subsection.15.26.5}%
+\contentsline {section}{\numberline {15.27}Key Takeaways}{219}{section.15.27}%
+\contentsline {section}{\numberline {15.28}25 Interview Questions with Answers}{219}{section.15.28}%
+\contentsline {section}{\numberline {15.29}25 MCQs with Answers}{220}{section.15.29}%
+\contentsline {section}{\numberline {15.30}Revision Notes}{221}{section.15.30}%
+\contentsline {section}{\numberline {15.31}Cheat Sheet}{222}{section.15.31}%
+\contentsline {chapter}{\numberline {16}Memory Allocation Strategies}{223}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Introduction}{223}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Memory Allocation Overview}{223}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Fixed Partition Allocation}{223}{section.16.3}%
+\contentsline {subsection}{\numberline {16.3.1}Example}{224}{subsection.16.3.1}%
+\contentsline {subsection}{\numberline {16.3.2}Advantages}{224}{subsection.16.3.2}%
+\contentsline {subsection}{\numberline {16.3.3}Disadvantages}{224}{subsection.16.3.3}%
+\contentsline {section}{\numberline {16.4}Dynamic Partition Allocation}{225}{section.16.4}%
+\contentsline {subsection}{\numberline {16.4.1}Example}{225}{subsection.16.4.1}%
+\contentsline {subsection}{\numberline {16.4.2}Advantages}{225}{subsection.16.4.2}%
+\contentsline {subsection}{\numberline {16.4.3}Disadvantages}{225}{subsection.16.4.3}%
+\contentsline {section}{\numberline {16.5}First Fit}{226}{section.16.5}%
+\contentsline {subsection}{\numberline {16.5.1}Example}{226}{subsection.16.5.1}%
+\contentsline {subsection}{\numberline {16.5.2}Advantages}{226}{subsection.16.5.2}%
+\contentsline {subsection}{\numberline {16.5.3}Disadvantages}{226}{subsection.16.5.3}%
+\contentsline {section}{\numberline {16.6}Best Fit}{226}{section.16.6}%
+\contentsline {subsection}{\numberline {16.6.1}Example}{227}{subsection.16.6.1}%
+\contentsline {subsection}{\numberline {16.6.2}Advantages}{227}{subsection.16.6.2}%
+\contentsline {subsection}{\numberline {16.6.3}Disadvantages}{227}{subsection.16.6.3}%
+\contentsline {section}{\numberline {16.7}Worst Fit}{227}{section.16.7}%
+\contentsline {subsection}{\numberline {16.7.1}Example}{227}{subsection.16.7.1}%
+\contentsline {subsection}{\numberline {16.7.2}Advantages}{228}{subsection.16.7.2}%
+\contentsline {subsection}{\numberline {16.7.3}Disadvantages}{228}{subsection.16.7.3}%
+\contentsline {section}{\numberline {16.8}Next Fit}{228}{section.16.8}%
+\contentsline {subsection}{\numberline {16.8.1}Advantages}{228}{subsection.16.8.1}%
+\contentsline {subsection}{\numberline {16.8.2}Disadvantages}{228}{subsection.16.8.2}%
+\contentsline {section}{\numberline {16.9}Buddy System}{229}{section.16.9}%
+\contentsline {subsection}{\numberline {16.9.1}Advantages}{229}{subsection.16.9.1}%
+\contentsline {subsection}{\numberline {16.9.2}Disadvantages}{230}{subsection.16.9.2}%
+\contentsline {section}{\numberline {16.10}Slab Allocation}{230}{section.16.10}%
+\contentsline {subsection}{\numberline {16.10.1}Advantages}{230}{subsection.16.10.1}%
+\contentsline {section}{\numberline {16.11}Kernel Memory Allocation}{230}{section.16.11}%
+\contentsline {section}{\numberline {16.12}Heap Management}{231}{section.16.12}%
+\contentsline {section}{\numberline {16.13}Free Lists}{231}{section.16.13}%
+\contentsline {subsection}{\numberline {16.13.1}Example}{231}{subsection.16.13.1}%
+\contentsline {subsection}{\numberline {16.13.2}Advantages}{231}{subsection.16.13.2}%
+\contentsline {subsection}{\numberline {16.13.3}Disadvantages}{231}{subsection.16.13.3}%
+\contentsline {section}{\numberline {16.14}Fragmentation Analysis}{232}{section.16.14}%
+\contentsline {subsection}{\numberline {16.14.1}Internal Fragmentation}{232}{subsection.16.14.1}%
+\contentsline {subsection}{\numberline {16.14.2}External Fragmentation}{232}{subsection.16.14.2}%
+\contentsline {section}{\numberline {16.15}Memory Pools}{232}{section.16.15}%
+\contentsline {section}{\numberline {16.16}Allocators in Modern Systems}{233}{section.16.16}%
+\contentsline {section}{\numberline {16.17}Linux Memory Allocation}{233}{section.16.17}%
+\contentsline {section}{\numberline {16.18}malloc Internals Overview}{233}{section.16.18}%
+\contentsline {subsection}{\numberline {16.18.1}Common Data Structures}{234}{subsection.16.18.1}%
+\contentsline {section}{\numberline {16.19}jemalloc and tcmalloc Overview}{234}{section.16.19}%
+\contentsline {subsection}{\numberline {16.19.1}jemalloc}{234}{subsection.16.19.1}%
+\contentsline {subsection}{\numberline {16.19.2}tcmalloc}{234}{subsection.16.19.2}%
+\contentsline {section}{\numberline {16.20}Detailed Comparison of Allocation Methods}{235}{section.16.20}%
+\contentsline {section}{\numberline {16.21}Performance Analysis}{235}{section.16.21}%
+\contentsline {section}{\numberline {16.22}Interview Discussions}{235}{section.16.22}%
+\contentsline {subsection}{\numberline {16.22.1}Why is Buddy Allocation Popular in Kernels?}{235}{subsection.16.22.1}%
+\contentsline {subsection}{\numberline {16.22.2}Why is Slab Allocation Used?}{236}{subsection.16.22.2}%
+\contentsline {subsection}{\numberline {16.22.3}Why Do Modern Servers Use jemalloc or tcmalloc?}{236}{subsection.16.22.3}%
+\contentsline {section}{\numberline {16.23}Key Takeaways}{236}{section.16.23}%
+\contentsline {part}{VI\hspace {1em}File Systems}{237}{part.6}%
+\contentsline {chapter}{\numberline {17}File System Fundamentals}{239}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Introduction}{239}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Learning Objectives}{239}{section.17.2}%
+\contentsline {section}{\numberline {17.3}What is a File System}{239}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}Definition}{239}{subsection.17.3.1}%
+\contentsline {subsection}{\numberline {17.3.2}Responsibilities}{240}{subsection.17.3.2}%
+\contentsline {subsection}{\numberline {17.3.3}Examples}{240}{subsection.17.3.3}%
+\contentsline {section}{\numberline {17.4}File Concept}{240}{section.17.4}%
+\contentsline {subsection}{\numberline {17.4.1}Definition}{240}{subsection.17.4.1}%
+\contentsline {subsection}{\numberline {17.4.2}Examples}{240}{subsection.17.4.2}%
+\contentsline {subsection}{\numberline {17.4.3}Real-World Analogy}{240}{subsection.17.4.3}%
+\contentsline {section}{\numberline {17.5}File Attributes}{241}{section.17.5}%
+\contentsline {subsection}{\numberline {17.5.1}Common Attributes}{241}{subsection.17.5.1}%
+\contentsline {subsection}{\numberline {17.5.2}Example}{241}{subsection.17.5.2}%
+\contentsline {section}{\numberline {17.6}File Operations}{241}{section.17.6}%
+\contentsline {subsection}{\numberline {17.6.1}Linux Example}{242}{subsection.17.6.1}%
+\contentsline {subsection}{\numberline {17.6.2}Windows Example}{242}{subsection.17.6.2}%
+\contentsline {section}{\numberline {17.7}Access Methods}{242}{section.17.7}%
+\contentsline {section}{\numberline {17.8}Sequential Access}{242}{section.17.8}%
+\contentsline {subsection}{\numberline {17.8.1}Definition}{242}{subsection.17.8.1}%
+\contentsline {subsection}{\numberline {17.8.2}Example}{243}{subsection.17.8.2}%
+\contentsline {subsection}{\numberline {17.8.3}Advantages}{243}{subsection.17.8.3}%
+\contentsline {subsection}{\numberline {17.8.4}Disadvantages}{243}{subsection.17.8.4}%
+\contentsline {section}{\numberline {17.9}Direct Access}{243}{section.17.9}%
+\contentsline {subsection}{\numberline {17.9.1}Definition}{243}{subsection.17.9.1}%
+\contentsline {subsection}{\numberline {17.9.2}Example}{243}{subsection.17.9.2}%
+\contentsline {subsection}{\numberline {17.9.3}Advantages}{243}{subsection.17.9.3}%
+\contentsline {subsection}{\numberline {17.9.4}Disadvantages}{243}{subsection.17.9.4}%
+\contentsline {section}{\numberline {17.10}Indexed Access}{244}{section.17.10}%
+\contentsline {subsection}{\numberline {17.10.1}Definition}{244}{subsection.17.10.1}%
+\contentsline {subsection}{\numberline {17.10.2}Example}{244}{subsection.17.10.2}%
+\contentsline {subsection}{\numberline {17.10.3}Advantages}{244}{subsection.17.10.3}%
+\contentsline {subsection}{\numberline {17.10.4}Disadvantages}{244}{subsection.17.10.4}%
+\contentsline {section}{\numberline {17.11}Directory Structures}{244}{section.17.11}%
+\contentsline {section}{\numberline {17.12}Single-Level Directory}{245}{section.17.12}%
+\contentsline {subsection}{\numberline {17.12.1}Definition}{245}{subsection.17.12.1}%
+\contentsline {subsection}{\numberline {17.12.2}Advantages}{245}{subsection.17.12.2}%
+\contentsline {subsection}{\numberline {17.12.3}Disadvantages}{245}{subsection.17.12.3}%
+\contentsline {section}{\numberline {17.13}Two-Level Directory}{245}{section.17.13}%
+\contentsline {subsection}{\numberline {17.13.1}Definition}{245}{subsection.17.13.1}%
+\contentsline {subsection}{\numberline {17.13.2}Advantages}{245}{subsection.17.13.2}%
+\contentsline {subsection}{\numberline {17.13.3}Disadvantages}{245}{subsection.17.13.3}%
+\contentsline {section}{\numberline {17.14}Tree-Structured Directory}{246}{section.17.14}%
+\contentsline {subsection}{\numberline {17.14.1}Definition}{246}{subsection.17.14.1}%
+\contentsline {subsection}{\numberline {17.14.2}Advantages}{246}{subsection.17.14.2}%
+\contentsline {subsection}{\numberline {17.14.3}Disadvantages}{246}{subsection.17.14.3}%
+\contentsline {section}{\numberline {17.15}Acyclic Graph Directories}{246}{section.17.15}%
+\contentsline {subsection}{\numberline {17.15.1}Definition}{246}{subsection.17.15.1}%
+\contentsline {subsection}{\numberline {17.15.2}Advantages}{246}{subsection.17.15.2}%
+\contentsline {subsection}{\numberline {17.15.3}Disadvantages}{246}{subsection.17.15.3}%
+\contentsline {section}{\numberline {17.16}General Graph Directories}{247}{section.17.16}%
+\contentsline {subsection}{\numberline {17.16.1}Definition}{247}{subsection.17.16.1}%
+\contentsline {subsection}{\numberline {17.16.2}Advantages}{247}{subsection.17.16.2}%
+\contentsline {subsection}{\numberline {17.16.3}Disadvantages}{247}{subsection.17.16.3}%
+\contentsline {section}{\numberline {17.17}File Metadata}{247}{section.17.17}%
+\contentsline {subsection}{\numberline {17.17.1}Definition}{247}{subsection.17.17.1}%
+\contentsline {subsection}{\numberline {17.17.2}Examples}{247}{subsection.17.17.2}%
+\contentsline {section}{\numberline {17.18}File Permissions}{247}{section.17.18}%
+\contentsline {subsection}{\numberline {17.18.1}Linux Permissions}{247}{subsection.17.18.1}%
+\contentsline {subsection}{\numberline {17.18.2}Meaning}{248}{subsection.17.18.2}%
+\contentsline {subsection}{\numberline {17.18.3}Permission Groups}{248}{subsection.17.18.3}%
+\contentsline {section}{\numberline {17.19}Links}{248}{section.17.19}%
+\contentsline {section}{\numberline {17.20}Hard Links}{248}{section.17.20}%
+\contentsline {subsection}{\numberline {17.20.1}Definition}{248}{subsection.17.20.1}%
+\contentsline {subsection}{\numberline {17.20.2}Linux Example}{248}{subsection.17.20.2}%
+\contentsline {subsection}{\numberline {17.20.3}Properties}{248}{subsection.17.20.3}%
+\contentsline {subsection}{\numberline {17.20.4}Illustration}{249}{subsection.17.20.4}%
+\contentsline {section}{\numberline {17.21}Symbolic Links}{249}{section.17.21}%
+\contentsline {subsection}{\numberline {17.21.1}Definition}{249}{subsection.17.21.1}%
+\contentsline {subsection}{\numberline {17.21.2}Linux Example}{249}{subsection.17.21.2}%
+\contentsline {subsection}{\numberline {17.21.3}Properties}{249}{subsection.17.21.3}%
+\contentsline {subsection}{\numberline {17.21.4}Illustration}{249}{subsection.17.21.4}%
+\contentsline {section}{\numberline {17.22}Hard Link vs Soft Link}{249}{section.17.22}%
+\contentsline {section}{\numberline {17.23}Linux Examples}{250}{section.17.23}%
+\contentsline {section}{\numberline {17.24}Windows Examples}{250}{section.17.24}%
+\contentsline {section}{\numberline {17.25}Directory Structure Comparison}{251}{section.17.25}%
+\contentsline {section}{\numberline {17.26}Interview Focus}{251}{section.17.26}%
+\contentsline {subsection}{\numberline {17.26.1}Frequently Asked Topics}{251}{subsection.17.26.1}%
+\contentsline {subsection}{\numberline {17.26.2}Golden Rule}{251}{subsection.17.26.2}%
+\contentsline {section}{\numberline {17.27}Key Takeaways}{251}{section.17.27}%
+\contentsline {section}{\numberline {17.28}20 Interview Questions with Answers}{252}{section.17.28}%
+\contentsline {section}{\numberline {17.29}20 MCQs with Answers}{253}{section.17.29}%
+\contentsline {section}{\numberline {17.30}Revision Notes}{253}{section.17.30}%
+\contentsline {section}{\numberline {17.31}Cheat Sheet}{254}{section.17.31}%
+\contentsline {chapter}{\numberline {18}File System Implementation}{255}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Introduction}{255}{section.18.1}%
+\contentsline {section}{\numberline {18.2}File System Architecture}{255}{section.18.2}%
+\contentsline {section}{\numberline {18.3}On-Disk Structures}{256}{section.18.3}%
+\contentsline {section}{\numberline {18.4}In-Memory Structures}{256}{section.18.4}%
+\contentsline {section}{\numberline {18.5}Boot Block}{256}{section.18.5}%
+\contentsline {section}{\numberline {18.6}Superblock}{257}{section.18.6}%
+\contentsline {section}{\numberline {18.7}Inodes}{257}{section.18.7}%
+\contentsline {section}{\numberline {18.8}File Control Blocks}{258}{section.18.8}%
+\contentsline {section}{\numberline {18.9}Allocation Methods}{258}{section.18.9}%
+\contentsline {section}{\numberline {18.10}Contiguous Allocation}{258}{section.18.10}%
+\contentsline {section}{\numberline {18.11}Linked Allocation}{259}{section.18.11}%
+\contentsline {section}{\numberline {18.12}Indexed Allocation}{259}{section.18.12}%
+\contentsline {section}{\numberline {18.13}Free Space Management}{260}{section.18.13}%
+\contentsline {section}{\numberline {18.14}Bitmaps}{260}{section.18.14}%
+\contentsline {section}{\numberline {18.15}Free Lists}{261}{section.18.15}%
+\contentsline {section}{\numberline {18.16}Journaling}{261}{section.18.16}%
+\contentsline {section}{\numberline {18.17}Log Structured File Systems}{262}{section.18.17}%
+\contentsline {section}{\numberline {18.18}ext4 Overview}{262}{section.18.18}%
+\contentsline {section}{\numberline {18.19}NTFS Overview}{263}{section.18.19}%
+\contentsline {section}{\numberline {18.20}File System Consistency}{263}{section.18.20}%
+\contentsline {section}{\numberline {18.21}fsck Overview}{263}{section.18.21}%
+\contentsline {section}{\numberline {18.22}Dedicated Interview Section: How Linux Stores Files Internally}{264}{section.18.22}%
+\contentsline {section}{\numberline {18.23}Allocation Method Comparison}{265}{section.18.23}%
+\contentsline {section}{\numberline {18.24}Key Takeaways}{265}{section.18.24}%
+\contentsline {chapter}{\numberline {19}Disk Management and Disk Scheduling}{267}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Introduction}{267}{section.19.1}%
+\contentsline {section}{\numberline {19.2}Learning Objectives}{267}{section.19.2}%
+\contentsline {section}{\numberline {19.3}Magnetic Disks Overview}{267}{section.19.3}%
+\contentsline {subsection}{\numberline {19.3.1}Definition}{267}{subsection.19.3.1}%
+\contentsline {subsection}{\numberline {19.3.2}Components}{268}{subsection.19.3.2}%
+\contentsline {subsection}{\numberline {19.3.3}Characteristics}{268}{subsection.19.3.3}%
+\contentsline {section}{\numberline {19.4}SSD Overview}{268}{section.19.4}%
+\contentsline {subsection}{\numberline {19.4.1}Definition}{268}{subsection.19.4.1}%
+\contentsline {subsection}{\numberline {19.4.2}Characteristics}{268}{subsection.19.4.2}%
+\contentsline {subsection}{\numberline {19.4.3}Advantages over HDDs}{268}{subsection.19.4.3}%
+\contentsline {section}{\numberline {19.5}Disk Structure}{268}{section.19.5}%
+\contentsline {section}{\numberline {19.6}Tracks}{269}{section.19.6}%
+\contentsline {subsection}{\numberline {19.6.1}Definition}{269}{subsection.19.6.1}%
+\contentsline {subsection}{\numberline {19.6.2}Characteristics}{269}{subsection.19.6.2}%
+\contentsline {section}{\numberline {19.7}Sectors}{269}{section.19.7}%
+\contentsline {subsection}{\numberline {19.7.1}Definition}{269}{subsection.19.7.1}%
+\contentsline {subsection}{\numberline {19.7.2}Typical Sizes}{269}{subsection.19.7.2}%
+\contentsline {section}{\numberline {19.8}Cylinders}{270}{section.19.8}%
+\contentsline {subsection}{\numberline {19.8.1}Definition}{270}{subsection.19.8.1}%
+\contentsline {section}{\numberline {19.9}Seek Time}{270}{section.19.9}%
+\contentsline {subsection}{\numberline {19.9.1}Definition}{270}{subsection.19.9.1}%
+\contentsline {subsection}{\numberline {19.9.2}Formula}{270}{subsection.19.9.2}%
+\contentsline {subsection}{\numberline {19.9.3}Example}{270}{subsection.19.9.3}%
+\contentsline {section}{\numberline {19.10}Rotational Latency}{271}{section.19.10}%
+\contentsline {subsection}{\numberline {19.10.1}Definition}{271}{subsection.19.10.1}%
+\contentsline {subsection}{\numberline {19.10.2}Average Rotational Latency}{271}{subsection.19.10.2}%
+\contentsline {subsection}{\numberline {19.10.3}Example}{271}{subsection.19.10.3}%
+\contentsline {section}{\numberline {19.11}Transfer Time}{271}{section.19.11}%
+\contentsline {subsection}{\numberline {19.11.1}Definition}{271}{subsection.19.11.1}%
+\contentsline {subsection}{\numberline {19.11.2}Factors}{272}{subsection.19.11.2}%
+\contentsline {section}{\numberline {19.12}Disk Access Time}{272}{section.19.12}%
+\contentsline {section}{\numberline {19.13}Disk Scheduling Concepts}{272}{section.19.13}%
+\contentsline {subsection}{\numberline {19.13.1}Goals}{272}{subsection.19.13.1}%
+\contentsline {subsection}{\numberline {19.13.2}Example Queue}{272}{subsection.19.13.2}%
+\contentsline {section}{\numberline {19.14}FCFS (First Come First Serve)}{272}{section.19.14}%
+\contentsline {subsection}{\numberline {19.14.1}Working}{272}{subsection.19.14.1}%
+\contentsline {subsection}{\numberline {19.14.2}Sequence}{273}{subsection.19.14.2}%
+\contentsline {subsection}{\numberline {19.14.3}Head Movement}{273}{subsection.19.14.3}%
+\contentsline {subsection}{\numberline {19.14.4}Advantages}{273}{subsection.19.14.4}%
+\contentsline {subsection}{\numberline {19.14.5}Disadvantages}{273}{subsection.19.14.5}%
+\contentsline {section}{\numberline {19.15}SSTF (Shortest Seek Time First)}{273}{section.19.15}%
+\contentsline {subsection}{\numberline {19.15.1}Working}{273}{subsection.19.15.1}%
+\contentsline {subsection}{\numberline {19.15.2}Sequence}{273}{subsection.19.15.2}%
+\contentsline {subsection}{\numberline {19.15.3}Head Movement}{274}{subsection.19.15.3}%
+\contentsline {subsection}{\numberline {19.15.4}Advantages}{274}{subsection.19.15.4}%
+\contentsline {subsection}{\numberline {19.15.5}Disadvantages}{274}{subsection.19.15.5}%
+\contentsline {section}{\numberline {19.16}SCAN Algorithm}{274}{section.19.16}%
+\contentsline {subsection}{\numberline {19.16.1}Working}{274}{subsection.19.16.1}%
+\contentsline {subsection}{\numberline {19.16.2}Nickname}{274}{subsection.19.16.2}%
+\contentsline {subsection}{\numberline {19.16.3}Example}{274}{subsection.19.16.3}%
+\contentsline {subsection}{\numberline {19.16.4}Advantages}{275}{subsection.19.16.4}%
+\contentsline {subsection}{\numberline {19.16.5}Disadvantages}{275}{subsection.19.16.5}%
+\contentsline {section}{\numberline {19.17}CSCAN Algorithm}{275}{section.19.17}%
+\contentsline {subsection}{\numberline {19.17.1}Working}{275}{subsection.19.17.1}%
+\contentsline {subsection}{\numberline {19.17.2}Advantages}{275}{subsection.19.17.2}%
+\contentsline {subsection}{\numberline {19.17.3}Disadvantages}{276}{subsection.19.17.3}%
+\contentsline {section}{\numberline {19.18}LOOK Algorithm}{276}{section.19.18}%
+\contentsline {subsection}{\numberline {19.18.1}Working}{276}{subsection.19.18.1}%
+\contentsline {subsection}{\numberline {19.18.2}Advantages}{276}{subsection.19.18.2}%
+\contentsline {subsection}{\numberline {19.18.3}Disadvantages}{276}{subsection.19.18.3}%
+\contentsline {section}{\numberline {19.19}CLOOK Algorithm}{276}{section.19.19}%
+\contentsline {subsection}{\numberline {19.19.1}Working}{276}{subsection.19.19.1}%
+\contentsline {subsection}{\numberline {19.19.2}Advantages}{276}{subsection.19.19.2}%
+\contentsline {subsection}{\numberline {19.19.3}Disadvantages}{276}{subsection.19.19.3}%
+\contentsline {section}{\numberline {19.20}Scheduling Diagram}{276}{section.19.20}%
+\contentsline {section}{\numberline {19.21}RAID Levels}{277}{section.19.21}%
+\contentsline {subsection}{\numberline {19.21.1}Definition}{277}{subsection.19.21.1}%
+\contentsline {section}{\numberline {19.22}RAID 0}{277}{section.19.22}%
+\contentsline {subsection}{\numberline {19.22.1}Concept}{277}{subsection.19.22.1}%
+\contentsline {subsection}{\numberline {19.22.2}Advantages}{277}{subsection.19.22.2}%
+\contentsline {subsection}{\numberline {19.22.3}Disadvantages}{277}{subsection.19.22.3}%
+\contentsline {section}{\numberline {19.23}RAID 1}{277}{section.19.23}%
+\contentsline {subsection}{\numberline {19.23.1}Concept}{277}{subsection.19.23.1}%
+\contentsline {subsection}{\numberline {19.23.2}Advantages}{278}{subsection.19.23.2}%
+\contentsline {subsection}{\numberline {19.23.3}Disadvantages}{278}{subsection.19.23.3}%
+\contentsline {section}{\numberline {19.24}RAID 5}{278}{section.19.24}%
+\contentsline {subsection}{\numberline {19.24.1}Concept}{278}{subsection.19.24.1}%
+\contentsline {subsection}{\numberline {19.24.2}Characteristics}{278}{subsection.19.24.2}%
+\contentsline {subsection}{\numberline {19.24.3}Advantages}{278}{subsection.19.24.3}%
+\contentsline {subsection}{\numberline {19.24.4}Disadvantages}{278}{subsection.19.24.4}%
+\contentsline {section}{\numberline {19.25}RAID 6}{278}{section.19.25}%
+\contentsline {subsection}{\numberline {19.25.1}Concept}{278}{subsection.19.25.1}%
+\contentsline {subsection}{\numberline {19.25.2}Characteristics}{278}{subsection.19.25.2}%
+\contentsline {subsection}{\numberline {19.25.3}Advantages}{278}{subsection.19.25.3}%
+\contentsline {subsection}{\numberline {19.25.4}Disadvantages}{279}{subsection.19.25.4}%
+\contentsline {section}{\numberline {19.26}RAID 10}{279}{section.19.26}%
+\contentsline {subsection}{\numberline {19.26.1}Concept}{279}{subsection.19.26.1}%
+\contentsline {subsection}{\numberline {19.26.2}Advantages}{279}{subsection.19.26.2}%
+\contentsline {subsection}{\numberline {19.26.3}Disadvantages}{279}{subsection.19.26.3}%
+\contentsline {section}{\numberline {19.27}RAID Comparison}{279}{section.19.27}%
+\contentsline {section}{\numberline {19.28}SSD Internals}{279}{section.19.28}%
+\contentsline {subsection}{\numberline {19.28.1}Organization}{280}{subsection.19.28.1}%
+\contentsline {subsection}{\numberline {19.28.2}Characteristics}{280}{subsection.19.28.2}%
+\contentsline {section}{\numberline {19.29}Wear Leveling}{280}{section.19.29}%
+\contentsline {subsection}{\numberline {19.29.1}Problem}{280}{subsection.19.29.1}%
+\contentsline {subsection}{\numberline {19.29.2}Solution}{280}{subsection.19.29.2}%
+\contentsline {subsection}{\numberline {19.29.3}Goal}{280}{subsection.19.29.3}%
+\contentsline {subsection}{\numberline {19.29.4}Types}{280}{subsection.19.29.4}%
+\contentsline {section}{\numberline {19.30}TRIM}{280}{section.19.30}%
+\contentsline {subsection}{\numberline {19.30.1}Definition}{280}{subsection.19.30.1}%
+\contentsline {subsection}{\numberline {19.30.2}Benefits}{280}{subsection.19.30.2}%
+\contentsline {subsection}{\numberline {19.30.3}Linux Example}{281}{subsection.19.30.3}%
+\contentsline {section}{\numberline {19.31}Solved Numerical Example}{281}{section.19.31}%
+\contentsline {section}{\numberline {19.32}Interview Tips}{281}{section.19.32}%
+\contentsline {section}{\numberline {19.33}Key Takeaways}{282}{section.19.33}%
+\contentsline {section}{\numberline {19.34}25 Interview Questions with Answers}{282}{section.19.34}%
+\contentsline {section}{\numberline {19.35}25 MCQs with Answers}{283}{section.19.35}%
+\contentsline {section}{\numberline {19.36}Revision Notes}{284}{section.19.36}%
+\contentsline {section}{\numberline {19.37}Cheat Sheet}{285}{section.19.37}%
+\contentsline {part}{VII\hspace {1em}Input/Output Systems}{287}{part.7}%
+\contentsline {chapter}{\numberline {20}Disk Management and Disk Scheduling}{289}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Introduction}{289}{section.20.1}%
+\contentsline {section}{\numberline {20.2}Learning Objectives}{289}{section.20.2}%
+\contentsline {section}{\numberline {20.3}Magnetic Disks Overview}{289}{section.20.3}%
+\contentsline {subsection}{\numberline {20.3.1}Definition}{289}{subsection.20.3.1}%
+\contentsline {subsection}{\numberline {20.3.2}Components}{290}{subsection.20.3.2}%
+\contentsline {subsection}{\numberline {20.3.3}Characteristics}{290}{subsection.20.3.3}%
+\contentsline {section}{\numberline {20.4}SSD Overview}{290}{section.20.4}%
+\contentsline {subsection}{\numberline {20.4.1}Definition}{290}{subsection.20.4.1}%
+\contentsline {subsection}{\numberline {20.4.2}Characteristics}{290}{subsection.20.4.2}%
+\contentsline {subsection}{\numberline {20.4.3}Advantages over HDDs}{290}{subsection.20.4.3}%
+\contentsline {section}{\numberline {20.5}Disk Structure}{290}{section.20.5}%
+\contentsline {section}{\numberline {20.6}Tracks}{291}{section.20.6}%
+\contentsline {subsection}{\numberline {20.6.1}Definition}{291}{subsection.20.6.1}%
+\contentsline {subsection}{\numberline {20.6.2}Characteristics}{291}{subsection.20.6.2}%
+\contentsline {section}{\numberline {20.7}Sectors}{291}{section.20.7}%
+\contentsline {subsection}{\numberline {20.7.1}Definition}{291}{subsection.20.7.1}%
+\contentsline {subsection}{\numberline {20.7.2}Typical Sizes}{291}{subsection.20.7.2}%
+\contentsline {section}{\numberline {20.8}Cylinders}{292}{section.20.8}%
+\contentsline {subsection}{\numberline {20.8.1}Definition}{292}{subsection.20.8.1}%
+\contentsline {section}{\numberline {20.9}Seek Time}{292}{section.20.9}%
+\contentsline {subsection}{\numberline {20.9.1}Definition}{292}{subsection.20.9.1}%
+\contentsline {subsection}{\numberline {20.9.2}Formula}{292}{subsection.20.9.2}%
+\contentsline {subsection}{\numberline {20.9.3}Example}{292}{subsection.20.9.3}%
+\contentsline {section}{\numberline {20.10}Rotational Latency}{293}{section.20.10}%
+\contentsline {subsection}{\numberline {20.10.1}Definition}{293}{subsection.20.10.1}%
+\contentsline {subsection}{\numberline {20.10.2}Average Rotational Latency}{293}{subsection.20.10.2}%
+\contentsline {subsection}{\numberline {20.10.3}Example}{293}{subsection.20.10.3}%
+\contentsline {section}{\numberline {20.11}Transfer Time}{293}{section.20.11}%
+\contentsline {subsection}{\numberline {20.11.1}Definition}{293}{subsection.20.11.1}%
+\contentsline {subsection}{\numberline {20.11.2}Factors}{294}{subsection.20.11.2}%
+\contentsline {section}{\numberline {20.12}Disk Access Time}{294}{section.20.12}%
+\contentsline {section}{\numberline {20.13}Disk Scheduling Concepts}{294}{section.20.13}%
+\contentsline {subsection}{\numberline {20.13.1}Goals}{294}{subsection.20.13.1}%
+\contentsline {subsection}{\numberline {20.13.2}Example Queue}{294}{subsection.20.13.2}%
+\contentsline {section}{\numberline {20.14}FCFS (First Come First Serve)}{294}{section.20.14}%
+\contentsline {subsection}{\numberline {20.14.1}Working}{294}{subsection.20.14.1}%
+\contentsline {subsection}{\numberline {20.14.2}Sequence}{295}{subsection.20.14.2}%
+\contentsline {subsection}{\numberline {20.14.3}Head Movement}{295}{subsection.20.14.3}%
+\contentsline {subsection}{\numberline {20.14.4}Advantages}{295}{subsection.20.14.4}%
+\contentsline {subsection}{\numberline {20.14.5}Disadvantages}{295}{subsection.20.14.5}%
+\contentsline {section}{\numberline {20.15}SSTF (Shortest Seek Time First)}{295}{section.20.15}%
+\contentsline {subsection}{\numberline {20.15.1}Working}{295}{subsection.20.15.1}%
+\contentsline {subsection}{\numberline {20.15.2}Sequence}{295}{subsection.20.15.2}%
+\contentsline {subsection}{\numberline {20.15.3}Head Movement}{296}{subsection.20.15.3}%
+\contentsline {subsection}{\numberline {20.15.4}Advantages}{296}{subsection.20.15.4}%
+\contentsline {subsection}{\numberline {20.15.5}Disadvantages}{296}{subsection.20.15.5}%
+\contentsline {section}{\numberline {20.16}SCAN Algorithm}{296}{section.20.16}%
+\contentsline {subsection}{\numberline {20.16.1}Working}{296}{subsection.20.16.1}%
+\contentsline {subsection}{\numberline {20.16.2}Nickname}{296}{subsection.20.16.2}%
+\contentsline {subsection}{\numberline {20.16.3}Example}{296}{subsection.20.16.3}%
+\contentsline {subsection}{\numberline {20.16.4}Advantages}{297}{subsection.20.16.4}%
+\contentsline {subsection}{\numberline {20.16.5}Disadvantages}{297}{subsection.20.16.5}%
+\contentsline {section}{\numberline {20.17}CSCAN Algorithm}{297}{section.20.17}%
+\contentsline {subsection}{\numberline {20.17.1}Working}{297}{subsection.20.17.1}%
+\contentsline {subsection}{\numberline {20.17.2}Advantages}{297}{subsection.20.17.2}%
+\contentsline {subsection}{\numberline {20.17.3}Disadvantages}{298}{subsection.20.17.3}%
+\contentsline {section}{\numberline {20.18}LOOK Algorithm}{298}{section.20.18}%
+\contentsline {subsection}{\numberline {20.18.1}Working}{298}{subsection.20.18.1}%
+\contentsline {subsection}{\numberline {20.18.2}Advantages}{298}{subsection.20.18.2}%
+\contentsline {subsection}{\numberline {20.18.3}Disadvantages}{298}{subsection.20.18.3}%
+\contentsline {section}{\numberline {20.19}CLOOK Algorithm}{298}{section.20.19}%
+\contentsline {subsection}{\numberline {20.19.1}Working}{298}{subsection.20.19.1}%
+\contentsline {subsection}{\numberline {20.19.2}Advantages}{298}{subsection.20.19.2}%
+\contentsline {subsection}{\numberline {20.19.3}Disadvantages}{298}{subsection.20.19.3}%
+\contentsline {section}{\numberline {20.20}Scheduling Diagram}{298}{section.20.20}%
+\contentsline {section}{\numberline {20.21}RAID Levels}{299}{section.20.21}%
+\contentsline {subsection}{\numberline {20.21.1}Definition}{299}{subsection.20.21.1}%
+\contentsline {section}{\numberline {20.22}RAID 0}{299}{section.20.22}%
+\contentsline {subsection}{\numberline {20.22.1}Concept}{299}{subsection.20.22.1}%
+\contentsline {subsection}{\numberline {20.22.2}Advantages}{299}{subsection.20.22.2}%
+\contentsline {subsection}{\numberline {20.22.3}Disadvantages}{299}{subsection.20.22.3}%
+\contentsline {section}{\numberline {20.23}RAID 1}{299}{section.20.23}%
+\contentsline {subsection}{\numberline {20.23.1}Concept}{299}{subsection.20.23.1}%
+\contentsline {subsection}{\numberline {20.23.2}Advantages}{300}{subsection.20.23.2}%
+\contentsline {subsection}{\numberline {20.23.3}Disadvantages}{300}{subsection.20.23.3}%
+\contentsline {section}{\numberline {20.24}RAID 5}{300}{section.20.24}%
+\contentsline {subsection}{\numberline {20.24.1}Concept}{300}{subsection.20.24.1}%
+\contentsline {subsection}{\numberline {20.24.2}Characteristics}{300}{subsection.20.24.2}%
+\contentsline {subsection}{\numberline {20.24.3}Advantages}{300}{subsection.20.24.3}%
+\contentsline {subsection}{\numberline {20.24.4}Disadvantages}{300}{subsection.20.24.4}%
+\contentsline {section}{\numberline {20.25}RAID 6}{300}{section.20.25}%
+\contentsline {subsection}{\numberline {20.25.1}Concept}{300}{subsection.20.25.1}%
+\contentsline {subsection}{\numberline {20.25.2}Characteristics}{300}{subsection.20.25.2}%
+\contentsline {subsection}{\numberline {20.25.3}Advantages}{300}{subsection.20.25.3}%
+\contentsline {subsection}{\numberline {20.25.4}Disadvantages}{301}{subsection.20.25.4}%
+\contentsline {section}{\numberline {20.26}RAID 10}{301}{section.20.26}%
+\contentsline {subsection}{\numberline {20.26.1}Concept}{301}{subsection.20.26.1}%
+\contentsline {subsection}{\numberline {20.26.2}Advantages}{301}{subsection.20.26.2}%
+\contentsline {subsection}{\numberline {20.26.3}Disadvantages}{301}{subsection.20.26.3}%
+\contentsline {section}{\numberline {20.27}RAID Comparison}{301}{section.20.27}%
+\contentsline {section}{\numberline {20.28}SSD Internals}{301}{section.20.28}%
+\contentsline {subsection}{\numberline {20.28.1}Organization}{302}{subsection.20.28.1}%
+\contentsline {subsection}{\numberline {20.28.2}Characteristics}{302}{subsection.20.28.2}%
+\contentsline {section}{\numberline {20.29}Wear Leveling}{302}{section.20.29}%
+\contentsline {subsection}{\numberline {20.29.1}Problem}{302}{subsection.20.29.1}%
+\contentsline {subsection}{\numberline {20.29.2}Solution}{302}{subsection.20.29.2}%
+\contentsline {subsection}{\numberline {20.29.3}Goal}{302}{subsection.20.29.3}%
+\contentsline {subsection}{\numberline {20.29.4}Types}{302}{subsection.20.29.4}%
+\contentsline {section}{\numberline {20.30}TRIM}{302}{section.20.30}%
+\contentsline {subsection}{\numberline {20.30.1}Definition}{302}{subsection.20.30.1}%
+\contentsline {subsection}{\numberline {20.30.2}Benefits}{302}{subsection.20.30.2}%
+\contentsline {subsection}{\numberline {20.30.3}Linux Example}{303}{subsection.20.30.3}%
+\contentsline {section}{\numberline {20.31}Solved Numerical Example}{303}{section.20.31}%
+\contentsline {section}{\numberline {20.32}Interview Tips}{303}{section.20.32}%
+\contentsline {section}{\numberline {20.33}Key Takeaways}{304}{section.20.33}%
+\contentsline {section}{\numberline {20.34}25 Interview Questions with Answers}{304}{section.20.34}%
+\contentsline {section}{\numberline {20.35}25 MCQs with Answers}{305}{section.20.35}%
+\contentsline {section}{\numberline {20.36}Revision Notes}{306}{section.20.36}%
+\contentsline {section}{\numberline {20.37}Cheat Sheet}{307}{section.20.37}%
+\contentsline {part}{VIII\hspace {1em}Modern Operating Systems}{309}{part.8}%
+\contentsline {chapter}{\numberline {21}Linux Internals}{311}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Introduction}{311}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Linux Architecture Overview}{311}{section.21.2}%
+\contentsline {section}{\numberline {21.3}User Space vs Kernel Space}{312}{section.21.3}%
+\contentsline {subsection}{\numberline {21.3.1}User Space}{312}{subsection.21.3.1}%
+\contentsline {subsection}{\numberline {21.3.2}Kernel Space}{312}{subsection.21.3.2}%
+\contentsline {section}{\numberline {21.4}Linux Kernel Architecture}{312}{section.21.4}%
+\contentsline {section}{\numberline {21.5}Monolithic Kernel Design}{313}{section.21.5}%
+\contentsline {section}{\numberline {21.6}Kernel Modules}{313}{section.21.6}%
+\contentsline {section}{\numberline {21.7}System Call Interface}{314}{section.21.7}%
+\contentsline {section}{\numberline {21.8}Process Management in Linux}{314}{section.21.8}%
+\contentsline {section}{\numberline {21.9}Scheduler Overview}{315}{section.21.9}%
+\contentsline {section}{\numberline {21.10}Completely Fair Scheduler (CFS)}{315}{section.21.10}%
+\contentsline {section}{\numberline {21.11}Linux Memory Management}{316}{section.21.11}%
+\contentsline {section}{\numberline {21.12}Virtual Memory in Linux}{316}{section.21.12}%
+\contentsline {section}{\numberline {21.13}Linux File Systems Overview}{316}{section.21.13}%
+\contentsline {section}{\numberline {21.14}ext4 Architecture}{317}{section.21.14}%
+\contentsline {section}{\numberline {21.15}proc File System}{317}{section.21.15}%
+\contentsline {section}{\numberline {21.16}sysfs}{318}{section.21.16}%
+\contentsline {section}{\numberline {21.17}Signals}{318}{section.21.17}%
+\contentsline {section}{\numberline {21.18}IPC Mechanisms}{318}{section.21.18}%
+\contentsline {section}{\numberline {21.19}Daemons}{319}{section.21.19}%
+\contentsline {section}{\numberline {21.20}Linux Boot Process}{319}{section.21.20}%
+\contentsline {section}{\numberline {21.21}init and systemd}{319}{section.21.21}%
+\contentsline {section}{\numberline {21.22}Kernel Panic}{320}{section.21.22}%
+\contentsline {section}{\numberline {21.23}Common Linux Commands for OS Interviews}{320}{section.21.23}%
+\contentsline {section}{\numberline {21.24}Real-World Backend Engineering Examples}{321}{section.21.24}%
+\contentsline {subsection}{\numberline {21.24.1}Web Server}{321}{subsection.21.24.1}%
+\contentsline {subsection}{\numberline {21.24.2}Database Server}{321}{subsection.21.24.2}%
+\contentsline {subsection}{\numberline {21.24.3}Container Platform}{321}{subsection.21.24.3}%
+\contentsline {section}{\numberline {21.25}Dedicated Interview Section: What Happens When a Linux Process Starts?}{321}{section.21.25}%
+\contentsline {section}{\numberline {21.26}Dedicated Interview Section: What Happens When a Process Terminates?}{322}{section.21.26}%
+\contentsline {section}{\numberline {21.27}Dedicated Interview Section: How a System Call Reaches the Kernel?}{322}{section.21.27}%
+\contentsline {section}{\numberline {21.28}Key Takeaways}{322}{section.21.28}%
+\contentsline {chapter}{\numberline {22}Modern Concurrency}{323}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Introduction}{323}{section.22.1}%
+\contentsline {section}{\numberline {22.2}Learning Objectives}{323}{section.22.2}%
+\contentsline {section}{\numberline {22.3}Concurrency vs Parallelism}{324}{section.22.3}%
+\contentsline {subsection}{\numberline {22.3.1}Concurrency}{324}{subsection.22.3.1}%
+\contentsline {subsection}{\numberline {22.3.2}Parallelism}{324}{subsection.22.3.2}%
+\contentsline {subsection}{\numberline {22.3.3}Example}{324}{subsection.22.3.3}%
+\contentsline {subsection}{\numberline {22.3.4}Comparison}{324}{subsection.22.3.4}%
+\contentsline {section}{\numberline {22.4}Multicore Architectures}{325}{section.22.4}%
+\contentsline {subsection}{\numberline {22.4.1}Definition}{325}{subsection.22.4.1}%
+\contentsline {subsection}{\numberline {22.4.2}Benefits}{325}{subsection.22.4.2}%
+\contentsline {section}{\numberline {22.5}Hyperthreading}{325}{section.22.5}%
+\contentsline {subsection}{\numberline {22.5.1}Definition}{325}{subsection.22.5.1}%
+\contentsline {subsection}{\numberline {22.5.2}Goal}{325}{subsection.22.5.2}%
+\contentsline {subsection}{\numberline {22.5.3}Example}{325}{subsection.22.5.3}%
+\contentsline {subsection}{\numberline {22.5.4}Advantages}{326}{subsection.22.5.4}%
+\contentsline {subsection}{\numberline {22.5.5}Limitations}{326}{subsection.22.5.5}%
+\contentsline {section}{\numberline {22.6}Symmetric Multiprocessing (SMP)}{326}{section.22.6}%
+\contentsline {subsection}{\numberline {22.6.1}Definition}{326}{subsection.22.6.1}%
+\contentsline {subsection}{\numberline {22.6.2}Characteristics}{326}{subsection.22.6.2}%
+\contentsline {section}{\numberline {22.7}NUMA Systems}{326}{section.22.7}%
+\contentsline {subsection}{\numberline {22.7.1}Definition}{326}{subsection.22.7.1}%
+\contentsline {subsection}{\numberline {22.7.2}Idea}{326}{subsection.22.7.2}%
+\contentsline {subsection}{\numberline {22.7.3}Interview Insight}{327}{subsection.22.7.3}%
+\contentsline {section}{\numberline {22.8}Thread Pools}{327}{section.22.8}%
+\contentsline {subsection}{\numberline {22.8.1}Definition}{327}{subsection.22.8.1}%
+\contentsline {subsection}{\numberline {22.8.2}Why Needed}{327}{subsection.22.8.2}%
+\contentsline {subsection}{\numberline {22.8.3}Architecture}{327}{subsection.22.8.3}%
+\contentsline {subsection}{\numberline {22.8.4}Java Example}{327}{subsection.22.8.4}%
+\contentsline {section}{\numberline {22.9}Work Queues}{327}{section.22.9}%
+\contentsline {subsection}{\numberline {22.9.1}Definition}{327}{subsection.22.9.1}%
+\contentsline {subsection}{\numberline {22.9.2}Benefits}{327}{subsection.22.9.2}%
+\contentsline {section}{\numberline {22.10}Fork-Join Model}{328}{section.22.10}%
+\contentsline {subsection}{\numberline {22.10.1}Definition}{328}{subsection.22.10.1}%
+\contentsline {subsection}{\numberline {22.10.2}Example}{328}{subsection.22.10.2}%
+\contentsline {subsection}{\numberline {22.10.3}Java Example}{328}{subsection.22.10.3}%
+\contentsline {section}{\numberline {22.11}Task Scheduling}{328}{section.22.11}%
+\contentsline {section}{\numberline {22.12}Futures}{329}{section.22.12}%
+\contentsline {subsection}{\numberline {22.12.1}Definition}{329}{subsection.22.12.1}%
+\contentsline {subsection}{\numberline {22.12.2}Java Example}{329}{subsection.22.12.2}%
+\contentsline {subsection}{\numberline {22.12.3}Benefits}{329}{subsection.22.12.3}%
+\contentsline {section}{\numberline {22.13}Promises}{329}{section.22.13}%
+\contentsline {subsection}{\numberline {22.13.1}Definition}{329}{subsection.22.13.1}%
+\contentsline {subsection}{\numberline {22.13.2}Workflow}{329}{subsection.22.13.2}%
+\contentsline {subsection}{\numberline {22.13.3}Use Cases}{329}{subsection.22.13.3}%
+\contentsline {section}{\numberline {22.14}Async Programming}{329}{section.22.14}%
+\contentsline {subsection}{\numberline {22.14.1}Definition}{329}{subsection.22.14.1}%
+\contentsline {subsection}{\numberline {22.14.2}Benefits}{330}{subsection.22.14.2}%
+\contentsline {subsection}{\numberline {22.14.3}Python Example}{330}{subsection.22.14.3}%
+\contentsline {section}{\numberline {22.15}Event Loops}{330}{section.22.15}%
+\contentsline {subsection}{\numberline {22.15.1}Definition}{330}{subsection.22.15.1}%
+\contentsline {subsection}{\numberline {22.15.2}Architecture}{330}{subsection.22.15.2}%
+\contentsline {subsection}{\numberline {22.15.3}Examples}{330}{subsection.22.15.3}%
+\contentsline {section}{\numberline {22.16}Non-Blocking Programming}{330}{section.22.16}%
+\contentsline {subsection}{\numberline {22.16.1}Definition}{330}{subsection.22.16.1}%
+\contentsline {subsection}{\numberline {22.16.2}Examples}{331}{subsection.22.16.2}%
+\contentsline {subsection}{\numberline {22.16.3}Advantages}{331}{subsection.22.16.3}%
+\contentsline {section}{\numberline {22.17}Lock-Free Data Structures}{331}{section.22.17}%
+\contentsline {subsection}{\numberline {22.17.1}Definition}{331}{subsection.22.17.1}%
+\contentsline {subsection}{\numberline {22.17.2}Tools}{331}{subsection.22.17.2}%
+\contentsline {subsection}{\numberline {22.17.3}Example}{331}{subsection.22.17.3}%
+\contentsline {subsection}{\numberline {22.17.4}Advantages}{331}{subsection.22.17.4}%
+\contentsline {subsection}{\numberline {22.17.5}Disadvantages}{331}{subsection.22.17.5}%
+\contentsline {section}{\numberline {22.18}Wait-Free Algorithms}{331}{section.22.18}%
+\contentsline {subsection}{\numberline {22.18.1}Definition}{331}{subsection.22.18.1}%
+\contentsline {subsection}{\numberline {22.18.2}Properties}{332}{subsection.22.18.2}%
+\contentsline {subsection}{\numberline {22.18.3}Challenge}{332}{subsection.22.18.3}%
+\contentsline {section}{\numberline {22.19}Software Transactional Memory}{332}{section.22.19}%
+\contentsline {subsection}{\numberline {22.19.1}Definition}{332}{subsection.22.19.1}%
+\contentsline {subsection}{\numberline {22.19.2}Workflow}{332}{subsection.22.19.2}%
+\contentsline {subsection}{\numberline {22.19.3}Advantages}{332}{subsection.22.19.3}%
+\contentsline {section}{\numberline {22.20}Actor Model}{332}{section.22.20}%
+\contentsline {subsection}{\numberline {22.20.1}Definition}{332}{subsection.22.20.1}%
+\contentsline {subsection}{\numberline {22.20.2}Principles}{332}{subsection.22.20.2}%
+\contentsline {subsection}{\numberline {22.20.3}Examples}{333}{subsection.22.20.3}%
+\contentsline {section}{\numberline {22.21}Reactive Programming Concepts}{333}{section.22.21}%
+\contentsline {subsection}{\numberline {22.21.1}Definition}{333}{subsection.22.21.1}%
+\contentsline {subsection}{\numberline {22.21.2}Features}{333}{subsection.22.21.2}%
+\contentsline {subsection}{\numberline {22.21.3}Examples}{333}{subsection.22.21.3}%
+\contentsline {section}{\numberline {22.22}Modern Concurrency Challenges}{333}{section.22.22}%
+\contentsline {section}{\numberline {22.23}Thread-per-Request vs Event-Driven Architectures}{334}{section.22.23}%
+\contentsline {subsection}{\numberline {22.23.1}Thread-per-Request}{334}{subsection.22.23.1}%
+\contentsline {subsection}{\numberline {22.23.2}Event-Driven Architecture}{334}{subsection.22.23.2}%
+\contentsline {section}{\numberline {22.24}How High-Concurrency Servers Work}{335}{section.22.24}%
+\contentsline {section}{\numberline {22.25}Java Examples}{335}{section.22.25}%
+\contentsline {subsection}{\numberline {22.25.1}CompletableFuture}{335}{subsection.22.25.1}%
+\contentsline {subsection}{\numberline {22.25.2}ExecutorService}{335}{subsection.22.25.2}%
+\contentsline {section}{\numberline {22.26}Python Examples}{336}{section.22.26}%
+\contentsline {subsection}{\numberline {22.26.1}Asyncio}{336}{subsection.22.26.1}%
+\contentsline {section}{\numberline {22.27}C++ Examples}{336}{section.22.27}%
+\contentsline {subsection}{\numberline {22.27.1}Future}{336}{subsection.22.27.1}%
+\contentsline {subsection}{\numberline {22.27.2}Thread}{336}{subsection.22.27.2}%
+\contentsline {section}{\numberline {22.28}Backend Service Examples}{336}{section.22.28}%
+\contentsline {section}{\numberline {22.29}Performance Discussion}{336}{section.22.29}%
+\contentsline {section}{\numberline {22.30}Modern Concurrency Interview Questions}{337}{section.22.30}%
+\contentsline {section}{\numberline {22.31}Key Takeaways}{337}{section.22.31}%
+\contentsline {section}{\numberline {22.32}25 Interview Questions with Answers}{338}{section.22.32}%
+\contentsline {section}{\numberline {22.33}25 MCQs with Answers}{339}{section.22.33}%
+\contentsline {section}{\numberline {22.34}Revision Notes}{340}{section.22.34}%
+\contentsline {section}{\numberline {22.35}Cheat Sheet}{341}{section.22.35}%
+\contentsline {chapter}{\numberline {23}Virtualization and Containers}{343}{chapter.23}%
+\contentsline {section}{\numberline {23.1}Introduction}{343}{section.23.1}%
+\contentsline {section}{\numberline {23.2}Motivation for Virtualization}{343}{section.23.2}%
+\contentsline {section}{\numberline {23.3}Virtual Machines}{344}{section.23.3}%
+\contentsline {section}{\numberline {23.4}Hypervisors}{344}{section.23.4}%
+\contentsline {section}{\numberline {23.5}Type 1 Hypervisors}{345}{section.23.5}%
+\contentsline {section}{\numberline {23.6}Type 2 Hypervisors}{345}{section.23.6}%
+\contentsline {section}{\numberline {23.7}Full Virtualization}{346}{section.23.7}%
+\contentsline {section}{\numberline {23.8}Para-Virtualization}{346}{section.23.8}%
+\contentsline {section}{\numberline {23.9}Hardware-Assisted Virtualization}{346}{section.23.9}%
+\contentsline {section}{\numberline {23.10}CPU Virtualization}{347}{section.23.10}%
+\contentsline {section}{\numberline {23.11}Memory Virtualization}{347}{section.23.11}%
+\contentsline {section}{\numberline {23.12}Storage Virtualization}{347}{section.23.12}%
+\contentsline {section}{\numberline {23.13}Network Virtualization}{348}{section.23.13}%
+\contentsline {section}{\numberline {23.14}Containers}{348}{section.23.14}%
+\contentsline {section}{\numberline {23.15}Linux Namespaces}{348}{section.23.15}%
+\contentsline {section}{\numberline {23.16}cgroups}{349}{section.23.16}%
+\contentsline {section}{\numberline {23.17}Container Isolation}{349}{section.23.17}%
+\contentsline {section}{\numberline {23.18}Docker Architecture}{349}{section.23.18}%
+\contentsline {section}{\numberline {23.19}Images}{350}{section.23.19}%
+\contentsline {section}{\numberline {23.20}Containers}{350}{section.23.20}%
+\contentsline {section}{\numberline {23.21}Registries}{351}{section.23.21}%
+\contentsline {section}{\numberline {23.22}Kubernetes Overview}{351}{section.23.22}%
+\contentsline {section}{\numberline {23.23}Pods}{351}{section.23.23}%
+\contentsline {section}{\numberline {23.24}Container Scheduling}{352}{section.23.24}%
+\contentsline {section}{\numberline {23.25}Security Considerations}{352}{section.23.25}%
+\contentsline {section}{\numberline {23.26}Dedicated Interview Section: VM vs Container}{353}{section.23.26}%
+\contentsline {section}{\numberline {23.27}Dedicated Interview Section: Docker vs Virtual Machine}{353}{section.23.27}%
+\contentsline {section}{\numberline {23.28}Dedicated Interview Section: How Containers Achieve Isolation}{353}{section.23.28}%
+\contentsline {section}{\numberline {23.29}Key Takeaways}{354}{section.23.29}%
+\contentsline {chapter}{\numberline {24}Operating System Security}{355}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Introduction}{355}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Learning Objectives}{355}{section.24.2}%
+\contentsline {section}{\numberline {24.3}Security Fundamentals}{356}{section.24.3}%
+\contentsline {subsection}{\numberline {24.3.1}Definition}{356}{subsection.24.3.1}%
+\contentsline {subsection}{\numberline {24.3.2}CIA Triad}{356}{subsection.24.3.2}%
+\contentsline {subsection}{\numberline {24.3.3}Example}{356}{subsection.24.3.3}%
+\contentsline {section}{\numberline {24.4}Threat Model Basics}{356}{section.24.4}%
+\contentsline {subsection}{\numberline {24.4.1}Definition}{356}{subsection.24.4.1}%
+\contentsline {subsection}{\numberline {24.4.2}Typical Threats}{357}{subsection.24.4.2}%
+\contentsline {subsection}{\numberline {24.4.3}Security Architecture}{357}{subsection.24.4.3}%
+\contentsline {section}{\numberline {24.5}Authentication}{357}{section.24.5}%
+\contentsline {subsection}{\numberline {24.5.1}Definition}{357}{subsection.24.5.1}%
+\contentsline {subsection}{\numberline {24.5.2}Methods}{357}{subsection.24.5.2}%
+\contentsline {subsection}{\numberline {24.5.3}Linux Example}{358}{subsection.24.5.3}%
+\contentsline {subsection}{\numberline {24.5.4}Windows Example}{358}{subsection.24.5.4}%
+\contentsline {section}{\numberline {24.6}Authorization}{358}{section.24.6}%
+\contentsline {subsection}{\numberline {24.6.1}Definition}{358}{subsection.24.6.1}%
+\contentsline {subsection}{\numberline {24.6.2}Examples}{358}{subsection.24.6.2}%
+\contentsline {section}{\numberline {24.7}Authentication vs Authorization}{358}{section.24.7}%
+\contentsline {section}{\numberline {24.8}Access Control Matrix}{359}{section.24.8}%
+\contentsline {subsection}{\numberline {24.8.1}Definition}{359}{subsection.24.8.1}%
+\contentsline {subsection}{\numberline {24.8.2}Challenge}{359}{subsection.24.8.2}%
+\contentsline {section}{\numberline {24.9}Access Control Lists (ACLs)}{359}{section.24.9}%
+\contentsline {subsection}{\numberline {24.9.1}Definition}{359}{subsection.24.9.1}%
+\contentsline {subsection}{\numberline {24.9.2}Example}{359}{subsection.24.9.2}%
+\contentsline {subsection}{\numberline {24.9.3}Advantages}{359}{subsection.24.9.3}%
+\contentsline {subsection}{\numberline {24.9.4}Disadvantages}{359}{subsection.24.9.4}%
+\contentsline {section}{\numberline {24.10}Capabilities}{360}{section.24.10}%
+\contentsline {subsection}{\numberline {24.10.1}Definition}{360}{subsection.24.10.1}%
+\contentsline {subsection}{\numberline {24.10.2}Example}{360}{subsection.24.10.2}%
+\contentsline {subsection}{\numberline {24.10.3}Advantages}{360}{subsection.24.10.3}%
+\contentsline {subsection}{\numberline {24.10.4}Disadvantages}{360}{subsection.24.10.4}%
+\contentsline {section}{\numberline {24.11}ACLs vs Capabilities}{360}{section.24.11}%
+\contentsline {section}{\numberline {24.12}Privilege Separation}{360}{section.24.12}%
+\contentsline {subsection}{\numberline {24.12.1}Definition}{360}{subsection.24.12.1}%
+\contentsline {subsection}{\numberline {24.12.2}Example}{360}{subsection.24.12.2}%
+\contentsline {subsection}{\numberline {24.12.3}Benefits}{361}{subsection.24.12.3}%
+\contentsline {section}{\numberline {24.13}Principle of Least Privilege}{361}{section.24.13}%
+\contentsline {subsection}{\numberline {24.13.1}Definition}{361}{subsection.24.13.1}%
+\contentsline {subsection}{\numberline {24.13.2}Example}{361}{subsection.24.13.2}%
+\contentsline {subsection}{\numberline {24.13.3}Benefits}{361}{subsection.24.13.3}%
+\contentsline {section}{\numberline {24.14}Secure Kernel Design}{361}{section.24.14}%
+\contentsline {subsection}{\numberline {24.14.1}Goals}{362}{subsection.24.14.1}%
+\contentsline {section}{\numberline {24.15}Memory Protection}{362}{section.24.15}%
+\contentsline {subsection}{\numberline {24.15.1}Definition}{362}{subsection.24.15.1}%
+\contentsline {subsection}{\numberline {24.15.2}Mechanisms}{362}{subsection.24.15.2}%
+\contentsline {subsection}{\numberline {24.15.3}Benefits}{362}{subsection.24.15.3}%
+\contentsline {section}{\numberline {24.16}ASLR}{362}{section.24.16}%
+\contentsline {subsection}{\numberline {24.16.1}Definition}{362}{subsection.24.16.1}%
+\contentsline {subsection}{\numberline {24.16.2}Goal}{362}{subsection.24.16.2}%
+\contentsline {subsection}{\numberline {24.16.3}Protected Areas}{362}{subsection.24.16.3}%
+\contentsline {subsection}{\numberline {24.16.4}Benefit}{363}{subsection.24.16.4}%
+\contentsline {subsection}{\numberline {24.16.5}Linux Example}{363}{subsection.24.16.5}%
+\contentsline {section}{\numberline {24.17}DEP / NX Bit}{363}{section.24.17}%
+\contentsline {subsection}{\numberline {24.17.1}Definition}{363}{subsection.24.17.1}%
+\contentsline {subsection}{\numberline {24.17.2}Purpose}{363}{subsection.24.17.2}%
+\contentsline {subsection}{\numberline {24.17.3}Mitigates}{363}{subsection.24.17.3}%
+\contentsline {section}{\numberline {24.18}Sandboxing}{363}{section.24.18}%
+\contentsline {subsection}{\numberline {24.18.1}Definition}{363}{subsection.24.18.1}%
+\contentsline {subsection}{\numberline {24.18.2}Examples}{364}{subsection.24.18.2}%
+\contentsline {subsection}{\numberline {24.18.3}Architecture}{364}{subsection.24.18.3}%
+\contentsline {section}{\numberline {24.19}Secure Boot}{364}{section.24.19}%
+\contentsline {subsection}{\numberline {24.19.1}Definition}{364}{subsection.24.19.1}%
+\contentsline {subsection}{\numberline {24.19.2}Goal}{364}{subsection.24.19.2}%
+\contentsline {subsection}{\numberline {24.19.3}Boot Chain}{364}{subsection.24.19.3}%
+\contentsline {subsection}{\numberline {24.19.4}Benefits}{364}{subsection.24.19.4}%
+\contentsline {section}{\numberline {24.20}SELinux Overview}{365}{section.24.20}%
+\contentsline {subsection}{\numberline {24.20.1}Definition}{365}{subsection.24.20.1}%
+\contentsline {subsection}{\numberline {24.20.2}Security Model}{365}{subsection.24.20.2}%
+\contentsline {subsection}{\numberline {24.20.3}Features}{365}{subsection.24.20.3}%
+\contentsline {subsection}{\numberline {24.20.4}Example}{365}{subsection.24.20.4}%
+\contentsline {section}{\numberline {24.21}AppArmor Overview}{365}{section.24.21}%
+\contentsline {subsection}{\numberline {24.21.1}Definition}{365}{subsection.24.21.1}%
+\contentsline {subsection}{\numberline {24.21.2}Approach}{365}{subsection.24.21.2}%
+\contentsline {subsection}{\numberline {24.21.3}Advantages}{365}{subsection.24.21.3}%
+\contentsline {subsection}{\numberline {24.21.4}Common Usage}{366}{subsection.24.21.4}%
+\contentsline {section}{\numberline {24.22}Container Security}{366}{section.24.22}%
+\contentsline {subsection}{\numberline {24.22.1}Challenges}{366}{subsection.24.22.1}%
+\contentsline {subsection}{\numberline {24.22.2}Security Mechanisms}{366}{subsection.24.22.2}%
+\contentsline {subsection}{\numberline {24.22.3}Container Isolation}{366}{subsection.24.22.3}%
+\contentsline {section}{\numberline {24.23}Common Vulnerabilities}{366}{section.24.23}%
+\contentsline {subsection}{\numberline {24.23.1}Buffer Overflow}{366}{subsection.24.23.1}%
+\contentsline {subsection}{\numberline {24.23.2}Privilege Escalation}{367}{subsection.24.23.2}%
+\contentsline {subsection}{\numberline {24.23.3}Race Conditions}{367}{subsection.24.23.3}%
+\contentsline {subsection}{\numberline {24.23.4}Code Injection}{367}{subsection.24.23.4}%
+\contentsline {subsection}{\numberline {24.23.5}Directory Traversal}{367}{subsection.24.23.5}%
+\contentsline {subsection}{\numberline {24.23.6}Use-After-Free}{367}{subsection.24.23.6}%
+\contentsline {section}{\numberline {24.24}Real-World Attack Scenarios}{367}{section.24.24}%
+\contentsline {subsection}{\numberline {24.24.1}Scenario 1}{367}{subsection.24.24.1}%
+\contentsline {subsection}{\numberline {24.24.2}Scenario 2}{367}{subsection.24.24.2}%
+\contentsline {subsection}{\numberline {24.24.3}Scenario 3}{367}{subsection.24.24.3}%
+\contentsline {subsection}{\numberline {24.24.4}Scenario 4}{368}{subsection.24.24.4}%
+\contentsline {section}{\numberline {24.25}How Modern OSes Isolate Applications}{368}{section.24.25}%
+\contentsline {subsection}{\numberline {24.25.1}Isolation Layers}{368}{subsection.24.25.1}%
+\contentsline {section}{\numberline {24.26}Security Best Practices}{368}{section.24.26}%
+\contentsline {section}{\numberline {24.27}Key Takeaways}{369}{section.24.27}%
+\contentsline {section}{\numberline {24.28}20 Interview Questions with Answers}{369}{section.24.28}%
+\contentsline {section}{\numberline {24.29}20 MCQs with Answers}{370}{section.24.29}%
+\contentsline {section}{\numberline {24.30}Revision Notes}{371}{section.24.30}%
+\contentsline {section}{\numberline {24.31}Cheat Sheet}{372}{section.24.31}%
+\contentsline {part}{IX\hspace {1em}Operating Systems for System Design}{373}{part.9}%
+\contentsline {chapter}{\numberline {25}High-Concurrency Systems}{375}{chapter.25}%
+\contentsline {section}{\numberline {25.1}Introduction}{375}{section.25.1}%
+\contentsline {section}{\numberline {25.2}What High Concurrency Means}{375}{section.25.2}%
+\contentsline {section}{\numberline {25.3}Concurrency Challenges}{376}{section.25.3}%
+\contentsline {section}{\numberline {25.4}Throughput vs Latency}{376}{section.25.4}%
+\contentsline {subsection}{\numberline {25.4.1}Throughput}{376}{subsection.25.4.1}%
+\contentsline {subsection}{\numberline {25.4.2}Latency}{376}{subsection.25.4.2}%
+\contentsline {section}{\numberline {25.5}Thread-per-Request Model}{377}{section.25.5}%
+\contentsline {section}{\numberline {25.6}Event-Driven Architecture}{377}{section.25.6}%
+\contentsline {section}{\numberline {25.7}Reactor Pattern}{378}{section.25.7}%
+\contentsline {section}{\numberline {25.8}Proactor Pattern}{378}{section.25.8}%
+\contentsline {section}{\numberline {25.9}Non-Blocking I/O}{379}{section.25.9}%
+\contentsline {section}{\numberline {25.10}Asynchronous I/O}{379}{section.25.10}%
+\contentsline {section}{\numberline {25.11}Thread Pools}{379}{section.25.11}%
+\contentsline {section}{\numberline {25.12}Connection Pools}{380}{section.25.12}%
+\contentsline {section}{\numberline {25.13}Load Balancing}{380}{section.25.13}%
+\contentsline {section}{\numberline {25.14}Context Switching Costs}{381}{section.25.14}%
+\contentsline {section}{\numberline {25.15}Kernel Bottlenecks}{381}{section.25.15}%
+\contentsline {section}{\numberline {25.16}Resource Contention}{381}{section.25.16}%
+\contentsline {section}{\numberline {25.17}Backpressure}{382}{section.25.17}%
+\contentsline {section}{\numberline {25.18}Queue-Based Architectures}{382}{section.25.18}%
+\contentsline {section}{\numberline {25.19}High-Concurrency Web Servers}{383}{section.25.19}%
+\contentsline {subsection}{\numberline {25.19.1}Nginx-Style Architecture}{383}{subsection.25.19.1}%
+\contentsline {section}{\numberline {25.20}High-Concurrency Databases}{383}{section.25.20}%
+\contentsline {section}{\numberline {25.21}Modern Backend Architectures}{384}{section.25.21}%
+\contentsline {section}{\numberline {25.22}Dedicated Interview Section: How a Web Server Handles Millions of Requests}{385}{section.25.22}%
+\contentsline {section}{\numberline {25.23}Dedicated Interview Section: Why Thread-per-Request Does Not Scale}{385}{section.25.23}%
+\contentsline {section}{\numberline {25.24}Dedicated Interview Section: Event-Driven Systems Explained}{385}{section.25.24}%
+\contentsline {section}{\numberline {25.25}Key Takeaways}{386}{section.25.25}%
+\contentsline {chapter}{\numberline {26}Memory and Performance Optimization}{387}{chapter.26}%
+\contentsline {section}{\numberline {26.1}Introduction}{387}{section.26.1}%
+\contentsline {section}{\numberline {26.2}Performance Fundamentals}{387}{section.26.2}%
+\contentsline {subsection}{\numberline {26.2.1}Definition}{387}{subsection.26.2.1}%
+\contentsline {subsection}{\numberline {26.2.2}Performance Equation}{388}{subsection.26.2.2}%
+\contentsline {subsection}{\numberline {26.2.3}Key Observation}{388}{subsection.26.2.3}%
+\contentsline {section}{\numberline {26.3}CPU Cache Hierarchy}{388}{section.26.3}%
+\contentsline {subsection}{\numberline {26.3.1}Motivation}{388}{subsection.26.3.1}%
+\contentsline {subsection}{\numberline {26.3.2}Hierarchy}{388}{subsection.26.3.2}%
+\contentsline {subsection}{\numberline {26.3.3}Characteristics}{389}{subsection.26.3.3}%
+\contentsline {section}{\numberline {26.4}Cache Locality}{389}{section.26.4}%
+\contentsline {subsection}{\numberline {26.4.1}Definition}{389}{subsection.26.4.1}%
+\contentsline {subsection}{\numberline {26.4.2}Importance}{389}{subsection.26.4.2}%
+\contentsline {section}{\numberline {26.5}Spatial Locality}{389}{section.26.5}%
+\contentsline {subsection}{\numberline {26.5.1}Definition}{389}{subsection.26.5.1}%
+\contentsline {subsection}{\numberline {26.5.2}Example}{389}{subsection.26.5.2}%
+\contentsline {subsection}{\numberline {26.5.3}Benefit}{390}{subsection.26.5.3}%
+\contentsline {section}{\numberline {26.6}Temporal Locality}{390}{section.26.6}%
+\contentsline {subsection}{\numberline {26.6.1}Definition}{390}{subsection.26.6.1}%
+\contentsline {subsection}{\numberline {26.6.2}Example}{390}{subsection.26.6.2}%
+\contentsline {subsection}{\numberline {26.6.3}Benefit}{390}{subsection.26.6.3}%
+\contentsline {section}{\numberline {26.7}Cache Lines}{390}{section.26.7}%
+\contentsline {subsection}{\numberline {26.7.1}Definition}{390}{subsection.26.7.1}%
+\contentsline {subsection}{\numberline {26.7.2}Illustration}{390}{subsection.26.7.2}%
+\contentsline {subsection}{\numberline {26.7.3}Interview Insight}{391}{subsection.26.7.3}%
+\contentsline {section}{\numberline {26.8}False Sharing}{391}{section.26.8}%
+\contentsline {subsection}{\numberline {26.8.1}Definition}{391}{subsection.26.8.1}%
+\contentsline {subsection}{\numberline {26.8.2}Example}{391}{subsection.26.8.2}%
+\contentsline {subsection}{\numberline {26.8.3}Effects}{391}{subsection.26.8.3}%
+\contentsline {subsection}{\numberline {26.8.4}Solution}{391}{subsection.26.8.4}%
+\contentsline {section}{\numberline {26.9}TLB Overview}{391}{section.26.9}%
+\contentsline {subsection}{\numberline {26.9.1}Definition}{391}{subsection.26.9.1}%
+\contentsline {subsection}{\numberline {26.9.2}Address Translation}{391}{subsection.26.9.2}%
+\contentsline {subsection}{\numberline {26.9.3}Purpose}{392}{subsection.26.9.3}%
+\contentsline {section}{\numberline {26.10}TLB Performance Impact}{392}{section.26.10}%
+\contentsline {subsection}{\numberline {26.10.1}TLB Hit}{392}{subsection.26.10.1}%
+\contentsline {subsection}{\numberline {26.10.2}TLB Miss}{392}{subsection.26.10.2}%
+\contentsline {subsection}{\numberline {26.10.3}Impact}{392}{subsection.26.10.3}%
+\contentsline {subsection}{\numberline {26.10.4}Interview Insight}{392}{subsection.26.10.4}%
+\contentsline {section}{\numberline {26.11}Memory Access Costs}{392}{section.26.11}%
+\contentsline {subsection}{\numberline {26.11.1}Observation}{392}{subsection.26.11.1}%
+\contentsline {section}{\numberline {26.12}Branch Prediction}{393}{section.26.12}%
+\contentsline {subsection}{\numberline {26.12.1}Definition}{393}{subsection.26.12.1}%
+\contentsline {subsection}{\numberline {26.12.2}Example}{393}{subsection.26.12.2}%
+\contentsline {subsection}{\numberline {26.12.3}Correct Prediction}{393}{subsection.26.12.3}%
+\contentsline {subsection}{\numberline {26.12.4}Misprediction}{393}{subsection.26.12.4}%
+\contentsline {subsection}{\numberline {26.12.5}Impact}{393}{subsection.26.12.5}%
+\contentsline {section}{\numberline {26.13}Pipeline Effects}{393}{section.26.13}%
+\contentsline {subsection}{\numberline {26.13.1}Pipeline}{393}{subsection.26.13.1}%
+\contentsline {subsection}{\numberline {26.13.2}Benefits}{393}{subsection.26.13.2}%
+\contentsline {subsection}{\numberline {26.13.3}Problems}{393}{subsection.26.13.3}%
+\contentsline {subsection}{\numberline {26.13.4}Result}{394}{subsection.26.13.4}%
+\contentsline {section}{\numberline {26.14}Memory Allocation Costs}{394}{section.26.14}%
+\contentsline {subsection}{\numberline {26.14.1}Dynamic Allocation}{394}{subsection.26.14.1}%
+\contentsline {subsection}{\numberline {26.14.2}Costs}{394}{subsection.26.14.2}%
+\contentsline {subsection}{\numberline {26.14.3}Optimization}{394}{subsection.26.14.3}%
+\contentsline {section}{\numberline {26.15}NUMA Effects}{394}{section.26.15}%
+\contentsline {subsection}{\numberline {26.15.1}NUMA}{394}{subsection.26.15.1}%
+\contentsline {subsection}{\numberline {26.15.2}Concept}{394}{subsection.26.15.2}%
+\contentsline {subsection}{\numberline {26.15.3}Performance Implications}{395}{subsection.26.15.3}%
+\contentsline {subsection}{\numberline {26.15.4}Optimization}{395}{subsection.26.15.4}%
+\contentsline {section}{\numberline {26.16}Memory Leaks}{395}{section.26.16}%
+\contentsline {subsection}{\numberline {26.16.1}Definition}{395}{subsection.26.16.1}%
+\contentsline {subsection}{\numberline {26.16.2}Example}{395}{subsection.26.16.2}%
+\contentsline {subsection}{\numberline {26.16.3}Effects}{395}{subsection.26.16.3}%
+\contentsline {section}{\numberline {26.17}Fragmentation}{395}{section.26.17}%
+\contentsline {subsection}{\numberline {26.17.1}Internal Fragmentation}{395}{subsection.26.17.1}%
+\contentsline {subsection}{\numberline {26.17.2}External Fragmentation}{395}{subsection.26.17.2}%
+\contentsline {subsection}{\numberline {26.17.3}Effects}{396}{subsection.26.17.3}%
+\contentsline {section}{\numberline {26.18}Garbage Collection Overview}{396}{section.26.18}%
+\contentsline {subsection}{\numberline {26.18.1}Definition}{396}{subsection.26.18.1}%
+\contentsline {subsection}{\numberline {26.18.2}Languages}{396}{subsection.26.18.2}%
+\contentsline {subsection}{\numberline {26.18.3}Advantages}{396}{subsection.26.18.3}%
+\contentsline {subsection}{\numberline {26.18.4}Disadvantages}{396}{subsection.26.18.4}%
+\contentsline {section}{\numberline {26.19}Performance Profiling}{396}{section.26.19}%
+\contentsline {subsection}{\numberline {26.19.1}Definition}{396}{subsection.26.19.1}%
+\contentsline {subsection}{\numberline {26.19.2}Popular Tools}{396}{subsection.26.19.2}%
+\contentsline {subsection}{\numberline {26.19.3}Goal}{397}{subsection.26.19.3}%
+\contentsline {section}{\numberline {26.20}Benchmarking Fundamentals}{397}{section.26.20}%
+\contentsline {subsection}{\numberline {26.20.1}Definition}{397}{subsection.26.20.1}%
+\contentsline {subsection}{\numberline {26.20.2}Rules}{397}{subsection.26.20.2}%
+\contentsline {subsection}{\numberline {26.20.3}Example}{397}{subsection.26.20.3}%
+\contentsline {section}{\numberline {26.21}Performance Case Study}{397}{section.26.21}%
+\contentsline {subsection}{\numberline {26.21.1}Scenario}{397}{subsection.26.21.1}%
+\contentsline {section}{\numberline {26.22}Optimization Trade-Offs}{398}{section.26.22}%
+\contentsline {section}{\numberline {26.23}Why Cache Locality Matters}{398}{section.26.23}%
+\contentsline {section}{\numberline {26.24}Common Performance Bottlenecks}{399}{section.26.24}%
+\contentsline {section}{\numberline {26.25}How Memory Affects Scalability}{399}{section.26.25}%
+\contentsline {section}{\numberline {26.26}Key Takeaways}{399}{section.26.26}%
+\contentsline {section}{\numberline {26.27}20 Interview Questions with Answers}{400}{section.26.27}%
+\contentsline {section}{\numberline {26.28}20 MCQs with Answers}{401}{section.26.28}%
+\contentsline {section}{\numberline {26.29}Revision Notes}{401}{section.26.29}%
+\contentsline {section}{\numberline {26.30}Cheat Sheet}{402}{section.26.30}%
+\contentsline {chapter}{\numberline {27}Distributed Systems Through the Lens of Operating Systems}{403}{chapter.27}%
+\contentsline {section}{\numberline {27.1}Introduction}{403}{section.27.1}%
+\contentsline {section}{\numberline {27.2}Why Distributed Systems Exist}{403}{section.27.2}%
+\contentsline {section}{\numberline {27.3}OS Concepts vs Distributed Systems Concepts}{404}{section.27.3}%
+\contentsline {section}{\numberline {27.4}Processes vs Services}{404}{section.27.4}%
+\contentsline {section}{\numberline {27.5}Threads vs Workers}{405}{section.27.5}%
+\contentsline {section}{\numberline {27.6}Memory vs Distributed State}{405}{section.27.6}%
+\contentsline {section}{\numberline {27.7}Local IPC vs Network Communication}{406}{section.27.7}%
+\contentsline {section}{\numberline {27.8}RPC Fundamentals}{406}{section.27.8}%
+\contentsline {subsection}{\numberline {27.8.1}RPC Workflow}{406}{subsection.27.8.1}%
+\contentsline {section}{\numberline {27.9}gRPC Overview}{407}{section.27.9}%
+\contentsline {section}{\numberline {27.10}Distributed Locks}{407}{section.27.10}%
+\contentsline {section}{\numberline {27.11}Consensus Basics}{407}{section.27.11}%
+\contentsline {section}{\numberline {27.12}Leader Election}{408}{section.27.12}%
+\contentsline {section}{\numberline {27.13}Clock Synchronization}{408}{section.27.13}%
+\contentsline {section}{\numberline {27.14}Logical Clocks}{409}{section.27.14}%
+\contentsline {section}{\numberline {27.15}Vector Clocks}{409}{section.27.15}%
+\contentsline {section}{\numberline {27.16}CAP Theorem}{410}{section.27.16}%
+\contentsline {section}{\numberline {27.17}Consistency Models}{410}{section.27.17}%
+\contentsline {subsection}{\numberline {27.17.1}Strong Consistency}{410}{subsection.27.17.1}%
+\contentsline {subsection}{\numberline {27.17.2}Eventual Consistency}{410}{subsection.27.17.2}%
+\contentsline {subsection}{\numberline {27.17.3}Causal Consistency}{410}{subsection.27.17.3}%
+\contentsline {subsection}{\numberline {27.17.4}Read-Your-Writes}{410}{subsection.27.17.4}%
+\contentsline {subsection}{\numberline {27.17.5}Monotonic Reads}{411}{subsection.27.17.5}%
+\contentsline {section}{\numberline {27.18}Replication Basics}{411}{section.27.18}%
+\contentsline {subsection}{\numberline {27.18.1}Primary-Replica}{411}{subsection.27.18.1}%
+\contentsline {subsection}{\numberline {27.18.2}Multi-Leader Replication}{411}{subsection.27.18.2}%
+\contentsline {section}{\numberline {27.19}Fault Tolerance}{411}{section.27.19}%
+\contentsline {section}{\numberline {27.20}Distributed Transactions}{412}{section.27.20}%
+\contentsline {subsection}{\numberline {27.20.1}Two-Phase Commit}{412}{subsection.27.20.1}%
+\contentsline {section}{\numberline {27.21}Modern Cloud Architectures}{412}{section.27.21}%
+\contentsline {section}{\numberline {27.22}Dedicated Interview Section: How OS Concepts Appear in Distributed Systems}{413}{section.27.22}%
+\contentsline {section}{\numberline {27.23}Dedicated Interview Section: Distributed Lock Interview Questions}{413}{section.27.23}%
+\contentsline {section}{\numberline {27.24}Dedicated Interview Section: Consistency Model Interview Questions}{414}{section.27.24}%
+\contentsline {section}{\numberline {27.25}Key Takeaways}{414}{section.27.25}%
+\contentsline {part}{X\hspace {1em}Interview Mastery}{415}{part.10}%
+\contentsline {chapter}{\numberline {28}Operating Systems Interview Questions}{417}{chapter.28}%
+\contentsline {section}{\numberline {28.1}Introduction}{417}{section.28.1}%
+\contentsline {section}{\numberline {28.2}Operating System Fundamentals}{417}{section.28.2}%
+\contentsline {section}{\numberline {28.3}Processes}{417}{section.28.3}%
+\contentsline {section}{\numberline {28.4}Threads}{418}{section.28.4}%
+\contentsline {section}{\numberline {28.5}CPU Scheduling}{418}{section.28.5}%
+\contentsline {section}{\numberline {28.6}Synchronization}{418}{section.28.6}%
+\contentsline {section}{\numberline {28.7}Deadlocks}{419}{section.28.7}%
+\contentsline {section}{\numberline {28.8}Memory Management}{419}{section.28.8}%
+\contentsline {section}{\numberline {28.9}Virtual Memory}{420}{section.28.9}%
+\contentsline {section}{\numberline {28.10}Paging and Segmentation}{420}{section.28.10}%
+\contentsline {section}{\numberline {28.11}Page Replacement}{420}{section.28.11}%
+\contentsline {section}{\numberline {28.12}File Systems}{421}{section.28.12}%
+\contentsline {section}{\numberline {28.13}Disk Scheduling}{421}{section.28.13}%
+\contentsline {section}{\numberline {28.14}Linux Internals}{421}{section.28.14}%
+\contentsline {section}{\numberline {28.15}Containers and Virtualization}{422}{section.28.15}%
+\contentsline {section}{\numberline {28.16}Operating System Security}{422}{section.28.16}%
+\contentsline {section}{\numberline {28.17}High-Concurrency Systems}{422}{section.28.17}%
+\contentsline {section}{\numberline {28.18}Top 25 Most Frequently Asked Questions}{423}{section.28.18}%
+\contentsline {section}{\numberline {28.19}Top 25 One-Line Rapid Revision Questions}{423}{section.28.19}%
+\contentsline {section}{\numberline {28.20}Top 25 Deep-Dive Questions}{424}{section.28.20}%
+\contentsline {section}{\numberline {28.21}Interview Preparation Strategy}{425}{section.28.21}%
+\contentsline {section}{\numberline {28.22}Last-Minute Revision Advice}{425}{section.28.22}%
+\contentsline {section}{\numberline {28.23}Key Takeaways}{426}{section.28.23}%
+\contentsline {chapter}{\numberline {29}Operating Systems Numerical Problems}{427}{chapter.29}%
+\contentsline {section}{\numberline {29.1}Introduction}{427}{section.29.1}%
+\contentsline {section}{\numberline {29.2}Important Formula Summary}{427}{section.29.2}%
+\contentsline {subsection}{\numberline {29.2.1}CPU Scheduling}{427}{subsection.29.2.1}%
+\contentsline {subsection}{\numberline {29.2.2}Paging}{428}{subsection.29.2.2}%
+\contentsline {subsection}{\numberline {29.2.3}Effective Access Time}{428}{subsection.29.2.3}%
+\contentsline {subsection}{\numberline {29.2.4}Disk Scheduling}{428}{subsection.29.2.4}%
+\contentsline {section}{\numberline {29.3}CPU Scheduling Numericals}{429}{section.29.3}%
+\contentsline {subsection}{\numberline {29.3.1}FCFS Formula Review}{429}{subsection.29.3.1}%
+\contentsline {subsection}{\numberline {29.3.2}Solved Problem 1}{429}{subsection.29.3.2}%
+\contentsline {subsection}{\numberline {29.3.3}Solved Problem 2}{429}{subsection.29.3.3}%
+\contentsline {subsection}{\numberline {29.3.4}Solved Problem 3}{430}{subsection.29.3.4}%
+\contentsline {subsection}{\numberline {29.3.5}Solved Problems 4--10}{430}{subsection.29.3.5}%
+\contentsline {subsection}{\numberline {29.3.6}Interview Shortcut}{430}{subsection.29.3.6}%
+\contentsline {subsection}{\numberline {29.3.7}SJF Formula Review}{430}{subsection.29.3.7}%
+\contentsline {subsection}{\numberline {29.3.8}Solved Problem 11}{431}{subsection.29.3.8}%
+\contentsline {subsection}{\numberline {29.3.9}Solved Problems 12--20}{431}{subsection.29.3.9}%
+\contentsline {subsection}{\numberline {29.3.10}SRTF Problems}{431}{subsection.29.3.10}%
+\contentsline {subsection}{\numberline {29.3.11}Solved Problem 21}{431}{subsection.29.3.11}%
+\contentsline {subsection}{\numberline {29.3.12}Solved Problems 22--30}{432}{subsection.29.3.12}%
+\contentsline {subsection}{\numberline {29.3.13}Priority Scheduling Problems}{432}{subsection.29.3.13}%
+\contentsline {subsection}{\numberline {29.3.14}Solved Problems 31--40}{432}{subsection.29.3.14}%
+\contentsline {subsection}{\numberline {29.3.15}Round Robin Problems}{432}{subsection.29.3.15}%
+\contentsline {subsection}{\numberline {29.3.16}Solved Problem 41}{432}{subsection.29.3.16}%
+\contentsline {subsection}{\numberline {29.3.17}Solved Problems 42--50}{433}{subsection.29.3.17}%
+\contentsline {subsection}{\numberline {29.3.18}Multilevel Queue Problems}{433}{subsection.29.3.18}%
+\contentsline {subsection}{\numberline {29.3.19}Solved Problems 51--55}{433}{subsection.29.3.19}%
+\contentsline {section}{\numberline {29.4}Deadlock Numericals}{434}{section.29.4}%
+\contentsline {subsection}{\numberline {29.4.1}Resource Allocation Graph Problems}{434}{subsection.29.4.1}%
+\contentsline {subsection}{\numberline {29.4.2}Solved Problem 56}{434}{subsection.29.4.2}%
+\contentsline {subsection}{\numberline {29.4.3}Solved Problems 57--60}{434}{subsection.29.4.3}%
+\contentsline {subsection}{\numberline {29.4.4}Wait-For Graph Problems}{434}{subsection.29.4.4}%
+\contentsline {subsection}{\numberline {29.4.5}Solved Problems 61--65}{434}{subsection.29.4.5}%
+\contentsline {subsection}{\numberline {29.4.6}Banker's Algorithm Problems}{434}{subsection.29.4.6}%
+\contentsline {subsection}{\numberline {29.4.7}Solved Problems 66--75}{434}{subsection.29.4.7}%
+\contentsline {section}{\numberline {29.5}Paging Numericals}{435}{section.29.5}%
+\contentsline {subsection}{\numberline {29.5.1}Address Translation Problems}{435}{subsection.29.5.1}%
+\contentsline {subsection}{\numberline {29.5.2}Solved Problem 76}{435}{subsection.29.5.2}%
+\contentsline {subsection}{\numberline {29.5.3}Solved Problems 77--85}{435}{subsection.29.5.3}%
+\contentsline {subsection}{\numberline {29.5.4}Multilevel Paging Problems}{436}{subsection.29.5.4}%
+\contentsline {subsection}{\numberline {29.5.5}Solved Problems 86--90}{436}{subsection.29.5.5}%
+\contentsline {subsection}{\numberline {29.5.6}TLB Problems}{436}{subsection.29.5.6}%
+\contentsline {subsection}{\numberline {29.5.7}Solved Problems 91--95}{436}{subsection.29.5.7}%
+\contentsline {section}{\numberline {29.6}Segmentation Numericals}{436}{section.29.6}%
+\contentsline {subsection}{\numberline {29.6.1}Solved Problem 96}{436}{subsection.29.6.1}%
+\contentsline {subsection}{\numberline {29.6.2}Solved Problems 97--100}{437}{subsection.29.6.2}%
+\contentsline {section}{\numberline {29.7}Virtual Memory Numericals}{437}{section.29.7}%
+\contentsline {subsection}{\numberline {29.7.1}Page Fault Problems}{437}{subsection.29.7.1}%
+\contentsline {subsection}{\numberline {29.7.2}Solved Problems 101--105}{437}{subsection.29.7.2}%
+\contentsline {subsection}{\numberline {29.7.3}Working Set Problems}{437}{subsection.29.7.3}%
+\contentsline {subsection}{\numberline {29.7.4}Solved Problems 106--110}{437}{subsection.29.7.4}%
+\contentsline {subsection}{\numberline {29.7.5}Thrashing Problems}{437}{subsection.29.7.5}%
+\contentsline {subsection}{\numberline {29.7.6}Solved Problems 111--115}{437}{subsection.29.7.6}%
+\contentsline {section}{\numberline {29.8}Page Replacement Numericals}{438}{section.29.8}%
+\contentsline {subsection}{\numberline {29.8.1}FIFO Problems}{438}{subsection.29.8.1}%
+\contentsline {subsection}{\numberline {29.8.2}Solved Problem 116}{438}{subsection.29.8.2}%
+\contentsline {subsection}{\numberline {29.8.3}Optimal Problems}{438}{subsection.29.8.3}%
+\contentsline {subsection}{\numberline {29.8.4}Solved Problem 117}{438}{subsection.29.8.4}%
+\contentsline {subsection}{\numberline {29.8.5}LRU Problems}{438}{subsection.29.8.5}%
+\contentsline {subsection}{\numberline {29.8.6}Solved Problem 118}{438}{subsection.29.8.6}%
+\contentsline {subsection}{\numberline {29.8.7}Clock Algorithm Problems}{439}{subsection.29.8.7}%
+\contentsline {subsection}{\numberline {29.8.8}Solved Problems 119--122}{439}{subsection.29.8.8}%
+\contentsline {subsection}{\numberline {29.8.9}Belady's Anomaly}{439}{subsection.29.8.9}%
+\contentsline {subsection}{\numberline {29.8.10}Solved Problems 123--125}{439}{subsection.29.8.10}%
+\contentsline {section}{\numberline {29.9}Disk Scheduling Numericals}{439}{section.29.9}%
+\contentsline {subsection}{\numberline {29.9.1}FCFS Problems}{439}{subsection.29.9.1}%
+\contentsline {subsection}{\numberline {29.9.2}Solved Problem 126}{439}{subsection.29.9.2}%
+\contentsline {subsection}{\numberline {29.9.3}SSTF Problems}{439}{subsection.29.9.3}%
+\contentsline {subsection}{\numberline {29.9.4}Solved Problem 127}{439}{subsection.29.9.4}%
+\contentsline {subsection}{\numberline {29.9.5}SCAN Problems}{440}{subsection.29.9.5}%
+\contentsline {subsection}{\numberline {29.9.6}Solved Problem 128}{440}{subsection.29.9.6}%
+\contentsline {subsection}{\numberline {29.9.7}CSCAN Problems}{440}{subsection.29.9.7}%
+\contentsline {subsection}{\numberline {29.9.8}Solved Problem 129}{440}{subsection.29.9.8}%
+\contentsline {subsection}{\numberline {29.9.9}LOOK Problems}{440}{subsection.29.9.9}%
+\contentsline {subsection}{\numberline {29.9.10}Solved Problem 130}{440}{subsection.29.9.10}%
+\contentsline {subsection}{\numberline {29.9.11}CLOOK Problems}{440}{subsection.29.9.11}%
+\contentsline {subsection}{\numberline {29.9.12}Solved Problem 131}{440}{subsection.29.9.12}%
+\contentsline {section}{\numberline {29.10}Rapid Numerical Problem Solving Techniques}{440}{section.29.10}%
+\contentsline {section}{\numberline {29.11}Formula Sheet}{441}{section.29.11}%
+\contentsline {section}{\numberline {29.12}Numerical Cheat Sheet}{441}{section.29.12}%
+\contentsline {section}{\numberline {29.13}Key Takeaways}{441}{section.29.13}%
+\contentsline {chapter}{\numberline {30}Operating Systems Cheat Sheets}{443}{chapter.30}%
+\contentsline {section}{\numberline {30.1}Introduction}{443}{section.30.1}%
+\contentsline {section}{\numberline {30.2}Operating System Fundamentals}{443}{section.30.2}%
+\contentsline {section}{\numberline {30.3}Computer Architecture}{444}{section.30.3}%
+\contentsline {section}{\numberline {30.4}Processes}{444}{section.30.4}%
+\contentsline {section}{\numberline {30.5}Threads}{445}{section.30.5}%
+\contentsline {section}{\numberline {30.6}CPU Scheduling}{445}{section.30.6}%
+\contentsline {section}{\numberline {30.7}Synchronization}{446}{section.30.7}%
+\contentsline {section}{\numberline {30.8}Critical Section Problem}{446}{section.30.8}%
+\contentsline {section}{\numberline {30.9}Semaphores}{447}{section.30.9}%
+\contentsline {section}{\numberline {30.10}Mutexes}{447}{section.30.10}%
+\contentsline {section}{\numberline {30.11}Deadlocks}{447}{section.30.11}%
+\contentsline {section}{\numberline {30.12}Memory Management}{448}{section.30.12}%
+\contentsline {section}{\numberline {30.13}Paging}{448}{section.30.13}%
+\contentsline {section}{\numberline {30.14}Segmentation}{448}{section.30.14}%
+\contentsline {section}{\numberline {30.15}Virtual Memory}{449}{section.30.15}%
+\contentsline {section}{\numberline {30.16}Page Replacement}{449}{section.30.16}%
+\contentsline {section}{\numberline {30.17}Memory Allocation}{449}{section.30.17}%
+\contentsline {section}{\numberline {30.18}File Systems}{450}{section.30.18}%
+\contentsline {section}{\numberline {30.19}File System Implementation}{450}{section.30.19}%
+\contentsline {section}{\numberline {30.20}Disk Scheduling}{450}{section.30.20}%
+\contentsline {section}{\numberline {30.21}I/O Systems}{451}{section.30.21}%
+\contentsline {section}{\numberline {30.22}Linux Internals}{451}{section.30.22}%
+\contentsline {section}{\numberline {30.23}Modern Concurrency}{451}{section.30.23}%
+\contentsline {section}{\numberline {30.24}Containers}{452}{section.30.24}%
+\contentsline {section}{\numberline {30.25}Virtualization}{452}{section.30.25}%
+\contentsline {section}{\numberline {30.26}Operating System Security}{452}{section.30.26}%
+\contentsline {section}{\numberline {30.27}High-Concurrency Systems}{453}{section.30.27}%
+\contentsline {section}{\numberline {30.28}Comparison Tables}{453}{section.30.28}%
+\contentsline {section}{\numberline {30.29}Top 100 One-Line Facts}{454}{section.30.29}%
+\contentsline {section}{\numberline {30.30}Top 100 Interview Rapid Fire Questions}{457}{section.30.30}%
+\contentsline {section}{\numberline {30.31}Final Interview Day Checklist}{460}{section.30.31}%
+\contentsline {section}{\numberline {30.32}Complete OS Revision Map}{460}{section.30.32}%
+\contentsline {section}{\numberline {30.33}Key Takeaways}{461}{section.30.33}%
+\contentsline {chapter}{\numberline {31}Final Revision Notes and Interview Strategy}{463}{chapter.31}%
+\contentsline {section}{\numberline {31.1}Purpose of This Chapter}{463}{section.31.1}%
+\contentsline {section}{\numberline {31.2}30-Day Revision Plan}{463}{section.31.2}%
+\contentsline {section}{\numberline {31.3}14-Day Revision Plan}{464}{section.31.3}%
+\contentsline {section}{\numberline {31.4}7-Day Revision Plan}{464}{section.31.4}%
+\contentsline {section}{\numberline {31.5}3-Day Revision Plan}{465}{section.31.5}%
+\contentsline {section}{\numberline {31.6}1-Day Revision Plan}{465}{section.31.6}%
+\contentsline {section}{\numberline {31.7}Interview Morning Checklist}{466}{section.31.7}%
+\contentsline {section}{\numberline {31.8}OS Fundamentals Revision}{467}{section.31.8}%
+\contentsline {section}{\numberline {31.9}Computer Architecture Revision}{467}{section.31.9}%
+\contentsline {section}{\numberline {31.10}Processes Revision}{467}{section.31.10}%
+\contentsline {section}{\numberline {31.11}Threads Revision}{467}{section.31.11}%
+\contentsline {section}{\numberline {31.12}Scheduling Revision}{468}{section.31.12}%
+\contentsline {section}{\numberline {31.13}Synchronization Revision}{468}{section.31.13}%
+\contentsline {section}{\numberline {31.14}Deadlocks Revision}{468}{section.31.14}%
+\contentsline {section}{\numberline {31.15}Memory Management Revision}{469}{section.31.15}%
+\contentsline {section}{\numberline {31.16}Paging Revision}{469}{section.31.16}%
+\contentsline {section}{\numberline {31.17}Segmentation Revision}{469}{section.31.17}%
+\contentsline {section}{\numberline {31.18}Virtual Memory Revision}{469}{section.31.18}%
+\contentsline {section}{\numberline {31.19}Page Replacement Revision}{470}{section.31.19}%
+\contentsline {section}{\numberline {31.20}File Systems Revision}{470}{section.31.20}%
+\contentsline {section}{\numberline {31.21}Disk Scheduling Revision}{470}{section.31.21}%
+\contentsline {section}{\numberline {31.22}Linux Internals Revision}{471}{section.31.22}%
+\contentsline {section}{\numberline {31.23}Containers Revision}{471}{section.31.23}%
+\contentsline {section}{\numberline {31.24}Virtualization Revision}{471}{section.31.24}%
+\contentsline {section}{\numberline {31.25}Security Revision}{471}{section.31.25}%
+\contentsline {section}{\numberline {31.26}High-Concurrency Systems Revision}{472}{section.31.26}%
+\contentsline {section}{\numberline {31.27}Top 50 Questions Every Candidate Must Know}{473}{section.31.27}%
+\contentsline {section}{\numberline {31.28}Top 50 Mistakes Candidates Make}{474}{section.31.28}%
+\contentsline {section}{\numberline {31.29}Top 50 Concepts Frequently Confused}{476}{section.31.29}%
+\contentsline {section}{\numberline {31.30}FAANG Interview Preparation Guidance}{476}{section.31.30}%
+\contentsline {section}{\numberline {31.31}How to Answer OS Questions}{477}{section.31.31}%
+\contentsline {section}{\numberline {31.32}How to Handle Follow-Up Questions}{477}{section.31.32}%
+\contentsline {section}{\numberline {31.33}How to Explain Trade-Offs}{477}{section.31.33}%
+\contentsline {section}{\numberline {31.34}How to Draw OS Diagrams During Interviews}{478}{section.31.34}%
+\contentsline {section}{\numberline {31.35}The Complete Operating Systems Knowledge Map}{478}{section.31.35}%
+\contentsline {section}{\numberline {31.36}One-Hour Revision Guide}{478}{section.31.36}%
+\contentsline {section}{\numberline {31.37}Thirty-Minute Revision Guide}{479}{section.31.37}%
+\contentsline {section}{\numberline {31.38}Fifteen-Minute Revision Guide}{479}{section.31.38}%
+\contentsline {section}{\numberline {31.39}Five-Minute Emergency Revision Guide}{479}{section.31.39}%
+\contentsline {section}{\numberline {31.40}Final Key Takeaways}{480}{section.31.40}%
+\contentsline {section}{\numberline {31.41}Final Interview Checklist}{480}{section.31.41}%
+\contentsline {section}{\numberline {31.42}Closing Revision Notes}{480}{section.31.42}%

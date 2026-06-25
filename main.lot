@@ -13,3 +13,60 @@
 \contentsline {table}{\numberline {5.1}{\ignorespaces Scheduling Algorithm Comparison}}{68}{table.caption.42}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {11.1}{\ignorespaces Static vs Dynamic Linking}}{154}{table.caption.73}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {13.1}{\ignorespaces Example Segments}}{178}{table.caption.86}%
+\contentsline {table}{\numberline {13.2}{\ignorespaces Segment Structure Example}}{180}{table.caption.88}%
+\contentsline {table}{\numberline {13.3}{\ignorespaces Example Segment Table}}{180}{table.caption.89}%
+\contentsline {table}{\numberline {13.4}{\ignorespaces Segment Protection}}{182}{table.caption.91}%
+\contentsline {table}{\numberline {13.5}{\ignorespaces Segmentation vs Paging}}{187}{table.caption.93}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {15.1}{\ignorespaces Page Replacement Comparison}}{218}{table.caption.103}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {17.1}{\ignorespaces Common File Systems}}{240}{table.caption.112}%
+\contentsline {table}{\numberline {17.2}{\ignorespaces Permission Symbols}}{248}{table.caption.119}%
+\contentsline {table}{\numberline {17.3}{\ignorespaces Hard Link vs Symbolic Link}}{249}{table.caption.122}%
+\contentsline {table}{\numberline {17.4}{\ignorespaces Directory Structure Comparison}}{251}{table.caption.123}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {18.1}{\ignorespaces Typical Superblock Fields}}{257}{table.caption.126}%
+\contentsline {table}{\numberline {18.2}{\ignorespaces Allocation Method Comparison}}{265}{table.caption.134}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {19.1}{\ignorespaces RAID Comparison}}{279}{table.caption.140}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {20.1}{\ignorespaces RAID Comparison}}{301}{table.caption.146}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {21.1}{\ignorespaces User Space vs Kernel Space}}{312}{table.caption.148}%
+\contentsline {table}{\numberline {21.2}{\ignorespaces Common Linux Signals}}{318}{table.caption.153}%
+\contentsline {table}{\numberline {21.3}{\ignorespaces Important Linux Commands}}{320}{table.caption.155}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {22.1}{\ignorespaces Concurrency vs Parallelism}}{324}{table.caption.158}%
+\contentsline {table}{\numberline {22.2}{\ignorespaces Architecture Comparison}}{334}{table.caption.164}%
+\contentsline {table}{\numberline {22.3}{\ignorespaces Real-World Concurrency Models}}{336}{table.caption.165}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {23.1}{\ignorespaces VM vs Container}}{353}{table.caption.171}%
+\contentsline {table}{\numberline {23.2}{\ignorespaces Docker vs Virtual Machine}}{353}{table.caption.172}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {24.1}{\ignorespaces CIA Triad}}{356}{table.caption.174}%
+\contentsline {table}{\numberline {24.2}{\ignorespaces Authentication vs Authorization}}{358}{table.caption.176}%
+\contentsline {table}{\numberline {24.3}{\ignorespaces Access Control Matrix}}{359}{table.caption.177}%
+\contentsline {table}{\numberline {24.4}{\ignorespaces ACL vs Capability}}{360}{table.caption.178}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {25.1}{\ignorespaces Throughput vs Latency}}{376}{table.caption.182}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {26.1}{\ignorespaces Memory Hierarchy Characteristics}}{389}{table.caption.194}%
+\contentsline {table}{\numberline {26.2}{\ignorespaces Memory Access Costs}}{392}{table.caption.196}%
+\contentsline {table}{\numberline {26.3}{\ignorespaces Optimization Trade-Offs}}{398}{table.caption.198}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {27.1}{\ignorespaces OS Concepts vs Distributed Systems}}{404}{table.caption.199}%
+\contentsline {table}{\numberline {27.2}{\ignorespaces Concept Mapping}}{413}{table.caption.207}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

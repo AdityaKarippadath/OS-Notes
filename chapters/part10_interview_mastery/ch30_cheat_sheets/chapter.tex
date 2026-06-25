@@ -1,0 +1,847 @@
+\chapter{Operating Systems Cheat Sheets}
+
+\section{Introduction}
+
+This chapter is designed for rapid interview revision and last-minute preparation. Every section focuses on concise recall, common interview questions, key comparisons, and essential formulas.
+
+\section{Operating System Fundamentals}
+
+\subsection*{Key Definitions}
+
+\begin{itemize}
+\item Operating System: Resource manager and abstraction layer.
+\item Kernel: Core component of the OS.
+\item System Call: Interface between user programs and kernel.
+\item Interrupt: Signal requiring CPU attention.
+\item Trap: Software-generated interrupt.
+\item DMA: Direct Memory Access.
+\end{itemize}
+
+\subsection*{Important Facts}
+
+\begin{itemize}
+\item OS manages CPU, memory, storage, and I/O devices.
+\item User programs cannot directly access hardware.
+\item Kernel mode has full privileges.
+\item User mode is restricted.
+\end{itemize}
+
+\subsection*{Most Common Interview Questions}
+
+\begin{enumerate}
+\item What is an operating system?
+\item What is a kernel?
+\item What is a system call?
+\item User mode vs kernel mode?
+\item What is context switching?
+\end{enumerate}
+
+\subsection*{Memory Trick}
+
+OS = Resource Manager + Abstraction Layer
+
+\section{Computer Architecture}
+
+\subsection*{Key Definitions}
+
+\begin{itemize}
+\item CPU
+\item Register
+\item Program Counter
+\item Stack Pointer
+\item Cache
+\item MMU
+\end{itemize}
+
+\subsection*{Memory Hierarchy}
+
+[
+Registers > L1 > L2 > L3 > RAM > SSD > HDD
+]
+
+\subsection*{Interview Favorites}
+
+\begin{itemize}
+\item Fetch-Decode-Execute Cycle
+\item Cache Memory
+\item Interrupt Handling
+\item DMA
+\item NUMA
+\end{itemize}
+
+\section{Processes}
+
+\subsection*{Key Definitions}
+
+\begin{itemize}
+\item Process = Program in execution.
+\item PCB = Process Control Block.
+\item Context Switch = Switching CPU execution.
+\end{itemize}
+
+\subsection*{Process States}
+
+[
+New \rightarrow Ready \rightarrow Running \rightarrow Waiting \rightarrow Terminated
+]
+
+\subsection*{Common Questions}
+
+\begin{itemize}
+\item fork vs exec
+\item Zombie process
+\item Orphan process
+\item Context switching
+\end{itemize}
+
+\section{Threads}
+
+\subsection*{Key Definitions}
+
+\begin{itemize}
+\item Thread = Lightweight execution unit.
+\item Shares process memory.
+\item Own stack and registers.
+\end{itemize}
+
+\subsection*{Benefits}
+
+\begin{itemize}
+\item Responsiveness
+\item Resource sharing
+\item Scalability
+\item Economy
+\end{itemize}
+
+\section{CPU Scheduling}
+
+\subsection*{Algorithms}
+
+\begin{itemize}
+\item FCFS
+\item SJF
+\item SRTF
+\item Round Robin
+\item Priority
+\item Multilevel Queue
+\end{itemize}
+
+\subsection*{Metrics}
+
+\begin{itemize}
+\item Turnaround Time
+\item Waiting Time
+\item Response Time
+\item Throughput
+\item CPU Utilization
+\end{itemize}
+
+\subsection*{Formula Summary}
+
+[
+Turnaround = Completion - Arrival
+]
+
+[
+Waiting = Turnaround - Burst
+]
+
+\section{Synchronization}
+
+\subsection*{Goals}
+
+\begin{itemize}
+\item Mutual Exclusion
+\item Progress
+\item Bounded Waiting
+\end{itemize}
+
+\subsection*{Common Questions}
+
+\begin{itemize}
+\item Race Condition
+\item Critical Section
+\item Semaphore
+\item Mutex
+\item Monitor
+\end{itemize}
+
+\section{Critical Section Problem}
+
+\subsection*{Requirements}
+
+\begin{enumerate}
+\item Mutual Exclusion
+\item Progress
+\item Bounded Waiting
+\end{enumerate}
+
+\subsection*{Classic Solutions}
+
+\begin{itemize}
+\item Peterson's Algorithm
+\item Bakery Algorithm
+\item Test-and-Set
+\item Compare-and-Swap
+\end{itemize}
+
+\section{Semaphores}
+
+\subsection*{Definition}
+
+Integer synchronization variable.
+
+\subsection*{Operations}
+
+\begin{itemize}
+\item wait()
+\item signal()
+\end{itemize}
+
+\subsection*{Types}
+
+\begin{itemize}
+\item Binary Semaphore
+\item Counting Semaphore
+\end{itemize}
+
+\section{Mutexes}
+
+\subsection*{Definition}
+
+Lock mechanism providing ownership semantics.
+
+\subsection*{Key Difference}
+
+Mutex owner must unlock.
+
+\section{Deadlocks}
+
+\subsection*{Necessary Conditions}
+
+\begin{enumerate}
+\item Mutual Exclusion
+\item Hold and Wait
+\item No Preemption
+\item Circular Wait
+\end{enumerate}
+
+\subsection*{Strategies}
+
+\begin{itemize}
+\item Prevention
+\item Avoidance
+\item Detection
+\item Recovery
+\end{itemize}
+
+\section{Memory Management}
+
+\subsection*{Key Terms}
+
+\begin{itemize}
+\item Logical Address
+\item Physical Address
+\item Fragmentation
+\item Compaction
+\end{itemize}
+
+\subsection*{Fragmentation}
+
+\begin{itemize}
+\item Internal
+\item External
+\end{itemize}
+
+\section{Paging}
+
+\subsection*{Formula}
+
+[
+PhysicalAddress=(FrameNumber\times FrameSize)+Offset
+]
+
+\subsection*{Key Terms}
+
+\begin{itemize}
+\item Page
+\item Frame
+\item Page Table
+\item TLB
+\end{itemize}
+
+\section{Segmentation}
+
+\subsection*{Address Format}
+
+[
+(segment, offset)
+]
+
+\subsection*{Characteristics}
+
+\begin{itemize}
+\item Logical View
+\item Variable Sized
+\item External Fragmentation
+\end{itemize}
+
+\section{Virtual Memory}
+
+\subsection*{Key Concepts}
+
+\begin{itemize}
+\item Demand Paging
+\item Page Fault
+\item Thrashing
+\item Swap Space
+\item Copy-on-Write
+\end{itemize}
+
+\subsection*{Interview Favorite}
+
+What happens during a page fault?
+
+\section{Page Replacement}
+
+\subsection*{Algorithms}
+
+\begin{itemize}
+\item FIFO
+\item Optimal
+\item LRU
+\item LFU
+\item Clock
+\end{itemize}
+
+\subsection*{Key Fact}
+
+Optimal is theoretical benchmark.
+
+\section{Memory Allocation}
+
+\subsection*{Algorithms}
+
+\begin{itemize}
+\item First Fit
+\item Best Fit
+\item Worst Fit
+\item Next Fit
+\item Buddy System
+\item Slab Allocator
+\end{itemize}
+
+\section{File Systems}
+
+\subsection*{Key Terms}
+
+\begin{itemize}
+\item File
+\item Directory
+\item Inode
+\item Superblock
+\end{itemize}
+
+\subsection*{Allocation Methods}
+
+\begin{itemize}
+\item Contiguous
+\item Linked
+\item Indexed
+\end{itemize}
+
+\section{File System Implementation}
+
+\subsection*{On-Disk Structures}
+
+\begin{itemize}
+\item Boot Block
+\item Superblock
+\item Inodes
+\item Data Blocks
+\end{itemize}
+
+\subsection*{Consistency}
+
+\begin{itemize}
+\item Journaling
+\item fsck
+\end{itemize}
+
+\section{Disk Scheduling}
+
+\subsection*{Algorithms}
+
+\begin{itemize}
+\item FCFS
+\item SSTF
+\item SCAN
+\item C-SCAN
+\item LOOK
+\item C-LOOK
+\end{itemize}
+
+\section{I/O Systems}
+
+\subsection*{I/O Types}
+
+\begin{itemize}
+\item Programmed I/O
+\item Interrupt-Driven I/O
+\item DMA
+\end{itemize}
+
+\subsection*{Models}
+
+\begin{itemize}
+\item Blocking
+\item Non-Blocking
+\item Asynchronous
+\end{itemize}
+
+\section{Linux Internals}
+
+\subsection*{Must Know Topics}
+
+\begin{itemize}
+\item Process Creation
+\item fork()
+\item exec()
+\item CFS Scheduler
+\item Signals
+\item systemd
+\item proc
+\item sysfs
+\end{itemize}
+
+\section{Modern Concurrency}
+
+\subsection*{Key Topics}
+
+\begin{itemize}
+\item Lock-Free Programming
+\item Atomic Operations
+\item CAS
+\item Memory Ordering
+\item Thread Pools
+\end{itemize}
+
+\section{Containers}
+
+\subsection*{Core Concepts}
+
+\begin{itemize}
+\item Namespaces
+\item cgroups
+\item Images
+\item Containers
+\end{itemize}
+
+\section{Virtualization}
+
+\subsection*{Key Concepts}
+
+\begin{itemize}
+\item Hypervisor
+\item Type 1
+\item Type 2
+\item Hardware Virtualization
+\end{itemize}
+
+\section{Operating System Security}
+
+\subsection*{Key Topics}
+
+\begin{itemize}
+\item Authentication
+\item Authorization
+\item Access Control
+\item ASLR
+\item Secure Boot
+\item Sandboxing
+\end{itemize}
+
+\section{High-Concurrency Systems}
+
+\subsection*{Must Know}
+
+\begin{itemize}
+\item Thread Pools
+\item Event Loops
+\item epoll
+\item Reactor Pattern
+\item Proactor Pattern
+\item Backpressure
+\end{itemize}
+
+\section{Comparison Tables}
+
+\subsection*{Process vs Thread}
+
+\begin{longtable}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+Aspect & Process & Thread \
+\hline
+Memory & Separate & Shared \
+\hline
+Creation Cost & High & Low \
+\hline
+Context Switch & Expensive & Cheaper \
+\hline
+Isolation & Strong & Weak \
+\hline
+\end{longtable}
+
+\subsection*{Mutex vs Semaphore}
+
+\begin{longtable}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+Aspect & Mutex & Semaphore \
+\hline
+Ownership & Yes & No \
+\hline
+Counter & No & Yes \
+\hline
+Unlocker & Owner Only & Any Thread \
+\hline
+\end{longtable}
+
+\subsection*{Paging vs Segmentation}
+
+\begin{longtable}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+Aspect & Paging & Segmentation \
+\hline
+Unit Size & Fixed & Variable \
+\hline
+Fragmentation & Internal & External \
+\hline
+View & Physical & Logical \
+\hline
+\end{longtable}
+
+\subsection*{VM vs Container}
+
+\begin{longtable}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+Aspect & VM & Container \
+\hline
+Kernel & Separate & Shared \
+\hline
+Startup & Slow & Fast \
+\hline
+Isolation & Strong & Moderate \
+\hline
+\end{longtable}
+
+\subsection*{FCFS vs SJF vs RR}
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+\hline
+Aspect & FCFS & SJF & RR \
+\hline
+Preemptive & No & Optional & Yes \
+\hline
+Fairness & Medium & Poor & High \
+\hline
+Response Time & Poor & Good & Good \
+\hline
+\end{longtable}
+
+\subsection*{Blocking vs Non-Blocking I/O}
+
+\begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+Aspect & Blocking & Non-Blocking \
+\hline
+Waits & Yes & No \
+\hline
+CPU Usage & Low & Higher \
+\hline
+Concurrency & Lower & Higher \
+\hline
+\end{longtable}
+
+\subsection*{Synchronization Mechanisms}
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+\hline
+Mechanism & Ownership & Blocking & Use Case \
+\hline
+Mutex & Yes & Yes & Critical Sections \
+\hline
+Semaphore & No & Yes & Resource Counting \
+\hline
+Spinlock & Yes & No & Short Waits \
+\hline
+Monitor & Yes & Yes & High-Level Sync \
+\hline
+\end{longtable}
+
+\section{Top 100 One-Line Facts}
+
+\begin{enumerate}
+\item OS is a resource manager.
+\item Kernel runs in privileged mode.
+\item Threads share address space.
+\item Processes provide isolation.
+\item TLB caches translations.
+\item Page faults trigger OS intervention.
+\item Context switches are expensive.
+\item Mutex provides ownership.
+\item Semaphore is a counter.
+\item Deadlock requires four conditions.
+\item Paging eliminates external fragmentation.
+\item Segmentation reflects logical program structure.
+\item Virtual memory enables large address spaces.
+\item LRU approximates optimal replacement.
+\item Linux uses copy-on-write fork.
+\item ext4 uses journaling.
+\item DMA bypasses CPU copying.
+\item epoll scales well.
+\item Containers share kernels.
+\item Hypervisors run VMs.
+\item CFS schedules fairly.
+\item Signals provide notifications.
+\item ASLR randomizes memory layout.
+\item NUMA affects memory latency.
+\item Thrashing destroys performance.
+\item Buddy allocators split powers of two.
+\item Slab allocators cache kernel objects.
+\item Working set prevents thrashing.
+\item Page tables map addresses.
+\item Inodes store metadata.
+\item SCAN resembles an elevator.
+\item SSTF minimizes seek distance.
+\item Round Robin improves responsiveness.
+\item Starvation affects priority scheduling.
+\item Aging reduces starvation.
+\item Critical sections require protection.
+\item CAS supports lock-free programming.
+\item Monitors encapsulate synchronization.
+\item Namespaces isolate containers.
+\item cgroups enforce limits.
+\item Docker uses namespaces and cgroups.
+\item Linux boot starts with firmware.
+\item System calls cross protection boundaries.
+\item Cache is faster than RAM.
+\item Registers are fastest storage.
+\item User mode is restricted.
+\item Kernel mode is privileged.
+\item File descriptors identify open files.
+\item IPC enables process communication.
+\item Shared memory is fastest IPC.
+\item Pipes are unidirectional.
+\item Sockets support networking.
+\item Fork duplicates a process.
+\item Exec replaces process image.
+\item Zombie retains exit status.
+\item Orphan is adopted by init.
+\item Daemons run in background.
+\item Virtualization improves isolation.
+\item Containers improve density.
+\item Event loops scale efficiently.
+\item Thread pools reduce overhead.
+\item Connection pools improve throughput.
+\item Backpressure prevents overload.
+\item Reactor handles readiness events.
+\item Proactor handles completion events.
+\item Memory-mapped files use virtual memory.
+\item Swap extends memory.
+\item Belady's anomaly affects FIFO.
+\item Optimal replacement is theoretical.
+\item Page size impacts performance.
+\item Huge pages reduce TLB misses.
+\item Kernel panic is fatal.
+\item proc exposes kernel data.
+\item sysfs exposes device information.
+\item Scheduler chooses runnable tasks.
+\item Locks serialize access.
+\item Deadlocks stop progress.
+\item Recovery breaks cycles.
+\item Distributed locks extend mutexes.
+\item Strong consistency returns latest writes.
+\item Eventual consistency converges later.
+\item Replication improves availability.
+\item Consensus enables agreement.
+\item Leader election selects coordinator.
+\item Vector clocks track causality.
+\item NTP synchronizes clocks.
+\item Authentication verifies identity.
+\item Authorization verifies permissions.
+\item Secure boot validates startup.
+\item SELinux enforces policies.
+\item Cache coherence matters in multicore CPUs.
+\item NUMA favors local memory access.
+\item CPU scheduling affects responsiveness.
+\item Throughput measures completed work.
+\item Latency measures delay.
+\item Availability measures uptime.
+\item Reliability measures correctness.
+\item Scalability measures growth capability.
+\item Concurrency differs from parallelism.
+\item Synchronization prevents races.
+\item Protection prevents misuse.
+\item Isolation improves reliability.
+\item OS concepts underpin distributed systems.
+\end{enumerate}
+
+\section{Top 100 Interview Rapid Fire Questions}
+
+\begin{enumerate}
+\item What is an OS?
+\item What is a kernel?
+\item What is a system call?
+\item What is a process?
+\item What is a thread?
+\item Process vs thread?
+\item What is PCB?
+\item What is context switching?
+\item What is a race condition?
+\item What is a semaphore?
+\item What is a mutex?
+\item What is a monitor?
+\item What is deadlock?
+\item Four deadlock conditions?
+\item What is starvation?
+\item What is aging?
+\item What is paging?
+\item What is segmentation?
+\item What is TLB?
+\item What is a page fault?
+\item What is virtual memory?
+\item What is thrashing?
+\item What is swap?
+\item What is copy-on-write?
+\item What is FIFO?
+\item What is LRU?
+\item What is Optimal replacement?
+\item What is fragmentation?
+\item Internal fragmentation?
+\item External fragmentation?
+\item What is buddy allocation?
+\item What is slab allocation?
+\item What is an inode?
+\item What is a superblock?
+\item What is journaling?
+\item What is ext4?
+\item What is DMA?
+\item What is interrupt-driven I/O?
+\item What is blocking I/O?
+\item What is non-blocking I/O?
+\item What is asynchronous I/O?
+\item What is select?
+\item What is poll?
+\item What is epoll?
+\item What is Linux CFS?
+\item What is fork()?
+\item What is exec()?
+\item What is a zombie process?
+\item What is an orphan process?
+\item What is a signal?
+\item What is proc?
+\item What is sysfs?
+\item What is a namespace?
+\item What is a cgroup?
+\item What is Docker?
+\item What is Kubernetes?
+\item What is a hypervisor?
+\item Type 1 hypervisor?
+\item Type 2 hypervisor?
+\item What is virtualization?
+\item What is a VM?
+\item What is a container?
+\item What is ASLR?
+\item What is secure boot?
+\item What is SELinux?
+\item What is NUMA?
+\item What is cache coherence?
+\item What is a spinlock?
+\item What is CAS?
+\item What is memory ordering?
+\item What is a thread pool?
+\item What is a connection pool?
+\item What is backpressure?
+\item What is a reactor?
+\item What is a proactor?
+\item What is throughput?
+\item What is latency?
+\item What is scalability?
+\item What is availability?
+\item What is consistency?
+\item What is consensus?
+\item What is Raft?
+\item What is Paxos?
+\item What is a distributed lock?
+\item What is leader election?
+\item What is NTP?
+\item What is a logical clock?
+\item What is a vector clock?
+\item What is CAP theorem?
+\item Strong consistency?
+\item Eventual consistency?
+\item What is replication?
+\item What is fault tolerance?
+\item What is 2PC?
+\item What is IPC?
+\item Shared memory?
+\item Pipe?
+\item Socket?
+\item Why does thread-per-request not scale?
+\item How does Nginx scale?
+\end{enumerate}
+
+\section{Final Interview Day Checklist}
+
+\begin{itemize}
+\item Revise Process vs Thread.
+\item Revise Mutex vs Semaphore.
+\item Memorize Deadlock Conditions.
+\item Review Page Fault Handling.
+\item Review TLB and Paging.
+\item Review Virtual Memory.
+\item Review Scheduling Algorithms.
+\item Review Synchronization Problems.
+\item Review Linux Process Lifecycle.
+\item Review Containers and Virtualization.
+\item Review epoll and Event Loops.
+\item Practice concise answers.
+\item Focus on trade-offs.
+\item Explain concepts visually.
+\item Connect OS to system design.
+\end{itemize}
+
+\section{Complete OS Revision Map}
+
+\begin{enumerate}
+\item Fundamentals
+\item Computer Architecture
+\item Processes
+\item Threads
+\item Scheduling
+\item Synchronization
+\item Deadlocks
+\item Memory Management
+\item Paging
+\item Segmentation
+\item Virtual Memory
+\item Page Replacement
+\item Allocation
+\item File Systems
+\item Storage
+\item I/O
+\item Linux
+\item Security
+\item Virtualization
+\item Containers
+\item Concurrency
+\item Distributed Systems Connections
+\item High-Concurrency Systems
+\item System Design Applications
+\end{enumerate}
+
+\section{Key Takeaways}
+
+\begin{keytakeaways}
+Master the core concepts before memorizing advanced details. Focus heavily on processes, threads, synchronization, deadlocks, virtual memory, paging, Linux internals, containers, and high-concurrency architectures. Understand trade-offs rather than definitions alone. Practice explaining concepts clearly, drawing diagrams, solving numerical problems, and connecting operating-system fundamentals to real-world backend systems and large-scale system design.
+\end{keytakeaways}

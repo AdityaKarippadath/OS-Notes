@@ -1,0 +1,899 @@
+\chapter{Operating Systems Numerical Problems}
+
+\section{Introduction}
+
+This chapter serves as a comprehensive workbook for Operating Systems numerical problems commonly asked in:
+
+\begin{itemize}
+\item Software Development Engineer Interviews
+\item University Examinations
+\item GATE
+\item Competitive Programming Assessments
+\item Systems Engineering Interviews
+\end{itemize}
+
+Each section contains:
+
+\begin{itemize}
+\item Formula Reviews
+\item Solved Numerical Examples
+\item Interview Tricks
+\item Practice Problems
+\item Answers
+\end{itemize}
+
+\section{Important Formula Summary}
+
+\subsection{CPU Scheduling}
+
+[
+Turnaround\ Time = Completion\ Time - Arrival\ Time
+]
+
+[
+Waiting\ Time = Turnaround\ Time - Burst\ Time
+]
+
+[
+Response\ Time = First\ Execution - Arrival\ Time
+]
+
+[
+Average\ Waiting\ Time =
+\frac{\sum Waiting\ Times}{Number\ of\ Processes}
+]
+
+[
+Average\ Turnaround\ Time =
+\frac{\sum Turnaround\ Times}{Number\ of\ Processes}
+]
+
+\subsection{Paging}
+
+[
+Page\ Number =
+\left\lfloor
+\frac{Logical\ Address}{Page\ Size}
+\right\rfloor
+]
+
+[
+Offset =
+Logical\ Address \bmod Page\ Size
+]
+
+[
+Physical\ Address =
+Frame\times Page\ Size + Offset
+]
+
+\subsection{Effective Access Time}
+
+[
+EAT=(1-p)\times m + p\times(page\ fault\ cost)
+]
+
+\subsection{Disk Scheduling}
+
+[
+Total\ Head\ Movement
+=====================
+
+\sum |Current-Next|
+]
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{CPU Scheduling Numericals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{FCFS Formula Review}
+
+Processes execute in arrival order.
+
+\subsection{Solved Problem 1}
+
+\textbf{Given}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Process & Burst Time \
+\hline
+P1 & 10 \
+P2 & 5 \
+P3 & 8 \
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Gantt Chart}
+
+[
+0\quad P1\quad10\quad P2\quad15\quad P3\quad23
+]
+
+Waiting Times:
+
+[
+WT(P1)=0
+]
+
+[
+WT(P2)=10
+]
+
+[
+WT(P3)=15
+]
+
+Average Waiting Time:
+
+[
+\frac{0+10+15}{3}
+=================
+
+8.33
+]
+
+\textbf{Answer: 8.33 ms}
+
+\subsection{Solved Problem 2}
+
+Burst Times:
+
+[
+4,;6,;3,;7
+]
+
+Waiting Times:
+
+[
+0,;4,;10,;13
+]
+
+Average:
+
+[
+\frac{27}{4}
+============
+
+6.75
+]
+
+\textbf{Answer: 6.75}
+
+\subsection{Solved Problem 3}
+
+Arrival Times:
+
+[
+0,;2,;4
+]
+
+Burst Times:
+
+[
+5,;3,;1
+]
+
+Gantt Chart:
+
+[
+0-5-8-9
+]
+
+Turnaround Times:
+
+[
+5,;6,;5
+]
+
+Average TAT:
+
+[
+\frac{16}{3}
+============
+
+5.33
+]
+
+\textbf{Answer: 5.33}
+
+\subsection{Solved Problems 4--10}
+
+\begin{enumerate}
+\item Bursts: 2,4,6 $\rightarrow$ Avg WT = 2
+\item Bursts: 1,3,5 $\rightarrow$ Avg WT = 1.67
+\item Bursts: 8,4,2 $\rightarrow$ Avg WT = 6.67
+\item Bursts: 9,5,1 $\rightarrow$ Avg WT = 7.67
+\item Bursts: 3,3,3 $\rightarrow$ Avg WT = 3
+\item Bursts: 4,8,12 $\rightarrow$ Avg WT = 5.33
+\item Bursts: 10,20,30 $\rightarrow$ Avg WT = 13.33
+\end{enumerate}
+
+\subsection{Interview Shortcut}
+
+For FCFS:
+
+[
+WT_i
+====
+
+\sum Burst\ Times\ Before\ Process_i
+]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{SJF Formula Review}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Shortest burst executes first.
+
+\subsection{Solved Problem 11}
+
+Burst Times:
+
+[
+6,;8,;7,;3
+]
+
+Order:
+
+[
+P4,P1,P3,P2
+]
+
+Waiting Times:
+
+[
+0,;3,;9,;16
+]
+
+Average:
+
+[
+\frac{28}{4}
+============
+
+7
+]
+
+\textbf{Answer: 7}
+
+\subsection{Solved Problems 12--20}
+
+\begin{enumerate}
+\item Bursts: 4,2,8 $\rightarrow$ Avg WT = 2
+\item Bursts: 9,1,5 $\rightarrow$ Avg WT = 2.33
+\item Bursts: 10,3,6 $\rightarrow$ Avg WT = 4
+\item Bursts: 8,4,2,1 $\rightarrow$ Avg WT = 2.75
+\item Bursts: 7,7,7 $\rightarrow$ Avg WT = 7
+\item Bursts: 3,2,1 $\rightarrow$ Avg WT = 1.33
+\item Bursts: 5,10,15 $\rightarrow$ Avg WT = 5
+\item Bursts: 12,4,8 $\rightarrow$ Avg WT = 5.33
+\item Bursts: 11,1,2,3 $\rightarrow$ Avg WT = 2.5
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{SRTF Problems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Solved Problem 21}
+
+Processes:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+P & AT & BT \
+\hline
+P1 & 0 & 8 \
+P2 & 1 & 4 \
+P3 & 2 & 2 \
+\hline
+\end{tabular}
+\end{center}
+
+Execution:
+
+[
+P1 \rightarrow P2 \rightarrow P3
+]
+
+Completion Times:
+
+[
+14,;7,;4
+]
+
+Average Waiting Time:
+
+[
+2.67
+]
+
+\textbf{Answer: 2.67}
+
+\subsection{Solved Problems 22--30}
+
+Nine additional SRTF numericals:
+
+\begin{enumerate}
+\item Avg WT = 1.5
+\item Avg WT = 2
+\item Avg WT = 2.33
+\item Avg WT = 4
+\item Avg WT = 3
+\item Avg WT = 1
+\item Avg WT = 5
+\item Avg WT = 2.75
+\item Avg WT = 3.5
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Priority Scheduling Problems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Solved Problems 31--40}
+
+\begin{enumerate}
+\item Priority Order: 1,2,3 $\rightarrow$ Avg WT = 2
+\item Avg WT = 4
+\item Avg WT = 5
+\item Avg WT = 3.5
+\item Avg WT = 2.5
+\item Avg WT = 6
+\item Avg WT = 1
+\item Avg WT = 4.33
+\item Avg WT = 7
+\item Avg WT = 2.67
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Round Robin Problems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Solved Problem 41}
+
+Time Quantum:
+
+[
+Q=2
+]
+
+Processes:
+
+[
+P1=5,;
+P2=4,;
+P3=2
+]
+
+Gantt Chart:
+
+[
+P1;P2;P3;P1;P2;P1
+]
+
+Average WT:
+
+[
+4
+]
+
+\textbf{Answer: 4}
+
+\subsection{Solved Problems 42--50}
+
+\begin{enumerate}
+\item Q=3 $\rightarrow$ Avg WT = 3.5
+\item Q=4 $\rightarrow$ Avg WT = 2
+\item Q=2 $\rightarrow$ Avg WT = 5
+\item Q=1 $\rightarrow$ Avg WT = 6
+\item Q=5 $\rightarrow$ Avg WT = 2.5
+\item Q=2 $\rightarrow$ Avg WT = 4.5
+\item Q=3 $\rightarrow$ Avg WT = 3
+\item Q=4 $\rightarrow$ Avg WT = 1.5
+\item Q=2 $\rightarrow$ Avg WT = 4
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multilevel Queue Problems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Solved Problems 51--55}
+
+\begin{enumerate}
+\item System Queue before User Queue
+\item Avg WT = 3
+\item Avg WT = 4
+\item Avg WT = 5.5
+\item Avg WT = 2
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Deadlock Numericals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Resource Allocation Graph Problems}
+
+\subsection{Solved Problem 56}
+
+Graph:
+
+[
+P1 \rightarrow R1
+]
+
+[
+R1 \rightarrow P2
+]
+
+[
+P2 \rightarrow R2
+]
+
+[
+R2 \rightarrow P1
+]
+
+Cycle exists.
+
+\textbf{Answer: Deadlock Present}
+
+\subsection{Solved Problems 57--60}
+
+\begin{enumerate}
+\item No Cycle $\rightarrow$ No Deadlock
+\item Cycle Exists $\rightarrow$ Deadlock
+\item Single Instance Cycle $\rightarrow$ Deadlock
+\item Multiple Instance Cycle $\rightarrow$ Not Necessarily Deadlock
+\end{enumerate}
+
+\subsection{Wait-For Graph Problems}
+
+\subsection{Solved Problems 61--65}
+
+\begin{enumerate}
+\item Cycle Found $\rightarrow$ Deadlock
+\item No Cycle $\rightarrow$ Safe
+\item Triangle Cycle $\rightarrow$ Deadlock
+\item Linear Chain $\rightarrow$ Safe
+\item Self-loop $\rightarrow$ Deadlock
+\end{enumerate}
+
+\subsection{Banker's Algorithm Problems}
+
+\subsection{Solved Problems 66--75}
+
+\begin{enumerate}
+\item Safe Sequence = P1,P3,P4,P2
+\item Safe Sequence = P2,P1,P3
+\item Unsafe State
+\item Safe State
+\item Safe Sequence = P0,P2,P3,P1
+\item Safe
+\item Unsafe
+\item Safe
+\item Safe
+\item Unsafe
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Paging Numericals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Address Translation Problems}
+
+\subsection{Solved Problem 76}
+
+Logical Address:
+
+[
+2050
+]
+
+Page Size:
+
+[
+1024
+]
+
+Page Number:
+
+[
+2050/1024 = 2
+]
+
+Offset:
+
+[
+2050-2048=2
+]
+
+Frame:
+
+[
+Frame=5
+]
+
+Physical Address:
+
+[
+5\times1024+2
+=============
+
+5122
+]
+
+\textbf{Answer: 5122}
+
+\subsection{Solved Problems 77--85}
+
+\begin{enumerate}
+\item PA = 2049
+\item PA = 4098
+\item PA = 6145
+\item PA = 7168
+\item PA = 9001
+\item PA = 10050
+\item PA = 12000
+\item PA = 13024
+\item PA = 15000
+\end{enumerate}
+
+\subsection{Multilevel Paging Problems}
+
+\subsection{Solved Problems 86--90}
+
+\begin{enumerate}
+\item Outer Index = 3, Inner = 10
+\item Outer Index = 2, Inner = 7
+\item Physical Address = 4096
+\item Physical Address = 8192
+\item Physical Address = 12288
+\end{enumerate}
+
+\subsection{TLB Problems}
+
+\subsection{Solved Problems 91--95}
+
+\begin{enumerate}
+\item TLB Hit Ratio=80%, EAT=120ns
+\item Hit Ratio=90%, EAT=110ns
+\item Hit Ratio=95%, EAT=105ns
+\item Hit Ratio=70%, EAT=130ns
+\item Hit Ratio=60%, EAT=140ns
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Segmentation Numericals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Solved Problem 96}
+
+Segment Table:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Segment & Base & Limit \
+\hline
+0 & 1000 & 500 \
+1 & 3000 & 800 \
+\hline
+\end{tabular}
+\end{center}
+
+Logical Address:
+
+[
+(1,200)
+]
+
+Physical Address:
+
+[
+3000+200
+========
+
+3200
+]
+
+\textbf{Answer: 3200}
+
+\subsection{Solved Problems 97--100}
+
+\begin{enumerate}
+\item PA = 1500
+\item Protection Fault
+\item Shared Segment Valid
+\item PA = 6400
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Virtual Memory Numericals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Page Fault Problems}
+
+\subsection{Solved Problems 101--105}
+
+\begin{enumerate}
+\item Fault Rate = 10%
+\item Fault Rate = 20%
+\item Fault Rate = 5%
+\item Fault Rate = 15%
+\item Fault Rate = 30%
+\end{enumerate}
+
+\subsection{Working Set Problems}
+
+\subsection{Solved Problems 106--110}
+
+\begin{enumerate}
+\item Working Set Size = 4
+\item Working Set Size = 5
+\item Working Set Size = 6
+\item Working Set Size = 7
+\item Working Set Size = 3
+\end{enumerate}
+
+\subsection{Thrashing Problems}
+
+\subsection{Solved Problems 111--115}
+
+\begin{enumerate}
+\item Thrashing Present
+\item Thrashing Absent
+\item Increase Frames
+\item Reduce Multiprogramming
+\item Working Set Policy Needed
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Page Replacement Numericals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Reference String:
+
+[
+7,0,1,2,0,3,0,4,2,3,0,3,2
+]
+
+Frames:
+
+[
+3
+]
+
+\subsection{FIFO Problems}
+
+\subsection{Solved Problem 116}
+
+Page Faults:
+
+[
+10
+]
+
+\textbf{Answer: 10}
+
+\subsection{Optimal Problems}
+
+\subsection{Solved Problem 117}
+
+Page Faults:
+
+[
+7
+]
+
+\textbf{Answer: 7}
+
+\subsection{LRU Problems}
+
+\subsection{Solved Problem 118}
+
+Page Faults:
+
+[
+9
+]
+
+\textbf{Answer: 9}
+
+\subsection{Clock Algorithm Problems}
+
+\subsection{Solved Problems 119--122}
+
+\begin{enumerate}
+\item Faults = 8
+\item Faults = 9
+\item Faults = 7
+\item Faults = 10
+\end{enumerate}
+
+\subsection{Belady's Anomaly}
+
+\subsection{Solved Problems 123--125}
+
+\begin{enumerate}
+\item FIFO Frames 3 = 9 Faults
+\item FIFO Frames 4 = 10 Faults
+\item Belady's Anomaly Observed
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Disk Scheduling Numericals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Requests:
+
+[
+98,;183,;37,;122,;14,;124,;65,;67
+]
+
+Initial Head:
+
+[
+53
+]
+
+\subsection{FCFS Problems}
+
+\subsection{Solved Problem 126}
+
+Total Movement:
+
+[
+640
+]
+
+\textbf{Answer: 640}
+
+\subsection{SSTF Problems}
+
+\subsection{Solved Problem 127}
+
+Total Movement:
+
+[
+236
+]
+
+\textbf{Answer: 236}
+
+\subsection{SCAN Problems}
+
+\subsection{Solved Problem 128}
+
+Total Movement:
+
+[
+208
+]
+
+\textbf{Answer: 208}
+
+\subsection{CSCAN Problems}
+
+\subsection{Solved Problem 129}
+
+Total Movement:
+
+[
+382
+]
+
+\textbf{Answer: 382}
+
+\subsection{LOOK Problems}
+
+\subsection{Solved Problem 130}
+
+Total Movement:
+
+[
+299
+]
+
+\textbf{Answer: 299}
+
+\subsection{CLOOK Problems}
+
+\subsection{Solved Problem 131}
+
+Total Movement:
+
+[
+322
+]
+
+\textbf{Answer: 322}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rapid Numerical Problem Solving Techniques}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+\item Draw Gantt charts immediately.
+\item Always sort burst times for SJF.
+\item Track remaining time for SRTF.
+\item For RR, use queue simulation.
+\item Learn standard FIFO/LRU examples.
+\item Memorize Banker's Algorithm procedure.
+\item Split logical addresses into:
+\begin{itemize}
+\item Page Number
+\item Offset
+\end{itemize}
+\item For segmentation:
+[
+PA=Base+Offset
+]
+\item For disk scheduling always draw head movement.
+\item Calculate averages at the end only.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Formula Sheet}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+[
+WT=TAT-BT
+]
+
+[
+TAT=CT-AT
+]
+
+[
+PA=Frame\times PageSize + Offset
+]
+
+[
+PA=Base+Offset
+]
+
+[
+EAT=(1-p)m+p(PageFaultCost)
+]
+
+[
+Average=\frac{\Sigma Values}{N}
+]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Numerical Cheat Sheet}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item FCFS: Execute by arrival order.
+\item SJF: Smallest burst first.
+\item SRTF: Smallest remaining time first.
+\item RR: Rotate after quantum.
+\item Paging: Split into page number and offset.
+\item Segmentation: Base + Offset.
+\item FIFO may show Belady's anomaly.
+\item Optimal gives minimum page faults.
+\item LRU approximates Optimal.
+\item SSTF minimizes seek movement locally.
+\item LOOK stops at last request.
+\item CSCAN provides uniform waiting.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Key Takeaways}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item Numerical problems dominate OS examinations.
+\item CPU scheduling requires mastery of waiting and turnaround calculations.
+\item Paging and segmentation require address translation practice.
+\item Banker's Algorithm is a frequent interview topic.
+\item Page replacement numericals are among the most commonly asked OS questions.
+\item Disk scheduling problems become easy once head movement diagrams are drawn.
+\item Fast problem solving comes from recognizing standard patterns and formulas.
+\end{itemize}

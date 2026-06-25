@@ -1,0 +1,398 @@
+\chapter{Operating Systems Interview Questions}
+
+\section{Introduction}
+
+This chapter is a consolidated interview-preparation resource covering the most important Operating Systems topics frequently asked in software engineering interviews.
+
+\section{Operating System Fundamentals}
+
+\begin{enumerate}
+\item \textbf{Interview Question:} What is an operating system?\
+\textbf{Short Answer:} Resource manager and abstraction layer.\
+\textbf{Detailed Explanation:} Manages CPU, memory, storage, and devices.\
+\textbf{Common Follow-up Questions:} Kernel? System calls?\
+\textbf{Interview Tips:} Mention abstraction and resource allocation.
+
+\item \textbf{Interview Question:} What are system calls?\
+\textbf{Short Answer:} Interface to kernel services.\
+\textbf{Detailed Explanation:} User programs access OS functionality through them.\
+\textbf{Common Follow-up Questions:} fork()? exec()?\
+\textbf{Interview Tips:} Explain mode switch.
+
+\item \textbf{Interview Question:} What is a kernel?
+\item \textbf{Interview Question:} Monolithic vs microkernel?
+\item \textbf{Interview Question:} User mode vs kernel mode?
+\item \textbf{Interview Question:} What is a trap?
+\item \textbf{Interview Question:} What is an interrupt?
+\item \textbf{Interview Question:} What is DMA?
+\item \textbf{Interview Question:} What is bootstrapping?
+\item \textbf{Interview Question:} What is a context switch?
+\end{enumerate}
+
+\section{Processes}
+
+\begin{enumerate}
+\setcounter{enumi}{10}
+\item Process lifecycle?
+\item Process Control Block?
+\item fork() vs exec()?
+\item Zombie process?
+\item Orphan process?
+\item Process states?
+\item Process creation?
+\item Process termination?
+\item Daemon process?
+\item Copy-on-write during fork?
+\end{enumerate}
+
+\section{Threads}
+
+\begin{enumerate}
+\setcounter{enumi}{20}
+\item What is a thread?
+\item Process vs thread?
+\item User vs kernel threads?
+\item Thread states?
+\item Thread pool?
+\item Multithreading benefits?
+\item Thread safety?
+\item Reentrant functions?
+\item Thread-local storage?
+\item Why are threads lightweight?
+\end{enumerate}
+
+\section{CPU Scheduling}
+
+\begin{enumerate}
+\setcounter{enumi}{30}
+\item Scheduling objective?
+\item FCFS scheduling?
+\item SJF scheduling?
+\item SRTF scheduling?
+\item Round Robin?
+\item Priority scheduling?
+\item Starvation?
+\item Aging?
+\item Throughput vs turnaround time?
+\item Context-switch overhead?
+\end{enumerate}
+
+\section{Synchronization}
+
+\begin{enumerate}
+\setcounter{enumi}{40}
+\item Race condition?
+\item Critical section?
+\item Mutual exclusion?
+\item Progress condition?
+\item Bounded waiting?
+\item Peterson's algorithm?
+\item Spinlock?
+\item Semaphore?
+\item Mutex?
+\item Monitor?
+\end{enumerate}
+
+\section{Deadlocks}
+
+\begin{enumerate}
+\setcounter{enumi}{50}
+\item What is deadlock?
+\item Four deadlock conditions?
+\item Mutual exclusion condition?
+\item Hold and wait?
+\item No preemption?
+\item Circular wait?
+\item Deadlock prevention?
+\item Deadlock avoidance?
+\item Deadlock detection?
+\item Deadlock recovery?
+\end{enumerate}
+
+\section{Memory Management}
+
+\begin{enumerate}
+\setcounter{enumi}{60}
+\item Logical vs physical memory?
+\item Memory allocation?
+\item Fragmentation?
+\item Internal fragmentation?
+\item External fragmentation?
+\item Compaction?
+\item Buddy allocator?
+\item Slab allocator?
+\item Heap management?
+\item Free lists?
+\end{enumerate}
+
+\section{Virtual Memory}
+
+\begin{enumerate}
+\setcounter{enumi}{70}
+\item Why virtual memory?
+\item Virtual address space?
+\item Demand paging?
+\item Page fault?
+\item Valid vs invalid reference?
+\item Working set model?
+\item Thrashing?
+\item Swap space?
+\item Copy-on-write?
+\item Memory-mapped files?
+\end{enumerate}
+
+\section{Paging and Segmentation}
+
+\begin{enumerate}
+\setcounter{enumi}{80}
+\item What is paging?
+\item Page vs frame?
+\item Page table?
+\item TLB?
+\item Effective access time?
+\item Multilevel paging?
+\item Inverted page table?
+\item Hashed page table?
+\item Segmentation?
+\item Paging vs segmentation?
+\end{enumerate}
+
+\section{Page Replacement}
+
+\begin{enumerate}
+\setcounter{enumi}{90}
+\item FIFO replacement?
+\item Optimal replacement?
+\item LRU replacement?
+\item LFU replacement?
+\item Second chance?
+\item Clock algorithm?
+\item Belady's anomaly?
+\item Reference string?
+\item Working set replacement?
+\item Global vs local replacement?
+\end{enumerate}
+
+\section{File Systems}
+
+\begin{enumerate}
+\setcounter{enumi}{100}
+\item File system purpose?
+\item Inode?
+\item Superblock?
+\item File Control Block?
+\item Contiguous allocation?
+\item Linked allocation?
+\item Indexed allocation?
+\item Journaling?
+\item ext4 architecture?
+\item NTFS overview?
+\end{enumerate}
+
+\section{Disk Scheduling}
+
+\begin{enumerate}
+\setcounter{enumi}{110}
+\item Disk scheduling objective?
+\item FCFS disk scheduling?
+\item SSTF?
+\item SCAN?
+\item C-SCAN?
+\item LOOK?
+\item C-LOOK?
+\item Seek time?
+\item Rotational latency?
+\item Throughput optimization?
+\end{enumerate}
+
+\section{Linux Internals}
+
+\begin{enumerate}
+\setcounter{enumi}{120}
+\item Linux architecture?
+\item System call path?
+\item proc filesystem?
+\item sysfs?
+\item CFS scheduler?
+\item Signals?
+\item Kernel modules?
+\item systemd?
+\item Linux boot process?
+\item Kernel panic?
+\end{enumerate}
+
+\section{Containers and Virtualization}
+
+\begin{enumerate}
+\setcounter{enumi}{130}
+\item Why virtualization?
+\item Hypervisor?
+\item Type 1 hypervisor?
+\item Type 2 hypervisor?
+\item Full virtualization?
+\item Para-virtualization?
+\item Containers?
+\item Namespaces?
+\item cgroups?
+\item Docker vs VM?
+\end{enumerate}
+
+\section{Operating System Security}
+
+\begin{enumerate}
+\setcounter{enumi}{140}
+\item Principle of least privilege?
+\item Access control?
+\item Authentication vs authorization?
+\item Capability-based security?
+\item Sandboxing?
+\item ASLR?
+\item Stack canaries?
+\item Secure boot?
+\item SELinux?
+\item Privileged instructions?
+\end{enumerate}
+
+\section{High-Concurrency Systems}
+
+\begin{enumerate}
+\setcounter{enumi}{150}
+\item What is high concurrency?
+\item Thread-per-request model?
+\item Event-driven architecture?
+\item Reactor pattern?
+\item Proactor pattern?
+\item Non-blocking I/O?
+\item Asynchronous I/O?
+\item epoll?
+\item Backpressure?
+\item How does Nginx scale?
+\end{enumerate}
+
+\section{Top 25 Most Frequently Asked Questions}
+
+\begin{enumerate}
+\item Process vs Thread
+\item Mutex vs Semaphore
+\item Deadlock Conditions
+\item What Happens During a Page Fault
+\item Paging vs Segmentation
+\item Virtual Memory
+\item TLB
+\item Context Switch
+\item fork vs exec
+\item Zombie Process
+\item Orphan Process
+\item CPU Scheduling Algorithms
+\item Critical Section Problem
+\item Peterson's Algorithm
+\item Producer Consumer Problem
+\item Readers Writers Problem
+\item Dining Philosophers
+\item Banker's Algorithm
+\item LRU Page Replacement
+\item Belady's Anomaly
+\item Inode Structure
+\item Linux Boot Process
+\item System Calls
+\item Docker vs VM
+\item epoll vs select
+\end{enumerate}
+
+\section{Top 25 One-Line Rapid Revision Questions}
+
+\begin{enumerate}
+\item What is a process?
+\item What is a thread?
+\item What is a PCB?
+\item What is a page?
+\item What is a frame?
+\item What is TLB?
+\item What is DMA?
+\item What is a trap?
+\item What is an interrupt?
+\item What is deadlock?
+\item What is starvation?
+\item What is aging?
+\item What is a semaphore?
+\item What is a mutex?
+\item What is thrashing?
+\item What is swapping?
+\item What is journaling?
+\item What is an inode?
+\item What is CFS?
+\item What is a namespace?
+\item What is a cgroup?
+\item What is epoll?
+\item What is a reactor?
+\item What is a hypervisor?
+\item What is copy-on-write?
+\end{enumerate}
+
+\section{Top 25 Deep-Dive Questions}
+
+\begin{enumerate}
+\item Explain page-fault handling in detail.
+\item Explain Linux process creation.
+\item Explain Linux memory management.
+\item Explain TLB shootdown.
+\item Explain NUMA architecture.
+\item Explain lock-free programming.
+\item Explain compare-and-swap.
+\item Explain monitor implementation.
+\item Explain distributed locks.
+\item Explain CFS scheduler internals.
+\item Explain ext4 journaling.
+\item Explain virtual memory in Linux.
+\item Explain container isolation.
+\item Explain namespaces and cgroups.
+\item Explain epoll internals.
+\item Explain event-driven architectures.
+\item Explain context-switch costs.
+\item Explain Banker's Algorithm.
+\item Explain demand paging.
+\item Explain working-set model.
+\item Explain slab allocation.
+\item Explain page replacement trade-offs.
+\item Explain kernel-user transitions.
+\item Explain memory ordering.
+\item Explain high-concurrency server design.
+\end{enumerate}
+
+\section{Interview Preparation Strategy}
+
+\begin{enumerate}
+\item Master operating-system fundamentals.
+\item Understand processes and threads thoroughly.
+\item Practice synchronization problems.
+\item Solve deadlock scenarios.
+\item Learn memory management numericals.
+\item Practice page replacement questions.
+\item Understand Linux internals.
+\item Learn virtualization and containers.
+\item Connect OS concepts to system design.
+\item Conduct mock interviews regularly.
+\end{enumerate}
+
+\section{Last-Minute Revision Advice}
+
+\begin{itemize}
+\item Revise Process vs Thread.
+\item Revise Mutex vs Semaphore.
+\item Memorize deadlock conditions.
+\item Practice page-fault handling.
+\item Revise TLB and paging.
+\item Understand copy-on-write.
+\item Review CPU scheduling algorithms.
+\item Revise producer-consumer and readers-writers.
+\item Review Linux process lifecycle.
+\item Revise Docker and container isolation.
+\item Review epoll and event-driven systems.
+\item Practice concise interview explanations.
+\end{itemize}
+
+\section{Key Takeaways}
+
+\begin{keytakeaways}
+Operating Systems remain one of the highest-signal interview domains for software engineers. Focus on processes, threads, synchronization, deadlocks, memory management, virtual memory, Linux internals, containers, and high-concurrency architectures. Strong candidates connect operating-system fundamentals with modern backend systems, distributed systems, cloud infrastructure, and large-scale system design. Consistent practice of conceptual, numerical, and scenario-based questions is the most effective preparation strategy.
+\end{keytakeaways}
